@@ -1,9 +1,4 @@
-﻿---
-title: Harmony 3 peripheral library application examples for SAM E70/S70/V70/V71 family
-nav_order: 1
----
-
-[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
+﻿[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
 # Harmony 3 peripheral library application examples for SAM E70/S70/V70/V71 family
 

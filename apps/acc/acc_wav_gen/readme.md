@@ -1,11 +1,6 @@
----
-title: SAM E70/V71 application example using Analog Comparator Controller peripheral library to generate a PWM waveform (acc_wave_gen)
-nav_order: 1
----
-
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# SAM E70/V71 application example using Analog Comparator Controller peripheral library to generate a PWM waveform (acc_wave_gen)
+# Analog Comparator Controller PWM Example (acc_wave_gen)
 
 ## Description
 
@@ -34,21 +29,22 @@ Refer to the MHC project graph for the components used and the respective config
 
 This section describes how to setup target hardware prior to running the projects.
 
-### Setting up [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
+| Project Name| Board|
+|:---------|:---------:|
+|sam_e70_xult.X|![](https://www.microchip.com/_ImagedCopy/180730-MCU32-PHOTO-DM320113-Angle-7x5.jpg)|
+|sam_v71_xult.X|![](https://www.microchip.com/_ImagedCopy/ATSAMV71-XULT_angle.jpg)|
 
-![sam_e70_xult](https://www.microchip.com/_ImagedCopy/180730-MCU32-PHOTO-DM320113-Angle-7x5.jpg)
 
-- *Comparator Positive Input: Connect an external voltage source to PD30 (Pin 3 of the J501)*
-- *Comparator Negative Input: Sine wave from the DAC Channel 0. No connection required*
-- *Connect the Debug USB port on the board to the computer using a micro USB cable*
 
-### Setting up [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)
+[SAM E70 Xplained Ultra board Setup](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
+- Comparator Positive Input: Connect an external voltage source to PD30 (Pin 3 of the J501)
+- Comparator Negative Input: Sine wave from the DAC Channel 0. No connection required
+- Connect the Debug USB port on the board to the computer using a micro USB cable
 
-![sam_v71_xult](https://www.microchip.com/_ImagedCopy/ATSAMV71-XULT_angle.jpg)
-
-- *Comparator Positive Input: Connect an external voltage source to PD30 (Pin 28 of the Camera Interface connector)*
-- *Comparator Negative Input: Sine wave from the DAC Channel 0. No connection required*
-- *Connect the Debug USB port on the board to the computer using a micro USB cable*
+[SAM V71 Xplained Ultra board Setup](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)
+- Comparator Positive Input: Connect an external voltage source to PD30 (Pin 28 of the Camera Interface connector)
+- Comparator Negative Input: Sine wave from the DAC Channel 0. No connection required
+- Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ## Running the Application
 
