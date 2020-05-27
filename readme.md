@@ -37,7 +37,7 @@ The following applications are provided to demonstrate the typical or interestin
 
 | App Name | Description|
 |:---------|:-----------|
-|[%Example Title% Example (%example name%)](./apps/%example path%/%example name%) | %Short Example Description%|
+|[Analog Comparator Controller PWM Example (acc_wave_gen)](./apps/acc/acc_wav_gen/readme.md) | This application example uses ACC peripheral Library to generate PWM waveform with variable duty cycle|
 |||
 ____
 
