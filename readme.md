@@ -34,7 +34,9 @@ The following applications are provided to demonstrate the typical or interestin
 |:---------|:-----------|
 |[Analog Comparator Controller PWM Example (acc_wave_gen)](apps/acc/acc_wav_gen/readme.md) | This application example uses ACC peripheral Library to generate PWM waveform with variable duty cycle|
 |[Analog Front-End Controller DMA striding Example (afec_dma_striding)](apps/afec/afec_dma_striding/readme.md) | This application example uses AFEC peripheral Library to sample multiple ADC channels using DMA striding|
-|[Analog Front-End Controller polling mode Example (afec_polled_mode)](apps/afec/afec_polled_mode/readme.md) | This example demonstrates how to sample an analog input in polled mode and send the converted data to console|
+|[Analog Front-End Controller polling mode Example (afec_polled_mode)](apps/afec/afec_polled_mode/readme.md) | This example uses AFEC peripheral library to demonstrate how to sample an analog input in polled mode and send the converted data to console|
+|[Analog Front-End Controller user sequencer Example (afec_user_sequence)](apps/afec/afec_user_sequence/readme.md) | This example uses AFEC peripheral library to demonstrate how to sample three analog inputs using the user sequencer in triggered conversion mode and send the converted data to the console|
+|[Cache Controller cache maintenance operations Example (cache_maintainenace)](apps/cache/cache_maintenance/readme.md) | This example demonstrates the cache maintenance operation by cleaning and invalidating the cache for the DMA buffers located in the cacheable SRAM region|
 |||
 ____
 
