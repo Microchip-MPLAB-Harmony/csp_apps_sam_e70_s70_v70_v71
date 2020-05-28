@@ -33,6 +33,7 @@ The following applications are provided to demonstrate the typical or interestin
 | App Name | Description|
 |:---------|:-----------|
 |[Analog Comparator Controller PWM Example (acc_wave_gen)](apps/acc/acc_wav_gen/readme.md) | This application example uses ACC peripheral Library to generate PWM waveform with variable duty cycle|
+|[Analog Front-End Controller DMA striding Example (afec_dma_striding)](apps/afec/afec_dma_striding/readme.md) | This application example uses AFEC peripheral Library to sample multiple ADC channels using DMA striding|
 |||
 ____
 
