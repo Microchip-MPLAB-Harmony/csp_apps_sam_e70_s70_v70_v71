@@ -8,11 +8,11 @@ This application example uses Analog Comparator to generate a PWM waveform by co
 
 ## Downloading and building the application
 
-To download or clone this application from the github, go to the [top level of the repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71) and click
+To download or clone this application from Github, go to the [top level of the repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71) and click
 
 ![clone](../../../docs/images/clone.png)
 
-Application path within the repository is **apps/acc/acc_wav_gen/firmware** .
+Path of the application within the repository is **apps/acc/acc_wav_gen/firmware** .
 
 To build the application, refer to the following table and open the project in their respective IDEs.
 
@@ -21,27 +21,23 @@ To build the application, refer to the following table and open the project in t
 | sam_e70_xult.X    | MPLABX Project for [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
 | sam_v71_xult.X    | MPLABX Project for  [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|        |
 
-## MPLAB Harmony Configurations
+## Setting up the hardware
 
-Refer to the MHC project graph for the components used and the respective configuration options.
-
-## Hardware Setup
-
-This section describes how to setup target hardware prior to running the projects.
+The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-|sam_e70_xult.X|![](https://www.microchip.com/_ImagedCopy/180730-MCU32-PHOTO-DM320113-Angle-7x5.jpg)|
-|sam_v71_xult.X|![](https://www.microchip.com/_ImagedCopy/ATSAMV71-XULT_angle.jpg)|
+|sam_e70_xult.X|[![sam_e70_xult](https://www.microchip.com/_ImagedCopy/180730-MCU32-PHOTO-DM320113-Angle-7x5.jpg)](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
+|sam_v71_xult.X|[![sam_v71_xult](https://www.microchip.com/_ImagedCopy/ATSAMV71-XULT_angle.jpg)](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
 
+### Setting up [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
-
-[SAM E70 Xplained Ultra board Setup](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 - Comparator Positive Input: Connect an external voltage source to PD30 (Pin 3 of the J501)
 - Comparator Negative Input: Sine wave from the DAC Channel 0. No connection required
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
-[SAM V71 Xplained Ultra board Setup](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)
+### Setting up [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)
+
 - Comparator Positive Input: Connect an external voltage source to PD30 (Pin 28 of the Camera Interface connector)
 - Comparator Negative Input: Sine wave from the DAC Channel 0. No connection required
 - Connect the Debug USB port on the board to the computer using a micro USB cable
@@ -52,7 +48,7 @@ This section describes how to setup target hardware prior to running the project
 2. Observe the generated PWM waveform on the output pin using an oscilloscope
 3. Change the positive input of the comparator from 0 to 3.3V and observe the duty cycle of the PWM waveform changing from 0 to 100 percentage
 
-| Hardware      | PWM output pin                                    |
+| Board      | PWM output pin                                    |
 | ----------------- | ---------------------------------------------- |
 | [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    | PB03 (Pin 7 of the J502 Connector) |
 | [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)      |PB03 (Pin 20 of the Camera Interface connector) |

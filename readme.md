@@ -15,7 +15,7 @@ This repository contains the MPLAB® Harmony 3 peripheral library application ex
 - [Release Notes](release_notes.md)
 - [MPLAB® Harmony License](mplab_harmony_license.md)
 
-To download or clone these application from the github, go to the top of the repository page and click:
+To download or clone these application from Github, go to the [top level of the repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71) page and click:
 
 ![clone](./docs/images/clone.png)
 
@@ -32,7 +32,7 @@ The following applications are provided to demonstrate the typical or interestin
 
 | App Name | Description|
 |:---------|:-----------|
-|[Analog Comparator Controller PWM Example (acc_wave_gen)](./apps/acc/acc_wav_gen/readme.md) | This application example uses ACC peripheral Library to generate PWM waveform with variable duty cycle|
+|[Analog Comparator Controller PWM Example (acc_wave_gen)](apps/acc/acc_wav_gen/readme.md) | This application example uses ACC peripheral Library to generate PWM waveform with variable duty cycle|
 |||
 ____
 
