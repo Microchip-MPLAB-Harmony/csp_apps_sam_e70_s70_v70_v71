@@ -38,6 +38,8 @@ The following applications are provided to demonstrate the typical or interestin
 |[Analog Front-End Controller user sequencer Example (afec_user_sequence)](apps/afec/afec_user_sequence/readme.md) | This example uses AFEC peripheral library to demonstrate how to sample three analog inputs using the user sequencer in triggered conversion mode and send the converted data to the console|
 |[Cache maintenance operations example (cache_maintainenace)](apps/cache/cache_maintenance/readme.md) | This example demonstrates the cache maintenance operation by cleaning and invalidating the cache for the DMA buffers located in the cacheable SRAM region|
 |[Clock configurations example (clock_config)](apps/clock/clock_config/readme.md) | This example application demonstrates how to configure the clock system to run the device at maximum frequency|
+|[Digital to Analog Converter Controller waveform generation example (dacc_wav_gen)](apps/dacc/dacc_wav_gen/readme.md) | This example application demonstrates how to configure the clock system to run the device at maximum frequency|
+|[Digital to Analog Converter Controller waveform generation using dma example (dacc_wav_gen_dma)](apps/dacc/dacc_wav_gen_dma/readme.md) | This example shows how to use the DAC with the DMA to generate sinusoidal waveform without CPU intervention|
 |||
 ____
 
