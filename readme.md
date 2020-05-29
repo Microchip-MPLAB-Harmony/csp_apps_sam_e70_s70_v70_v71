@@ -51,6 +51,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Quad Serial Peripheral Interface (QSPI) flash read write example (qspi_read_write)](apps/qspi/qspi_read_write/readme.md) | This example application demonstrates how to use the QSPI Peripheral library to perform erase, write and read operation with the QSPI Serial Flash memory in Quad IO mode |
 |[Quad Serial Peripheral Interface (QSPI) flash XIP example (qspi_xip)](apps/qspi/qspi_xip/readme.md) | This example application demonstrates how to setup the QSPI Flash in the XIP mode to execute code from the serial Flash memory |
 |[Quad Serial Peripheral Interface (QSPI) flash read write in SPI mode example (spi_read_write)](apps/qspi/spi_read_write/readme.md) | This example application demonstrates how to use the QSPI Peripheral library to perform erase, write and read operation with the QSPI Serial Flash memory in SPI mode |
+|[Reset Controller interrupt generation example (led_switcher)](apps/rstc/led_switcher/readme.md) | This example application demonstrates how to use the RSTC peripheral to generate an interrupt instead of generating a reset, when the Reset switch is pressed on board |
 |||
 ____
 
