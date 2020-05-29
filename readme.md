@@ -44,6 +44,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Controller Area Network fd blocking operation example (mcan_fd_operation_blocking)](apps/mcan/mcan_fd_operation_blocking/readme.md) | This example application shows how to use the MCAN module to transmit and receive CAN FD messages in polling mode|
 |[Controller Area Network fd interrupt operation timestamp example (mcan_fd_operation_interrupt_timestamp)](apps/mcan/mcan_fd_operation_interrupt_timestamp/readme.md) | This example application shows how to use the MCAN module to transmit and receive CAN FD messages in interrupt mode|
 |[Controller Area Network normal blocking operation example (mcan_normal_operation_blocking)](apps/mcan/mcan_normal_operation_blocking/readme.md) | This example application shows how to use the MCAN module to transmit and receive normal CAN messages in polling mode|
+|[Memory Protection Unit (MPU) cache coherent memory example(mpu_coherent_regions)](apps/mpu/mpu_coherent_region/readme.md) | This example demonstrates maintaining cache coherency by allocating DMA buffers in non-cacheable SRAM region defined by MPU|
 |||
 ____
 
