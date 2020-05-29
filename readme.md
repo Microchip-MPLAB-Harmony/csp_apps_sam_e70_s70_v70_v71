@@ -54,6 +54,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Reset Controller interrupt generation example (led_switcher)](apps/rstc/led_switcher/readme.md) | This example application demonstrates how to use the RSTC peripheral to generate an interrupt instead of generating a reset, when the Reset switch is pressed on board |
 |[Reinforced Safety Watchdog Timer (RSWDT) timeout application example (rswdt_timeout)](apps/rswdt/rswdt_timeout/readme.md) | This example demonstrates Reinforced Safety Watchdog Timer reset by emulating a deadlock |
 |[Real Time Clock (RTC) Alarm generation application example (rtc_alarm)](apps/rtc/rtc_alarm/readme.md) | This example application shows how to use the RTC to configure the time and generate the alarm |
+|[Real Time Timer (RTT) periodic timer example (rtt_periodic_timeout)](apps/rtt/rtt_periodic_timeout/readme.md) | This example application shows how to use the RTT to generate periodic interrupts |
 |||
 ____
 
