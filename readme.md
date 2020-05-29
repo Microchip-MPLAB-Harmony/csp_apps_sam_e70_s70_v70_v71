@@ -46,6 +46,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Controller Area Network normal blocking operation example (mcan_normal_operation_blocking)](apps/mcan/mcan_normal_operation_blocking/readme.md) | This example application shows how to use the MCAN module to transmit and receive normal CAN messages in polling mode|
 |[Memory Protection Unit (MPU) cache coherent memory example(mpu_coherent_regions)](apps/mpu/mpu_coherent_region/readme.md) | This example demonstrates maintaining cache coherency by allocating DMA buffers in non-cacheable SRAM region defined by MPU|
 |[Parallel Input/Output Controller LED on/off using interrupt example (pio_led_on_off_interrupt)](apps/pio/pio_led_on_off_interrupt/readme.md) | This example application demonstrate how to generate GPIO interrupt on switch press and release, and indicate the switch status using the LED|
+|[Parallel Input/Output Controller LED on/off using polling example (pio_led_on_off_polling)](apps/pio/pio_led_on_off_polling/readme.md) | TThis example application demonstrate how to poll the switch input, and indicate the switch status using the LED|
 |||
 ____
 
