@@ -43,6 +43,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Embedded Flash Controller flash read write example (flash_read_write)](apps/efc/flash_read_write/readme.md) | This example application demonstrates how to use the EFC to erase and program the internal Flash memory|
 |[Controller Area Network fd blocking operation example (mcan_fd_operation_blocking)](apps/mcan/mcan_fd_operation_blocking/readme.md) | This example application shows how to use the MCAN module to transmit and receive CAN FD messages in polling mode|
 |[Controller Area Network fd interrupt operation timestamp example (mcan_fd_operation_interrupt_timestamp)](apps/mcan/mcan_fd_operation_interrupt_timestamp/readme.md) | This example application shows how to use the MCAN module to transmit and receive CAN FD messages in interrupt mode|
+|[Controller Area Network normal blocking operation example (mcan_normal_operation_blocking)](apps/mcan/mcan_normal_operation_blocking/readme.md) | This example application shows how to use the MCAN module to transmit and receive normal CAN messages in polling mode|
 |||
 ____
 
