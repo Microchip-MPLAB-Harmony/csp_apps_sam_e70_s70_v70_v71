@@ -62,6 +62,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[SPI self loopback data transfer in blocking mode example (spi_self_loopback_blocking)](apps/spi/spi_self_loopback_blocking/readme.md) | This example application demonstrates how to use the SPI peripheral to transmit and receive a block of data in a blocking manner |
 |[SPI self loopback data transfer in interrupt mode example (spi_self_loopback_interrupt)](apps/spi/spi_self_loopback_interrupt/readme.md) | This example application demonstrates how to use the SPI peripheral to transmit and receive a block of data using interrupts |
 |[Supply Controller (SUPC) entering low power mode and exiting using RTC example (supc_wakeup_rtc)](apps/supc/supc_wakeup_rtc/readme.md) | This example demonstrates entering different low power modes and exiting it using the RTC alarm |
+|[Supply Controller (SUPC) entering low power mode and exiting using RTT example (supc_wakeup_rtt)](apps/supc/supc_wakeup_rtt/readme.md) | This example demonstrates entering different low power modes and exiting it using the RTT alarm |
 |||
 ____
 
