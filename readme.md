@@ -48,6 +48,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Parallel Input/Output Controller LED on/off using interrupt example (pio_led_on_off_interrupt)](apps/pio/pio_led_on_off_interrupt/readme.md) | This example application demonstrate how to generate GPIO interrupt on switch press and release, and indicate the switch status using the LED|
 |[Parallel Input/Output Controller LED on/off using polling example (pio_led_on_off_polling)](apps/pio/pio_led_on_off_polling/readme.md) | This example application demonstrate how to poll the switch input, and indicate the switch status using the LED|
 |[Pulse width modulation 3 phase waveform generation using synchronous channels (pwm_synchronous_channels)](apps/pwm/pwm_synchronous_channels/readme.md) | This example demonstrates how to use the PWM peripheral to generate 3-phase PWM signals with dead time |
+|[Quad Serial Peripheral Interface (QSPI) flash read write example (qspi_read_write)](apps/qspi/qspi_read_write/readme.md) | This example application demonstrates how to use the QSPI Peripheral library to perform erase, write and read operation with the QSPI Serial Flash memory in Quad IO mode |
 |||
 ____
 
