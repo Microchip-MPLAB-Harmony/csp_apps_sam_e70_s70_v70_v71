@@ -50,6 +50,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Pulse width modulation 3 phase waveform generation using synchronous channels (pwm_synchronous_channels)](apps/pwm/pwm_synchronous_channels/readme.md) | This example demonstrates how to use the PWM peripheral to generate 3-phase PWM signals with dead time |
 |[Quad Serial Peripheral Interface (QSPI) flash read write example (qspi_read_write)](apps/qspi/qspi_read_write/readme.md) | This example application demonstrates how to use the QSPI Peripheral library to perform erase, write and read operation with the QSPI Serial Flash memory in Quad IO mode |
 |[Quad Serial Peripheral Interface (QSPI) flash XIP example (qspi_xip)](apps/qspi/qspi_xip/readme.md) | This example application demonstrates how to setup the QSPI Flash in the XIP mode to execute code from the serial Flash memory |
+|[Quad Serial Peripheral Interface (QSPI) flash read write in SPI mode example (spi_read_write)](apps/qspi/spi_read_write/readme.md) | This example application demonstrates how to use the QSPI Peripheral library to perform erase, write and read operation with the QSPI Serial Flash memory in SPI mode |
 |||
 ____
 
