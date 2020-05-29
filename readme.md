@@ -55,6 +55,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Reinforced Safety Watchdog Timer (RSWDT) timeout application example (rswdt_timeout)](apps/rswdt/rswdt_timeout/readme.md) | This example demonstrates Reinforced Safety Watchdog Timer reset by emulating a deadlock |
 |[Real Time Clock (RTC) Alarm generation application example (rtc_alarm)](apps/rtc/rtc_alarm/readme.md) | This example application shows how to use the RTC to configure the time and generate the alarm |
 |[Real Time Timer (RTT) periodic timer example (rtt_periodic_timeout)](apps/rtt/rtt_periodic_timeout/readme.md) | This example application shows how to use the RTT to generate periodic interrupts |
+|[SDRAM read write application example (sdramc_read_write)](apps/sdramc/sdramc_read_write/readme.md) | This example application demonstrates how to configure the external SDRAM using SDRAM controller to write and read data |
 |||
 ____
 
