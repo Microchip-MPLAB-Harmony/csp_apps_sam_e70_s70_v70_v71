@@ -57,6 +57,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Real Time Timer (RTT) periodic timer example (rtt_periodic_timeout)](apps/rtt/rtt_periodic_timeout/readme.md) | This example application shows how to use the RTT to generate periodic interrupts |
 |[SDRAM read write application example (sdramc_read_write)](apps/sdramc/sdramc_read_write/readme.md) | This example application demonstrates how to configure the external SDRAM using SDRAM controller to write and read data |
 |[SDRAM read write performance application example (sdramc_read_write_perf)](apps/sdramc/sdramc_read_write_perf/readme.md) | This example application demonstrates how to configure the SDRAM interface and measures the read/write throughput with DMA |
+|[SPI Controller EEPROM read write example (spi_eeprom_write_read)](apps/spi/spi_eeprom_write_read/readme.md) | This example application demonstrates how to use the SPI peripheral to write and read from the SPI serial EEPROM memory |
 |||
 ____
 
