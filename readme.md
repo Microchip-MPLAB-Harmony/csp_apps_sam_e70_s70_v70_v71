@@ -66,6 +66,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Supply Controller (SUPC) entering low power mode and exiting using WKUP example (supc_wakeup_wkup)](apps/supc/supc_wakeup_wkup/readme.md) | This example demonstrates entering different low power modes and exiting it using the WKUP pin |
 |[SysTick periodic timer example (systick_periodic_timeout)](apps/systick/systick_periodic_timeout/readme.md) | This example application shows how to use the SysTick to generate periodic interrupts |
 |[Timer Counter (TC) capture mode example  (tc_capture_mode)](apps/tc/tc_capture_mode/readme.md) | This example demonstrates how to use the TC module in capture mode to measure duty cycle and frequency of an external input |
+|[Timer Counter (TC) compare mode example (tc_compare_mode)](apps/tc/tc_compare_mode/readme.md) | This example demonstrates how to use the TC module in compare mode to generate an active low, active high, and toggle output on compare match |
 |||
 ____
 
