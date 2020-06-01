@@ -74,6 +74,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Universal Synchronous/Asynchronous Receiver Transmitter (USART) echo blocking application example (usart_echo_blocking)](apps/usart/usart_echo_blocking/readme.md) | This example application demonstrates how to use the USART peripheral to transfer a block of data in a blocking manner |
 |[Universal Synchronous/Asynchronous Receiver Transmitter (USART) echo interrupt application example (usart_echo_interrupt)](apps/usart/usart_echo_interrupt/readme.md) | This example application demonstrates how to use the USART peripheral to transfer a block of data in a non-blocking manner |
 |[Universal Synchronous/Asynchronous Receiver Transmitter (USART) application example using ring buffer (usart_ring_buffer_interrupt)](apps/usart/usart_ring_buffer_interrupt/readme.md) | This example application demonstrates how to use the USART peripheral in ring buffer mode |
+|[Watchdog Timer (WDT) timeout application example (wdt_timeout)](apps/wdt/wdt_timeout/readme.md) | This example demonstrates Watchdog Timer reset by emulating a deadlock |
 |||
 ____
 
