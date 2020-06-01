@@ -68,6 +68,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Timer Counter (TC) capture mode example  (tc_capture_mode)](apps/tc/tc_capture_mode/readme.md) | This example demonstrates how to use the TC module in capture mode to measure duty cycle and frequency of an external input |
 |[Timer Counter (TC) compare mode example (tc_compare_mode)](apps/tc/tc_compare_mode/readme.md) | This example demonstrates how to use the TC module in compare mode to generate an active low, active high, and toggle output on compare match |
 |[Timer Counter (TC) timer mode example (tc_timer_mode)](apps/tc/tc_timer_mode/readme.md) | This example demonstrates how to use the TC module in timer mode to generate periodic interrupt |
+|[Tightly Coupled Memory (TCM) application example (data_tcm)](apps/tcm/data_tcm/readme.md) | This example demonstrates maintaining cache coherency by allocating the DMA buffers in the Tightly Coupled Memory (TCM), which are not cacheable |
 |||
 ____
 
