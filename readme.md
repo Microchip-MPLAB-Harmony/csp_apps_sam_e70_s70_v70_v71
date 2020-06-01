@@ -71,6 +71,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Tightly Coupled Memory (TCM) application example (data_tcm)](apps/tcm/data_tcm/readme.md) | This example demonstrates maintaining cache coherency by allocating the DMA buffers in the Tightly Coupled Memory (TCM), which are not cacheable |
 |[True Random Number Generator (TRNG) application example (random_number)](apps/trng/random_number/readme.md) | This example application shows how to use the TRNG Peripheral library to generate and read a random number |
 |[Two Wire Interface (TWIHS) EEPROM read write example (twihs_eeprom)](apps/twihs/master/twihs_eeprom/readme.md) | This example application demonstrates how to use the TWIHS peripheral to write and read from the I2C serial EEPROM memory |
+|[Universal Synchronous/Asynchronous Receiver Transmitter (USART) echo blocking application example (usart_echo_blocking)](apps/usart/usart_echo_blocking/readme.md) | This example application demonstrates how to use the USART peripheral to transfer a block of data in a blocking manner |
 |||
 ____
 
