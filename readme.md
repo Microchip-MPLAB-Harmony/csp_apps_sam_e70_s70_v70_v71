@@ -70,6 +70,7 @@ The following applications are provided to demonstrate the typical or interestin
 |[Timer Counter (TC) timer mode example (tc_timer_mode)](apps/tc/tc_timer_mode/readme.md) | This example demonstrates how to use the TC module in timer mode to generate periodic interrupt |
 |[Tightly Coupled Memory (TCM) application example (data_tcm)](apps/tcm/data_tcm/readme.md) | This example demonstrates maintaining cache coherency by allocating the DMA buffers in the Tightly Coupled Memory (TCM), which are not cacheable |
 |[True Random Number Generator (TRNG) application example (random_number)](apps/trng/random_number/readme.md) | This example application shows how to use the TRNG Peripheral library to generate and read a random number |
+|[Two Wire Interface (TWIHS) EEPROM read write example (twihs_eeprom)](apps/twihs/master/twihs_eeprom/readme.md) | This example application demonstrates how to use the TWIHS peripheral to write and read from the I2C serial EEPROM memory |
 |||
 ____
 
