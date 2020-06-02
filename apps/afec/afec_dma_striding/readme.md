@@ -1,13 +1,14 @@
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# Analog Front-End Controller DMA striding Example (afec_dma_striding)
+# AFEC with DMA
 
-This example demonstrates taking 100 samples of three analog inputs at a 5 KHz sampling rate in triggered conversion mode and then sorting the data by an analog channel using XDMAC.
+This example uses AFEC peripheral Library to sample multiple ADC channels using DMA striding.
 
 ## Description
 
-Conversion of the three analog inputs (AD0, AD5, AD6) is triggered by the TC peripheral every 200 us. The ADC results are copied to buffer using DMA. Data striding feature of XDMAC is used to store the ADC results by analog channel number. The console displays the ADC results of all the three channels.
+This example takes 100 samples of three analog inputs at a 5 KHz sampling rate in triggered conversion mode and then sort the data by an analog channel using XDMAC.
 
+Conversion of the three analog inputs (AD0, AD5, AD6) is triggered by the TC peripheral every 200 us. The ADC results are copied to buffer using DMA. Data striding feature of XDMAC is used to store the ADC results by analog channel number. The console displays the ADC results of all the three channels.
 
 ## Downloading and building the application
 
@@ -17,12 +18,13 @@ To download or clone this application from Github, go to the [top level of the r
 
 Path of the application within the repository is **apps/afec/afec_dma_striding/firmware** .
 
-To build the application, refer to the following table and open the project in their respective IDEs.
+To build the application, refer to the following table and open the project using its IDE.
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | sam_e70_xult.X    | MPLABX Project for [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
-| sam_v71_xult.X    | MPLABX Project for  [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|        |
+| sam_v71_xult.X    | MPLABX Project for  [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|||
 
 ## Setting up the hardware
 
@@ -30,14 +32,15 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-|sam_e70_xult.X|[![sam_e70_xult](https://www.microchip.com/_ImagedCopy/180730-MCU32-PHOTO-DM320113-Angle-7x5.jpg)](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
-|sam_v71_xult.X|[![sam_v71_xult](https://www.microchip.com/_ImagedCopy/ATSAMV71-XULT_angle.jpg)](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|sam_e70_xult.X | [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
+|sam_v71_xult.X | [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|||
 
 ### Setting up [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
 - Analog input (AD0) is fed from DAC output. Sine wave output is generated on the DAC output using 100 point lookup table.
   - Analog input "AD0" is mapped to Port Pin "PB1" that is routed to "Pin 14 of the EXT1 header"
-  - The DAC output "DAC0" is mapped to Port Pin "PB13" that is routed to "Pin 5 of the J502 header"
+  - DAC output "DAC0" is mapped to Port Pin "PB13" that is routed to "Pin 5 of the J502 header"
   - Use jumper wire to Connect "Pin 14 of the EXT1" to "Pin 5 of the J502"
 - Analog input (AD5) is connected to Vcc, or the user can supply input from an external source
   - Analog input "AD5" is mapped to Port Pin "PC30" that is routed to "Pin 8 of the EXT1 header"
@@ -51,7 +54,7 @@ The following table shows the target hardware for the application projects.
 
 - Analog input (AD0) is fed from DAC output. Sine wave output is generated on the DAC output using 100 point lookup table.
   - Analog input "AD0" is mapped to Port Pin "PB1" that is routed to "Pin 14 of the EXT1 header"
-  - The DAC output "DAC0" is mapped to Port Pin "PB13" that is routed to "Pin 5 of the J502 header"
+  - DAC output "DAC0" is mapped to Port Pin "PB13" that is routed to "Pin 5 of the J502 header"
   - Use jumper wire to Connect "Pin 14 of the EXT1" to "Pin 5 of the J502"
 - Analog input (AD5) is connected to Vcc, or the user can supply input from an external source
   - Analog input "AD5" is mapped to Port Pin "PC30" that is routed to "Pin 8 of the EXT1 header"
@@ -70,7 +73,7 @@ The following table shows the target hardware for the application projects.
     - Parity : None
     - Stop : 1 Bit
     - Flow Control : None
-3. Build and Program the project using their respective IDEs
+3. Build and Program the project using its respective IDE
 4. Console displays 100 samples of the ADC count and the respective input voltages for all three channels
 
 ![output](images/output_afec_dma_striding.png)

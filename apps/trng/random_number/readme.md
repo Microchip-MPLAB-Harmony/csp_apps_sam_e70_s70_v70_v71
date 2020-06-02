@@ -1,8 +1,8 @@
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# True Random Number Generator (TRNG) application example (random_number)
+# TRNG random number
 
-This example application shows how to use the TRNG Peripheral library to generate and read a random number.
+This example shows how to use the TRNG Peripheral library to generate and read a random number.
 
 ## Description
 
@@ -16,12 +16,13 @@ To download or clone this application from Github, go to the [top level of the r
 
 Path of the application within the repository is **apps/trng/random_number/firmware** .
 
-To build the application, refer to the following table and open the project in their respective IDEs.
+To build the application, refer to the following table and open the project using its IDE.
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | sam_e70_xult.X    | MPLABX Project for [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
-| sam_v71_xult.X    | MPLABX Project for  [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|        |
+| sam_v71_xult.X    | MPLABX Project for  [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|||
 
 ## Setting up the hardware
 
@@ -29,8 +30,9 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-|sam_e70_xult.X|[![sam_e70_xult](https://www.microchip.com/_ImagedCopy/180730-MCU32-PHOTO-DM320113-Angle-7x5.jpg)](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
-|sam_v71_xult.X|[![sam_v71_xult](https://www.microchip.com/_ImagedCopy/ATSAMV71-XULT_angle.jpg)](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|sam_e70_xult.X | [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
+|sam_v71_xult.X | [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|||
 
 ### Setting up [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
@@ -49,7 +51,7 @@ The following table shows the target hardware for the application projects.
     - Parity : None
     - Stop : 1 Bit
     - Flow Control : None
-3. Build and program the application using its respective IDE
+3. Build and program the application using its IDE
 4. The console displays the following message
 
     ![output](images/output_trng_random_number_1.png)
@@ -64,3 +66,4 @@ The following table shows the target hardware for the application projects.
 | ----------------- | ---------------------------------------------- |
 | [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    |SW0 |
 | [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)      |SW0 |
+|||

@@ -1,8 +1,8 @@
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# SysTick periodic timer example (systick_periodic_timeout)
+# SysTick periodic interrupt
 
-This example application shows how to use the SysTick to generate periodic interrupts.
+This example shows how to use the SysTick to generate periodic interrupts.
 
 ## Description
 
@@ -16,12 +16,13 @@ To download or clone this application from Github, go to the [top level of the r
 
 Path of the application within the repository is **apps/systick/systick_periodic_timeout/firmware** .
 
-To build the application, refer to the following table and open the project in their respective IDEs.
+To build the application, refer to the following table and open the project using its IDE.
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | sam_e70_xult.X    | MPLABX Project for [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
-| sam_v71_xult.X    | MPLABX Project for  [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|        |
+| sam_v71_xult.X    | MPLABX Project for  [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|||
 
 ## Setting up the hardware
 
@@ -29,8 +30,9 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-|sam_e70_xult.X|[![sam_e70_xult](https://www.microchip.com/_ImagedCopy/180730-MCU32-PHOTO-DM320113-Angle-7x5.jpg)](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
-|sam_v71_xult.X|[![sam_v71_xult](https://www.microchip.com/_ImagedCopy/ATSAMV71-XULT_angle.jpg)](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|sam_e70_xult.X | [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
+|sam_v71_xult.X | [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|||
 
 ### Setting up [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
@@ -42,7 +44,7 @@ The following table shows the target hardware for the application projects.
 
 ## Running the Application
 
-1. Build and Program the application project using its respective IDE
+1. Build and Program the application project using its IDE
 2. The LED blinks continuously
 
 The following table provides the LED name
@@ -51,3 +53,4 @@ The following table provides the LED name
 | ----------------- | ---------- |
 | [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    | LED1 |
 | [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)      | LED0 |
+|||

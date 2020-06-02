@@ -1,8 +1,8 @@
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# Timer Counter (TC) capture mode example  (tc_capture_mode)
+# TC capture mode
 
-This example demonstrates how to use the TC module in capture mode to measure duty cycle and frequency of an external input.
+This example shows how to use the TC module in capture mode to measure duty cycle and frequency of an external input.
 
 ## Description
 
@@ -16,12 +16,13 @@ To download or clone this application from Github, go to the [top level of the r
 
 Path of the application within the repository is **apps/tc/tc_capture_mode/firmware** .
 
-To build the application, refer to the following table and open the project in their respective IDEs.
+To build the application, refer to the following table and open the project using its IDE.
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | sam_e70_xult.X    | MPLABX Project for [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
-| sam_v71_xult.X    | MPLABX Project for  [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|        |
+| sam_v71_xult.X    | MPLABX Project for  [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|||
 
 ## Setting up the hardware
 
@@ -29,8 +30,9 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-|sam_e70_xult.X|[![sam_e70_xult](https://www.microchip.com/_ImagedCopy/180730-MCU32-PHOTO-DM320113-Angle-7x5.jpg)](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
-|sam_v71_xult.X|[![sam_v71_xult](https://www.microchip.com/_ImagedCopy/ATSAMV71-XULT_angle.jpg)](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|sam_e70_xult.X | [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
+|sam_v71_xult.X | [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|||
 
 ### Setting up [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
@@ -55,7 +57,7 @@ The following table shows the target hardware for the application projects.
     - Parity : None
     - Stop : 1 Bit
     - Flow Control : None
-3. Build and Program the application using its respective IDE
+3. Build and Program the application using its IDE
 4. Console displays the frequency and duty cycle of the input signal
 5. Frequency is constant (2500 Hz) and duty cycle changes by 1%
 

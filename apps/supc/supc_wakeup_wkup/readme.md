@@ -1,8 +1,8 @@
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# Supply Controller (SUPC) entering low power mode and exiting using WKUP pin example (supc_wakeup_wkup)
+# SUPC wakeup using WKUP pin
 
-This example demonstrates entering different low power modes and exiting it using the wake up pin.
+his example shows how to enter different low power modes and exit it using WKUP pin.
 
 ## Description
 
@@ -16,11 +16,13 @@ To download or clone this application from Github, go to the [top level of the r
 
 Path of the application within the repository is **apps/supc/supc_wakeup_rtt/firmware** .
 
-To build the application, refer to the following table and open the project in their respective IDEs.
+To build the application, refer to the following table and open the project using its IDE.
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| sam_e70_xult.X    | MPLABX Project for [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|     |
+| sam_e70_xult.X    | MPLABX Project for [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
+| sam_v71_xult.X    | MPLABX Project for  [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|||
 
 ## Setting up the hardware
 
@@ -28,7 +30,9 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-|sam_e70_xult.X|[![sam_e70_xult](https://www.microchip.com/_ImagedCopy/180730-MCU32-PHOTO-DM320113-Angle-7x5.jpg)](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
+|sam_e70_xult.X | [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
+|sam_v71_xult.X | [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|||
 
 ### Setting up [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
@@ -43,7 +47,7 @@ The following table shows the target hardware for the application projects.
     - Parity : None
     - Stop : 1 Bit
     - Flow Control : None
-3. Build and Program the application project using its respective IDE
+3. Build and Program the application project using its IDE
 4. On board LED starts blinking
 5. See the following message in the console
 
@@ -60,4 +64,4 @@ Following table lists the name of LED and switch used on the target board
 | Board | LED  | Switch |
 | ----- | --------- |----- |
 | [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    |LED1 | SW0 |
-
+|||

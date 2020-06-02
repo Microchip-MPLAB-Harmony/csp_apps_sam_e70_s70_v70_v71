@@ -1,8 +1,8 @@
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# Pulse width modulation 3 phase waveform generation using synchronous channels (pwm_synchronous_channels)
+# PWM Generation
 
-This example demonstrates how to use the PWM peripheral to generate 3-phase PWM signals with dead time.
+This example shows how to use the PWM peripheral to generate 3-phase PWM signals with dead time.
 
 ## Description
 
@@ -16,12 +16,13 @@ To download or clone this application from Github, go to the [top level of the r
 
 Path of the application within the repository is **apps/pwm/pwm_synchronous_channels/firmware** .
 
-To build the application, refer to the following table and open the project in their respective IDEs.
+To build the application, refer to the following table and open the project using its IDE.
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | sam_e70_xult.X    | MPLABX Project for [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
-| sam_v71_xult.X    | MPLABX Project for  [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|        |
+| sam_v71_xult.X    | MPLABX Project for  [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|||
 
 ## Setting up the hardware
 
@@ -29,8 +30,9 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-|sam_e70_xult.X|[![sam_e70_xult](https://www.microchip.com/_ImagedCopy/180730-MCU32-PHOTO-DM320113-Angle-7x5.jpg)](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
-|sam_v71_xult.X|[![sam_v71_xult](https://www.microchip.com/_ImagedCopy/ATSAMV71-XULT_angle.jpg)](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|sam_e70_xult.X | [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)|
+|sam_v71_xult.X | [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)|
+|||
 
 ### Setting up [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
@@ -44,6 +46,11 @@ The following table shows the target hardware for the application projects.
 
 1. Build and Program the application using their respective IDEs
 2. Observe the high-side and low-side PWM waveforms on the oscilloscope
+3. Observe the dead time between the high side and low side
+
+    ![output](images/output_pwm_synchronous_channels.png)
+
+Refer to the below table for PWM output pins for different boards:
 
 | PWM Channel      | [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113) | [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult) |
 | ---------|---------------------- | ---------------------|
@@ -53,6 +60,4 @@ The following table shows the target hardware for the application projects.
 | CH1_PWML | PD25 (Pin 15 of EXT1) | D25 (Pin 15 of EXT1) |
 | CH2_PWMH | PC19 (Pin 7 of EXT2)  | PC19 (Pin 7 of EXT2) |
 
-3. Observe the dead time between the high side and low side
 
-![output](images/output_pwm_synchronous_channels.png)
