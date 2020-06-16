@@ -51,7 +51,7 @@ The following table shows the target hardware for the application projects.
     - Parity : None
     - Stop : 1 Bit
     - Flow Control : None
-3. Build and Program the application project using its respective IDE
+3. Build and Program the application project using its IDE
 4. The console displays the following message upon successful execution of the application
 
 ![output](images/output_sdramc_read_write.png)

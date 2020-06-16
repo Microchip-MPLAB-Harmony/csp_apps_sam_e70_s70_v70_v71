@@ -51,9 +51,11 @@ The following table shows the target hardware for the application projects.
     - Parity : None
     - Stop : 1 Bit
     - Flow Control : None
-3. Build and Program the application using their respective IDEs
+3. Build and Program the application using its IDE
 4. The console displays the following message
-  ![output](images/output_mpu_coherent_region.png)
+
+    ![output](images/output_mpu_coherent_region.png)
+
 5. Type 10 characters in the terminal. It will echo back the received bytes and toggles the LED
 6. The following table provides the LED names
 

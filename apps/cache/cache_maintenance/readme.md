@@ -61,7 +61,9 @@ The following table shows the target hardware for the application projects.
     - Flow Control : None
 3. Build and Program the application using its respective IDE
 4. The console displays the following message
+
     ![output](images/cache_maintenance_output.png)
+
 5. Type 10 characters in the terminal. It will echo back the received bytes and toggles the LED
 6. The following table provides the LED names
 

@@ -44,7 +44,7 @@ The following table shows the target hardware for the application projects.
 
 ## Running the Application
 
-1. Build and Program the application using their respective IDEs
+1. Build and Program the application using its IDE
 2. LED is turned ON when the switch is pressed and turned OFF when the switch is released
 
 | Board      | Switch Name | LED Name Name

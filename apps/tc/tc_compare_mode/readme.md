@@ -8,6 +8,12 @@ This example shows how to use the TC module in compare mode to generate an activ
 
 Three TC channels are configured in compare mode. Each channel generates different output waveform depending upon configured action on compare match and period match.
 
+**Active low output**: Output is set high on compare match A and is set low on compare match C.
+
+**Active high output**: Output is set low on compare match A and is set high on compare match C.
+
+**Toggle output**: Output toggles on compare match A.
+
 ## Downloading and building the application
 
 To download or clone this application from Github, go to the [top level of the repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71) and click

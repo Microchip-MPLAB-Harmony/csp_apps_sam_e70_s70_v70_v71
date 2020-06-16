@@ -59,5 +59,4 @@ Refer to the below table for PWM output pins for different boards:
 | CH1_PWMH | PA02 (Pin 9 of EXT2)  | PA02 (Pin 9 of EXT2) |
 | CH1_PWML | PD25 (Pin 15 of EXT1) | D25 (Pin 15 of EXT1) |
 | CH2_PWMH | PC19 (Pin 7 of EXT2)  | PC19 (Pin 7 of EXT2) |
-
-
+| CH2_PWMH | PD26 (Pin 8 of EXT2)  | PD26 (Pin 8 of EXT2) |

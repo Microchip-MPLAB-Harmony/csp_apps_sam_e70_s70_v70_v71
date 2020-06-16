@@ -51,8 +51,8 @@ The following table shows the target hardware for the application projects.
 
 The following table provides the LED name
 
-| Board      | Switch Name | LED Name Name
-| ----------------- | ---------- | ---------- |
-| [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    | SW0 | LED1 |
-| [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)      |SW0  | LED0 |
+| Board      | LED Name Name |
+| ---------- | ------------- |
+| [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113) | LED1 |
+| [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)   | LED0 |
 |||
