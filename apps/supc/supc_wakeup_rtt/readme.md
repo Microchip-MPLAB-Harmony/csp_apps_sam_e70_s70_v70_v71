@@ -73,8 +73,9 @@ The following table shows the target hardware for the application projects.
         ![output_4](images/output_supc_wakeup_rtt_4.png)
 
 Following table lists the name of LED used on the target board
+
 | Board | LED  |
 | ----- | --------- |
-| [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    |LED1 |
-| [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)      |LED0 |
+| [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    | LED1 |
+| [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)      | LED0 |
 |||
