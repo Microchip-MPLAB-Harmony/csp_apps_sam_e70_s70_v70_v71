@@ -66,20 +66,20 @@
 #define SWITCH_Set()               (PIOA_REGS->PIO_SODR = (1<<9))
 #define SWITCH_Clear()             (PIOA_REGS->PIO_CODR = (1<<9))
 #define SWITCH_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<9))
-#define SWITCH_Get()               ((PIOA_REGS->PIO_PDSR >> 9) & 0x1)
 #define SWITCH_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<9))
 #define SWITCH_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<9))
+#define SWITCH_Get()               ((PIOA_REGS->PIO_PDSR >> 9) & 0x1)
+#define SWITCH_PIN                  PIO_PIN_PA9
 #define SWITCH_InterruptEnable()   (PIOA_REGS->PIO_IER = (1<<9))
 #define SWITCH_InterruptDisable()  (PIOA_REGS->PIO_IDR = (1<<9))
-#define SWITCH_PIN                  PIO_PIN_PA9
 
 /*** Macros for GPIO_PC10 pin ***/
 #define GPIO_PC10_Set()               (PIOC_REGS->PIO_SODR = (1<<10))
 #define GPIO_PC10_Clear()             (PIOC_REGS->PIO_CODR = (1<<10))
 #define GPIO_PC10_Toggle()            (PIOC_REGS->PIO_ODSR ^= (1<<10))
-#define GPIO_PC10_Get()               ((PIOC_REGS->PIO_PDSR >> 10) & 0x1)
 #define GPIO_PC10_OutputEnable()      (PIOC_REGS->PIO_OER = (1<<10))
 #define GPIO_PC10_InputEnable()       (PIOC_REGS->PIO_ODR = (1<<10))
+#define GPIO_PC10_Get()               ((PIOC_REGS->PIO_PDSR >> 10) & 0x1)
 #define GPIO_PC10_PIN                  PIO_PIN_PC10
 
 
