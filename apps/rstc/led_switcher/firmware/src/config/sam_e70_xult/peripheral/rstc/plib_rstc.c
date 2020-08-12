@@ -1,5 +1,5 @@
 /*******************************************************************************
-  Reset Controller (RSTC) Peripheral Library(PLIB) Source file 
+  Reset Controller (RSTC) Peripheral Library(PLIB) Source file
 
   Company:
     Microchip Technology Inc.
@@ -53,11 +53,11 @@ void RSTC_Initialize (void)
 
 void RSTC_Reset (RSTC_RESET_TYPE type)
 {
-	/* Issue reset command 				*/
-    RSTC_REGS->RSTC_CR = RSTC_CR_KEY_PASSWD | type; 
-	
+    /* Issue reset command              */
+    RSTC_REGS->RSTC_CR = RSTC_CR_KEY_PASSWD | type;
+
     /*Wait for processing reset command */
-    while (RSTC_REGS->RSTC_SR& (uint32_t) RSTC_SR_SRCMP_Msk);  
+    while (RSTC_REGS->RSTC_SR& (uint32_t) RSTC_SR_SRCMP_Msk);
 }
 
 RSTC_RESET_CAUSE RSTC_ResetCauseGet (void)
@@ -76,12 +76,12 @@ void RSTC_CallbackRegister (RSTC_CALLBACK callback, uintptr_t context)
 
 void RSTC_InterruptHandler( void )
 {
-	// Clear the interrupt flag
-	RSTC_REGS->RSTC_SR;
+    // Clear the interrupt flag
+    RSTC_REGS->RSTC_SR;
 
-	// Callback user function
-	if(rstcObj.callback != NULL)
-	{
-        rstcObj.callback(rstcObj.context);		
-	}
+    // Callback user function
+    if(rstcObj.callback != NULL)
+    {
+        rstcObj.callback(rstcObj.context);
+    }
 }
