@@ -66,18 +66,18 @@
 #define LED_Set()               (PIOA_REGS->PIO_SODR = (1<<23))
 #define LED_Clear()             (PIOA_REGS->PIO_CODR = (1<<23))
 #define LED_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<23))
-#define LED_Get()               ((PIOA_REGS->PIO_PDSR >> 23) & 0x1)
 #define LED_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<23))
 #define LED_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<23))
+#define LED_Get()               ((PIOA_REGS->PIO_PDSR >> 23) & 0x1)
 #define LED_PIN                  PIO_PIN_PA23
 
 /*** Macros for SWITCH pin ***/
 #define SWITCH_Set()               (PIOA_REGS->PIO_SODR = (1<<9))
 #define SWITCH_Clear()             (PIOA_REGS->PIO_CODR = (1<<9))
 #define SWITCH_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<9))
-#define SWITCH_Get()               ((PIOA_REGS->PIO_PDSR >> 9) & 0x1)
 #define SWITCH_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<9))
 #define SWITCH_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<9))
+#define SWITCH_Get()               ((PIOA_REGS->PIO_PDSR >> 9) & 0x1)
 #define SWITCH_PIN                  PIO_PIN_PA9
 
 
