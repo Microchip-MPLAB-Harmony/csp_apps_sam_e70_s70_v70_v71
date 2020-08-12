@@ -13,7 +13,7 @@
   Description
 
   Remarks:
-    
+
 *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
@@ -212,7 +212,7 @@ void QSPI_CallbackRegister (QSPI_CALLBACK callback, uintptr_t context)
     qspiObj.context = context;
 }
 
-bool QSPI_IsBusy()
+bool QSPI_IsBusy(void)
 {
     return ((qspiObj.transferIsBusy) || ((QSPI_REGS->QSPI_SR & QSPI_SR_TXEMPTY_Msk ) == 0));
 }

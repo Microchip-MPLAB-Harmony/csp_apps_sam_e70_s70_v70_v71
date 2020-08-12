@@ -66,36 +66,36 @@
 #define HOLD_Set()               (PIOD_REGS->PIO_SODR = (1<<31))
 #define HOLD_Clear()             (PIOD_REGS->PIO_CODR = (1<<31))
 #define HOLD_Toggle()            (PIOD_REGS->PIO_ODSR ^= (1<<31))
-#define HOLD_Get()               ((PIOD_REGS->PIO_PDSR >> 31) & 0x1)
 #define HOLD_OutputEnable()      (PIOD_REGS->PIO_OER = (1<<31))
 #define HOLD_InputEnable()       (PIOD_REGS->PIO_ODR = (1<<31))
+#define HOLD_Get()               ((PIOD_REGS->PIO_PDSR >> 31) & 0x1)
 #define HOLD_PIN                  PIO_PIN_PD31
 
 /*** Macros for WRITE_PROTECT pin ***/
 #define WRITE_PROTECT_Set()               (PIOA_REGS->PIO_SODR = (1<<17))
 #define WRITE_PROTECT_Clear()             (PIOA_REGS->PIO_CODR = (1<<17))
 #define WRITE_PROTECT_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<17))
-#define WRITE_PROTECT_Get()               ((PIOA_REGS->PIO_PDSR >> 17) & 0x1)
 #define WRITE_PROTECT_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<17))
 #define WRITE_PROTECT_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<17))
+#define WRITE_PROTECT_Get()               ((PIOA_REGS->PIO_PDSR >> 17) & 0x1)
 #define WRITE_PROTECT_PIN                  PIO_PIN_PA17
 
 /*** Macros for CHIP_SELECT pin ***/
 #define CHIP_SELECT_Set()               (PIOA_REGS->PIO_SODR = (1<<11))
 #define CHIP_SELECT_Clear()             (PIOA_REGS->PIO_CODR = (1<<11))
 #define CHIP_SELECT_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<11))
-#define CHIP_SELECT_Get()               ((PIOA_REGS->PIO_PDSR >> 11) & 0x1)
 #define CHIP_SELECT_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<11))
 #define CHIP_SELECT_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<11))
+#define CHIP_SELECT_Get()               ((PIOA_REGS->PIO_PDSR >> 11) & 0x1)
 #define CHIP_SELECT_PIN                  PIO_PIN_PA11
 
 /*** Macros for LED pin ***/
 #define LED_Set()               (PIOA_REGS->PIO_SODR = (1<<5))
 #define LED_Clear()             (PIOA_REGS->PIO_CODR = (1<<5))
 #define LED_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<5))
-#define LED_Get()               ((PIOA_REGS->PIO_PDSR >> 5) & 0x1)
 #define LED_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<5))
 #define LED_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<5))
+#define LED_Get()               ((PIOA_REGS->PIO_PDSR >> 5) & 0x1)
 #define LED_PIN                  PIO_PIN_PA5
 
 
