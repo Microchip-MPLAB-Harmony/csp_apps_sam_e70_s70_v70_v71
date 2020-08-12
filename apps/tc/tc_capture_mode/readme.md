@@ -61,4 +61,10 @@ The following table shows the target hardware for the application projects.
 4. Console displays the frequency and duty cycle of the input signal
 5. Frequency is constant (2500 Hz) and duty cycle changes by 1%
 
-  ![output](images/output_tc_capture_mode.png)
+    - [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
+
+    ![output](images/e70_output_tc_capture_mode.png)
+
+    - [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)
+
+    ![output](images/v71_output_tc_capture_mode.png)
