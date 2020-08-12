@@ -1,6 +1,6 @@
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# SPI EEPROM read write
+# SPI EEPROM write read
 
 This example shows how to use the SPI peripheral to write and read from the SPI serial EEPROM memory.
 
@@ -57,6 +57,6 @@ The following table provides the LED name.
 
 | Board      | LED |
 | ----------------- | ---------------------------------------------- |
-| [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    | LED1 |
+| [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)    | LED2 |
 | [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)      | LED0 |
 |||
