@@ -118,8 +118,10 @@ void PWM0_ChannelOverrideDisable(PWM_CHANNEL_NUM channel);
 
 void PWM0_CallbackRegister(PWM_CALLBACK callback, uintptr_t context);
 
+#ifdef __cplusplus // Provide C++ Compatibility
+}
+#endif
+
 #endif //PLIB_PWM0_H
 
-/**
- End of File
-*/
+/* End of File */
