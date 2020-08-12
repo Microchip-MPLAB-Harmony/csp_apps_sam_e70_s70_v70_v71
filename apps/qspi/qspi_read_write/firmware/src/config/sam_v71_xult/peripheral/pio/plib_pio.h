@@ -66,9 +66,9 @@
 #define LED0_Set()               (PIOA_REGS->PIO_SODR = (1<<23))
 #define LED0_Clear()             (PIOA_REGS->PIO_CODR = (1<<23))
 #define LED0_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<23))
-#define LED0_Get()               ((PIOA_REGS->PIO_PDSR >> 23) & 0x1)
 #define LED0_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<23))
 #define LED0_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<23))
+#define LED0_Get()               ((PIOA_REGS->PIO_PDSR >> 23) & 0x1)
 #define LED0_PIN                  PIO_PIN_PA23
 
 

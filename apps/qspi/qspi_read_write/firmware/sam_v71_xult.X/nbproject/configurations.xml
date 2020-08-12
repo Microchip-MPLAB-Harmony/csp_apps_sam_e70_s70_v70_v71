@@ -34,6 +34,7 @@
           <itemPath>../src/config/sam_v71_xult/device_cache.h</itemPath>
           <itemPath>../src/config/sam_v71_xult/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/sam_v71_xult/definitions.h</itemPath>
+          <itemPath>../src/config/sam_v71_xult/device.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -80,7 +81,6 @@
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMV71Q21B_DFP/pio/samv71q21b.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/packs/ATSAMV71Q21B_DFP/device.h</itemPath>
           <itemPath>../src/packs/ATSAMV71Q21B_DFP/atsamv71q21b.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
@@ -103,6 +103,14 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/app_s25fl.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>../src/config/sam_v71_xult/harmony.prj</itemPath>
+      <itemPath>../src/config/sam_v71_xult/sam_v71_xult.xml</itemPath>
+      <itemPath>../../../../../../mhc/../csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_read_write/firmware/src/config/sam_v71_xult/sam_v71_xult.xml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -146,15 +154,8 @@
           <itemPath>../src/config/sam_v71_xult/libc_syscalls.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app_s25fl.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_v71_xult/harmony.prj</itemPath>
-      <itemPath>../src/config/sam_v71_xult/sam_v71_xult.xml</itemPath>
+      <itemPath>../src/main.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -174,8 +175,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
         <pack name="SAMV71_DFP" vendor="Microchip" version="4.3.66"/>
+        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
