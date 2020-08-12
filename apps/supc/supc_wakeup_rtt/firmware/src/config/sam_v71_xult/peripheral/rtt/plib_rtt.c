@@ -97,12 +97,12 @@ void RTT_CallbackRegister( RTT_CALLBACK callback, uintptr_t context )
 {
 	rtt.callback = callback;
 	rtt.context = context;
-} 
- 
+}
+
 uint32_t RTT_TimerValueGet(void)
 {
     uint32_t rtt_val = RTT_REGS->RTT_VR;
-    while (rtt_val != RTT_REGS->RTT_VR) 
+    while (rtt_val != RTT_REGS->RTT_VR)
     {
         rtt_val = RTT_REGS->RTT_VR;
     }
@@ -112,9 +112,9 @@ uint32_t RTT_TimerValueGet(void)
 uint32_t RTT_FrequencyGet(void)
 {
     uint32_t flag = 0;
-    
+
     flag =  (RTT_REGS->RTT_MR) & (RTT_MR_RTC1HZ_Msk);
-    
+
     if (flag)
     {
         return 1;
@@ -128,12 +128,12 @@ uint32_t RTT_FrequencyGet(void)
         }
         else
         {
-            return (32768 / flag); 
+            return (32768 / flag);
         }
     }
 }
 
-void RTT_InterruptHandler()
+void RTT_InterruptHandler(void)
 {
 	uint32_t status = RTT_REGS->RTT_SR;
 	uint32_t flags = RTT_REGS->RTT_MR;
@@ -159,5 +159,5 @@ void RTT_InterruptHandler()
 			}
 		}
 		RTT_REGS->RTT_MR|= (RTT_MR_ALMIEN_Msk);
-	}	
+	}
 }
