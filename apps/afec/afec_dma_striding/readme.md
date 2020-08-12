@@ -54,8 +54,8 @@ The following table shows the target hardware for the application projects.
 
 - Analog input (AD0) is fed from DAC output. Sine wave output is generated on the DAC output using 100 point lookup table.
   - Analog input "AD0" is mapped to Port Pin "PB1" that is routed to "Pin 14 of the EXT1 header"
-  - DAC output "DAC0" is mapped to Port Pin "PB13" that is routed to "Pin 5 of the J502 header"
-  - Use jumper wire to Connect "Pin 14 of the EXT1" to "Pin 5 of the J502"
+  - DAC output "DAC0" is mapped to Port Pin "PB13" that is routed to "Pin 5 of the J504 header"
+  - Use jumper wire to Connect "Pin 14 of the EXT1" to "Pin 5 of the J504"
 - Analog input (AD5) is connected to Vcc, or the user can supply input from an external source
   - Analog input "AD5" is mapped to Port Pin "PC30" that is routed to "Pin 8 of the EXT1 header"
   - Use a jumper wire to connect "Pin 8 of the EXT1 (AD5)" to Vcc or an external voltage source
