@@ -40,26 +40,26 @@ if os.path.exists(filename):
 
     size = os.stat(filename)
 
-    print >> headerfile, "#ifndef XIP_IMAGE_PATTERN_HEX_H_"
-    print >> headerfile, "#define XIP_IMAGE_PATTERN_HEX_H_\n"
-    print >> headerfile, "const uint8_t xip_image_pattern[" + str(
-        size.st_size) + "] = \n{"
+    headerfile.write("#ifndef XIP_IMAGE_PATTERN_HEX_H_\n")
+    headerfile.write("#define XIP_IMAGE_PATTERN_HEX_H_\n")
+    headerfile.write("\nconst uint8_t xip_image_pattern[" + str(
+        size.st_size) + "] = \n{\n")
 
     while True:
         byte = binfile.read(1)
         if byte:
             count = count - 1
             hex_str = binascii.hexlify(byte)
-            print >> headerfile, "0x" + hex_str + ",",
+            headerfile.write("0x" + hex_str.decode('ascii') + ","+' ')
             if (count == 0):
-                print >> headerfile, ""
+                headerfile.write("\n")
                 count = 16
         else:
             break
 
     binfile.close()
-    print >> headerfile, "\n};\n"
-    print >> headerfile, "#endif"
+    headerfile.write("\n};\n")
+    headerfile.write("#endif")
     headerfile.close()
 else:
     print("\nUnable to locate sam_e70_xult.X.production.bin")
