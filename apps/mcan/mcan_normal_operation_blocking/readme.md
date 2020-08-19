@@ -6,7 +6,7 @@ This example shows how to use the MCAN module to transmit and receive CAN messag
 
 ## Description
 
-This application transmits and receives CAN messages on the CAN bus. To run this application, two evaluation boards of same type are required. These boards acts as different nodes on the CAN bus. Same application is programmed onto both the boards. Boards are connected to PC via UART. While running the application, user can send and receive CAN FD messages between the boards using UART console applications running on the PC.
+This application transmits and receives CAN messages on the CAN bus. To run this application, two evaluation boards of same type are required. These boards acts as different nodes on the CAN bus. Same application is programmed onto both the boards. Boards are connected to PC via UART. While running the application, user can send and receive CAN messages between the boards using UART console applications running on the PC.
 
 ## Downloading and building the application
 
@@ -14,7 +14,7 @@ To download or clone this application from Github, go to the [top level of the r
 
 ![clone](../../../docs/images/clone.png)
 
-Path of the application within the repository is **apps/mcan/mcan_fd_operation_blocking/firmware** .
+Path of the application within the repository is **apps/mcan/mcan_normal_operation_blocking/firmware** .
 
 To build the application, refer to the following table and open the project using its IDE.
 
