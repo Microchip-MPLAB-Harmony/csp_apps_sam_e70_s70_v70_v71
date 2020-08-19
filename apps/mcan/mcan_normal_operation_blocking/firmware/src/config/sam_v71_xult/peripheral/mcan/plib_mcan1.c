@@ -111,7 +111,7 @@ void MCAN1_Initialize(void)
     MCAN1_REGS->MCAN_CCCR |= MCAN_CCCR_CCE_Msk;
 
     /* Set Nominal Bit timing and Prescaler Register */
-    MCAN1_REGS->MCAN_NBTP  = MCAN_NBTP_NTSEG2(74) | MCAN_NBTP_NTSEG1(223) | MCAN_NBTP_NBRP(0) | MCAN_NBTP_NSJW(3);
+    MCAN1_REGS->MCAN_NBTP  = MCAN_NBTP_NTSEG2(74) | MCAN_NBTP_NTSEG1(223) | MCAN_NBTP_NBRP(0) | MCAN_NBTP_NSJW(74);
 
 
     /* Global Filter Configuration Register */
