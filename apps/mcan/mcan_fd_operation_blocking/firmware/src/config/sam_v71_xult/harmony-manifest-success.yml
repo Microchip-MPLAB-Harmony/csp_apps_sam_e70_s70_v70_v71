@@ -4,12 +4,12 @@
 
 
 project: mcan_fd_operation_blocking
-creation_date: 2020-08-19T13:15:23.743+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2020-08-24T17:54:08.804+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
-mhc_mode: Headless            # [IDE|Standalone|Headless]
-mplabx_version: NA        # if MPLAB X plugin only
-plugin_version: NA        # if MPLAB X plugin only
-compiler: xc32
+mhc_mode: IDE            # [IDE|Standalone|Headless]
+mplabx_version: v5.40        # if MPLAB X plugin only
+plugin_version: v3.6.0        # if MPLAB X plugin only
+compiler: XC32 (2.41)
 
 modules:
     - {name: "csp", version: "unknown"}
