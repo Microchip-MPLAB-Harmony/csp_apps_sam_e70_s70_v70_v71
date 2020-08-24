@@ -109,6 +109,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_e70_xult/harmony.prj</itemPath>
       <itemPath>../../../../../../mhc/../csp_apps_sam_e70_s70_v70_v71/apps/mcan/mcan_fd_operation_blocking/firmware/src/config/sam_e70_xult/sam_e70_xult.xml</itemPath>
+      <itemPath>../src/config/sam_e70_xult/sam_e70_xult.xml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -173,8 +174,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
         <pack name="SAME70_DFP" vendor="Microchip" version="4.3.73"/>
+        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

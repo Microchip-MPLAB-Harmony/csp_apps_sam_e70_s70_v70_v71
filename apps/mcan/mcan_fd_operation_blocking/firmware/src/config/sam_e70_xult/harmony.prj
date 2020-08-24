@@ -94,8 +94,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_e70_xult/peripheral/nvic/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/nvic/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">A1A3B7BE595D37F770A2449276309A5A</GeneratedChecksum>
-          <UserChecksum dnOrder="6">A1A3B7BE595D37F770A2449276309A5A</UserChecksum>
+          <GeneratedChecksum dnOrder="5">2189A0A4CD577ECC9D357C243E978F46</GeneratedChecksum>
+          <UserChecksum dnOrder="6">2189A0A4CD577ECC9D357C243E978F46</UserChecksum>
         </File>
         <File dnOrder="10">
           <Type dnOrder="0">SOURCE</Type>
@@ -704,12 +704,12 @@
       </Settings>
     </Manifest>
     <Settings dnOrder="5">
-      <Setting dnOrder="0" key="CMSISPath" value=".\dev_packs\arm\CMSIS\5.6.0"/>
-      <Setting dnOrder="1" key="DFPPath" value=".\dev_packs\Microchip\SAME70_DFP\4.2.62\same70b\atdf\ATSAME70Q21B.atdf"/>
+      <Setting dnOrder="0" key="CMSISPath" value=".\dev_packs\arm\CMSIS\5.7.0"/>
+      <Setting dnOrder="1" key="DFPPath" value=".\dev_packs\Microchip\SAME70_DFP\4.3.73\same70b\atdf\ATSAME70Q21B.atdf"/>
       <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
       <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
       <Setting dnOrder="4" key="MERGE_STRATEGY" value="USER_ALL"/>
-      <Setting dnOrder="5" key="PackageFilter" value="bsp;core;csp;expresslogic_threadx;micrium_ucos3;net;"/>
+      <Setting dnOrder="5" key="PackageFilter" value="bsp;core;core_apps_pic32cm_le00_ls00;core_apps_pic32cm_mc00;core_apps_pic32mk;core_apps_pic32mz_da;core_apps_pic32mz_ef;core_apps_pic32mz_w1;core_apps_sam_9x60;core_apps_sam_a5d2;core_apps_sam_d21_da1;core_apps_sam_d5x_e5x;core_apps_sam_e70_s70_v70_v71;core_apps_sam_l10_l11;core_apps_sam_rh71;csp;csp_apps_pic32cm_jh00_jh01;csp_apps_pic32cm_le00_ls00;csp_apps_pic32cm_mc00;csp_apps_pic32mk;csp_apps_pic32mx;csp_apps_pic32mz_da;csp_apps_pic32mz_ef;csp_apps_pic32mz_w1;csp_apps_sam_9x60;csp_apps_sam_c20_c21;csp_apps_sam_d5x_e5x;csp_apps_sam_e70_s70_v70_v71;csp_apps_sam_g55;csp_apps_sam_l10_l11;csp_apps_sam_l21;csp_apps_sam_rh71;expresslogic_threadx;mbed_os;micrium_ucos3;net;wireless;"/>
     </Settings>
   </Configurator>
 </Configuration>
