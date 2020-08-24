@@ -110,11 +110,16 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_v71_xult/harmony.prj</itemPath>
       <itemPath>../../../../../../mhc/../csp_apps_sam_e70_s70_v70_v71/apps/mpu/mpu_coherent_region/firmware/src/config/sam_v71_xult/sam_v71_xult.xml</itemPath>
+      <itemPath>../src/config/sam_v71_xult/sam_v71_xult.xml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
-      <itemPath>../src/config/sam_v71_xult/ATSAMV71Q21B.ld</itemPath>
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1" displayName="sam_v71_xult" projectFiles="true">
+          <itemPath>../src/config/sam_v71_xult/mpu_coherent.ld</itemPath>
+        </logicalFolder>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -174,8 +179,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
         <pack name="SAMV71_DFP" vendor="Microchip" version="4.3.66"/>
+        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -236,7 +241,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_v71_xult;../src/packs/ATSAMV71Q21B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/sam_v71_xult;../src/packs/ATSAMV71Q21B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -334,7 +339,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_v71_xult;../src/packs/ATSAMV71Q21B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/sam_v71_xult;../src/packs/ATSAMV71Q21B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -369,8 +374,8 @@
         <property key="arm.use_vtor" value="false"/>
         <property key="arm.vtor_adr" value="exception_table"/>
         <property key="communication.activationmode" value="nohv"/>
-        <property key="communication.interface" value="jtag"/>
-        <property key="communication.speed" value="${communication.speed.default}"/>
+        <property key="communication.interface" value="swd"/>
+        <property key="communication.speed" value="2.000"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="firmware.path"
                   value="Press to browse for a specific firmware version"/>
@@ -398,7 +403,7 @@
                   value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
-        <property key="programoptions.preserveprogram.ranges" value="0-2045ffff"/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
