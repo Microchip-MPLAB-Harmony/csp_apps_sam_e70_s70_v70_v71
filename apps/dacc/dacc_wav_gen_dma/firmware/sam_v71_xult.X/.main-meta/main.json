@@ -1,0 +1,79 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_e70_s70_v70_v71_confg_v71_dacc_wav_gen_dma",
+		"version": "3.0.1",
+		"displayName": "DACC waveform generation with DMA Example for SAM E70/S70/V70/V71 Family",
+		"projectName": "dacc_wav_gen_dma_sam_v71_xult",
+		"shortDescription": "This example shows how to use the DAC with the DMA to generate sinusoidal waveform without CPU intervention.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "CMSIS",
+			"semverRange": "^5.4.0"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAMV71Q21B",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM V71 Xplained Ultra board"
+			],
+			[
+				"Harmony", "Peripherals", "DACC"
+			],
+			[
+				"Peripherals", "DACC"
+			]
+		],
+		"peripherals": [
+			"DACC"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAMV71Q21B",
+			"SAM E70/S70/V70/V71 Family",
+			"DACC",
+			"CDAC",
+			"Control DAC",
+			"DAC",
+			"Digital to Analog Converter",
+			"Analog",
+			"AC Voltage"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

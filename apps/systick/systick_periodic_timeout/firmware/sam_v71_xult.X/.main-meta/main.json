@@ -1,0 +1,76 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_e70_s70_v70_v71_confg_v71_systick_periodic_timeout",
+		"version": "3.0.1",
+		"displayName": "SysTick periodic interrupt Example for SAM E70/S70/V70/V71 Family",
+		"projectName": "systick_periodic_timeout_sam_v71_xult",
+		"shortDescription": "This example shows how to use the SysTick to generate periodic interrupts.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "SAMV71_DFP",
+			"semverRange": "^4.3.66"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAMV71Q21B",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM V71 Xplained Ultra board"
+			],
+			[
+				"Harmony", "Peripherals", "SYSTICK"
+			],
+			[
+				"Peripherals", "SYSTICK"
+			]
+		],
+		"peripherals": [
+			"SYSTICK"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAMV71Q21B",
+			"SAM E70/S70/V70/V71 Family",
+			"System Timer",
+			"Core Timer",
+			"Timer",
+			"Counter"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,77 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_e70_s70_v70_v71_qspi_xip_function",
+		"version": "3.0.1",
+		"displayName": "QSPI flash XIP Function Example for SAM E70/S70/V70/V71 Family",
+		"projectName": "qspi_xip_function_sam_e70_xult",
+		"shortDescription": "This example shows how to setup the QSPI Flash in the XIP mode to call a function placed in QSPI Flash memory.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "CMSIS",
+			"semverRange": "^5.4.0"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAME70Q21B",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM E70 Xplained Ultra board"
+			],
+			[
+				"Harmony", "Peripherals", "QSPI"
+			],
+			[
+				"Peripherals", "QSPI"
+			]
+		],
+		"peripherals": [
+			"QSPI"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAME70Q21B",
+			"SAM E70/S70/V70/V71 Family",
+			"QSPI",
+			"Quad SPI",
+			"Memory",
+			"Communicaiton",
+			"Serial communication"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,78 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_e70_s70_v70_v71_afec_user_sequence",
+		"version": "3.0.1",
+		"displayName": "AFEC user sequence Example for SAM E70/S70/V70/V71 Family",
+		"projectName": "afec_user_sequence_sam_e70_xult",
+		"shortDescription": "This example uses AFEC peripheral library to sample three analog inputs using the user sequencer in triggered conversion mode and send the converted data to the console",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "SAME70_DFP",
+			"semverRange": "^4.3.67"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAME70Q21B",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM E70 Xplained Ultra board"
+			],
+			[
+				"Harmony", "Peripherals", "AFEC"
+			],
+			[
+				"Peripherals", "AFEC"
+			]
+		],
+		"peripherals": [
+			"AFEC"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAME70Q21B",
+			"SAM E70/S70/V70/V71 Family",
+			"AC voltage",
+			"Analog to Digital Converter",
+			"ADC",
+			"High Speed ADC",
+			"Analog",
+			"Analog Front End"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

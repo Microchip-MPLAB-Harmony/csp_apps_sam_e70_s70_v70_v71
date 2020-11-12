@@ -1,0 +1,76 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_e70_s70_v70_v71_rswdt_timeout",
+		"version": "3.0.1",
+		"displayName": "RSWDT timeout Example for SAM E70/S70/V70/V71 Family",
+		"projectName": "rswdt_timeout_sam_e70_xult",
+		"shortDescription": "This example shows how to generate a RSWDT reset by emulating a deadlock.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "SAME70_DFP",
+			"semverRange": "^4.3.67"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAME70Q21B",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM E70 Xplained Ultra board"
+			],
+			[
+				"Harmony", "Peripherals", "RSWDT"
+			],
+			[
+				"Peripherals", "RSWDT"
+			]
+		],
+		"peripherals": [
+			"RSWDT"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAME70Q21B",
+			"SAM E70/S70/V70/V71 Family",
+			"RSWDT",
+			"Timer",
+			"WDT",
+			"Watch Dog Timer"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,77 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_e70_s70_v70_v71_mcan_fd_operation_interrupt_timestamp",
+		"version": "3.0.1",
+		"displayName": "MCAN FD interrupt Example for SAM E70/S70/V70/V71 Family",
+		"projectName": "mcan_fd_operation_interrupt_timestamp_sam_e70_xult",
+		"shortDescription": "This example shows how to use the MCAN module to transmit and receive CAN FD messages in interrupt mode.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "CMSIS",
+			"semverRange": "^5.4.0"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAME70Q21B",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM E70 Xplained Ultra board"
+			],
+			[
+				"Harmony", "Peripherals", "MCAN"
+			],
+			[
+				"Peripherals", "MCAN"
+			]
+		],
+		"peripherals": [
+			"MCAN"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAME70Q21B",
+			"SAM E70/S70/V70/V71 Family",
+			"MCAN",
+			"CAN",
+			"Control Area Network",
+			"Communicaiton",
+			"Serial communication"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
