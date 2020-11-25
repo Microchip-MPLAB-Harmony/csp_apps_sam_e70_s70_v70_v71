@@ -15,6 +15,21 @@ This example shows how to use the MCAN module to transmit and receive CAN messag
 
 This application transmits and receives CAN messages on the CAN bus. To run this application, two evaluation boards of same type are required. These boards acts as different nodes on the CAN bus. Same application is programmed onto both the boards. Boards are connected to PC via UART. While running the application, user can send and receive CAN messages between the boards using UART console applications running on the PC.
 
+### MCAN Message RAM configuration
+- Allocate MCAN Message RAM configuration in contiguous non-cacheable buffer in the application.
+  For example, uint8_t Mcan1MessageRAM[MCAN1_MESSAGE_RAM_CONFIG_SIZE] __attribute__((aligned (32)))__attribute__((space(data), section (".ram_nocache"))); 
+
+- Add non-cacheable section "ram_nocache" in the Custom linker script
+
+| Project Name      | Description                                    |
+| ----------------- | ---------------------------------------------- |
+| sam_e70_xult.X    | Custom linker script **apps/mcan/mcan_normal_operation_blocking/firmware/src/config/sam_e70_xult/ATSAME70Q21B.ld** |
+| sam_v71_xult.X    | Custom linker script **apps/mcan/mcan_normal_operation_blocking/firmware/src/config/sam_v71_xult/ATSAMV71Q21B.ld** |
+|||
+
+- Please refer [How to Create Non-Cacheable Memory Region on CortexM7 (SAM S70/ E70/ V70/ V71) MCUs Using MPLAB Harmony
+v3](http://ww1.microchip.com/downloads/en/DeviceDoc/How_to_Create_Non-Cacheabl_%20Memory_Region_on_Cortex-M7_(SAME70)_MCU_Using_MPLAB_Harmonyv3_DS90003260A.pdf) to create a non-cacheable memory region.
+
 ## Downloading and building the application
 
 To clone or download this application from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71) and then click **Clone** button to clone this repository or download as zip file.
