@@ -1,0 +1,141 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: supc}
+children:
+- type: Symbols
+  children:
+  - type: KeyValueSet
+    attributes: {id: SUPC_SMMR_SMSMPL}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_SMMR_SMTH}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '15'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT0}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT1}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT10}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT11}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT12}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT13}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT3}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT4}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT5}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT6}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT7}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT8}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUIR_WKUPT9}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUMR_LPDBC}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+  - type: Boolean
+    attributes: {id: SUPC_WUMR_RTCEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: SUPC_WUMR_WKUPDBC}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: supc, value: '0'}
+- type: ElementPosition
+  attributes: {x: '18', y: '61', id: supc}

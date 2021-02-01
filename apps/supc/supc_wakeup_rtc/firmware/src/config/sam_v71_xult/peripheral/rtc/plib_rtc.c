@@ -40,6 +40,7 @@
 
 #include "device.h"
 #include "plib_rtc.h"
+#include "interrupts.h"
 
 RTC_OBJECT rtc;
 
