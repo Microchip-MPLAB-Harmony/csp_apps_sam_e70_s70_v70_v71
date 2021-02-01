@@ -53,6 +53,7 @@
 */
 #include "device.h"
 #include "plib_pwm0.h"
+#include "interrupts.h"
 
 
 /* Object to hold callback function and context */
