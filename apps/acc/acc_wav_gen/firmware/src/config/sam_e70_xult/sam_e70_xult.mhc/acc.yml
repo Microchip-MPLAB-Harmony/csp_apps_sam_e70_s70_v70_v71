@@ -1,0 +1,29 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: acc}
+children:
+- type: Symbols
+  children:
+  - type: KeyValueSet
+    attributes: {id: ACC_MR_EDGETYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
+  - type: KeyValueSet
+    attributes: {id: ACC_MR_SELMINUS}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '4'}
+  - type: KeyValueSet
+    attributes: {id: ACC_MR_SELPLUS}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
+- type: ElementPosition
+  attributes: {x: '10', y: '62', id: acc}
