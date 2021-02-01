@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-03-04T11:03:42Z */
+/* file generated from device description version 2020-11-26T11:12:57Z */
 #ifndef _SAME70_EFC_COMPONENT_H_
 #define _SAME70_EFC_COMPONENT_H_
 
