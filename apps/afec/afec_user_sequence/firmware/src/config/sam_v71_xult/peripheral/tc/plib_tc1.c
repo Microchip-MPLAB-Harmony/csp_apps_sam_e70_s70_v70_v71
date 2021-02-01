@@ -53,6 +53,7 @@
 */
 #include "device.h"
 #include "plib_tc1.h"
+#include "interrupts.h"
 
  
  
