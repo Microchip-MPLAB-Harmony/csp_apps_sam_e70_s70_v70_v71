@@ -40,6 +40,7 @@
 
 #include "device.h"
 #include "plib_xdmac.h"
+#include "interrupts.h"
 
 /* Macro for limiting XDMAC objects to highest channel enabled */
 #define XDMAC_ACTIVE_CHANNELS_MAX 1
@@ -123,7 +124,7 @@ void XDMAC_Initialize( void )
     }
 
     /* Configure Channel 0 */
-    XDMAC_REGS->XDMAC_CHID[0].XDMAC_CC= (XDMAC_CC_TYPE_PER_TRAN | XDMAC_CC_PERID(30) | XDMAC_CC_DSYNC_MEM2PER | XDMAC_CC_SWREQ_HWR_CONNECTED | XDMAC_CC_DAM_FIXED_AM | XDMAC_CC_SAM_INCREMENTED_AM | XDMAC_CC_SIF_AHB_IF1 | XDMAC_CC_DIF_AHB_IF1 | XDMAC_CC_DWIDTH_HALFWORD | XDMAC_CC_CSIZE_CHK_1 | XDMAC_CC_MBSIZE_SINGLE);
+    XDMAC_REGS->XDMAC_CHID[0].XDMAC_CC= (XDMAC_CC_TYPE_PER_TRAN | XDMAC_CC_PERID(200) | XDMAC_CC_DSYNC_MEM2PER | XDMAC_CC_SWREQ_HWR_CONNECTED | XDMAC_CC_DAM_FIXED_AM | XDMAC_CC_SAM_INCREMENTED_AM | XDMAC_CC_SIF_AHB_IF1 | XDMAC_CC_DIF_AHB_IF1 | XDMAC_CC_DWIDTH_HALFWORD | XDMAC_CC_CSIZE_CHK_1 | XDMAC_CC_MBSIZE_SINGLE);
     XDMAC_REGS->XDMAC_CHID[0].XDMAC_CIE= (XDMAC_CIE_BIE_Msk | XDMAC_CIE_RBIE_Msk | XDMAC_CIE_WBIE_Msk | XDMAC_CIE_ROIE_Msk);
     XDMAC_REGS->XDMAC_GIE= (XDMAC_GIE_IE0_Msk << 0);
     xdmacChannelObj[0].inUse = 1;
@@ -236,4 +237,16 @@ void XDMAC_ChannelBlockLengthSet (XDMAC_CHANNEL channel, uint16_t length)
     XDMAC_REGS->XDMAC_GD= (XDMAC_GD_DI0_Msk << channel);
 
     XDMAC_REGS->XDMAC_CHID[channel].XDMAC_CBC = length;
+}
+
+void XDMAC_ChannelSuspend (XDMAC_CHANNEL channel)
+{
+    /* Suspend the channel */
+    XDMAC_REGS->XDMAC_GRWS = (XDMAC_GRWS_RWS0_Msk << channel);
+}
+
+void XDMAC_ChannelResume (XDMAC_CHANNEL channel)
+{
+    /* Resume the channel */
+    XDMAC_REGS->XDMAC_GRWR = (XDMAC_GRWR_RWR0_Msk << channel);
 }
