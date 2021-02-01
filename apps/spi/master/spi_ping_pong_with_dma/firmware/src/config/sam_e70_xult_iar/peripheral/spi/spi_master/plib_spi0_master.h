@@ -1,22 +1,21 @@
 /*******************************************************************************
-  Device Header File
+  SPI PLIB
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    device.h
+    plib_spi0_master.h
 
   Summary:
-    This file includes the selected device from within the project.
-    The device will provide access to respective device packs.
+    SPI0 Master PLIB Header File
 
   Description:
-    None
+    This file has prototype of all the interfaces provided for particular
+    SPI peripheral.
 
 *******************************************************************************/
 
-// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -39,19 +38,47 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-// DOM-IGNORE-END
 
-#ifndef DEVICE_H
-#define DEVICE_H
+#ifndef PLIB_SPI0_MASTER_H
+#define PLIB_SPI0_MASTER__H
 
-#ifndef DONT_USE_PREDEFINED_CORE_HANDLERS
-    #define DONT_USE_PREDEFINED_CORE_HANDLERS
-#endif //DONT_USE_PREDEFINED_CORE_HANDLERS
-#ifndef DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS
-    #define DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS
-#endif //DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS
-#include "same70q21b.h"
-#include "device_cache.h"
-#include "toolchain_specifics.h"
+#include "device.h"
+#include "plib_spi_master_common.h"
 
-#endif //DEVICE_H
+/* Provide C++ Compatibility */
+#ifdef __cplusplus
+
+    extern "C" {
+
+#endif
+
+/****************************** SPI0 Interface *********************************/
+
+void SPI0_Initialize( void );
+
+bool SPI0_WriteRead( void* pTransmitData, size_t txSize, void* pReceiveData, size_t rxSize );
+
+bool SPI0_Write( void* pTransmitData, size_t txSize );
+
+bool SPI0_Read( void* pReceiveData, size_t rxSize );
+
+bool SPI0_TransferSetup( SPI_TRANSFER_SETUP *setup, uint32_t spiSourceClock );
+
+
+bool SPI0_IsBusy( void );
+
+void SPI0_CallbackRegister( const SPI_CALLBACK callback, uintptr_t context );
+
+
+/* Provide C++ Compatibility */
+#ifdef __cplusplus
+
+    }
+
+#endif
+
+#endif // PLIB_SPI0_MASTER_H
+
+/*******************************************************************************
+ End of File
+*/
