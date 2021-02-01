@@ -1,21 +1,20 @@
 /*******************************************************************************
-  SPI PLIB
+ System Interrupts File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_spi0.h
+    interrupt.h
 
   Summary:
-    SPI0 PLIB Header File
+    Interrupt vectors mapping
 
   Description:
-    This file has prototype of all the interfaces provided for particular
-    SPI peripheral.
+    This file contains declarations of device vectors used by Harmony 3
+ *******************************************************************************/
 
-*******************************************************************************/
-
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -37,47 +36,31 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
+// DOM-IGNORE-END
 
-#ifndef PLIB_SPI0_H
-#define PLIB_SPI0_H
+#ifndef INTERRUPTS_H
+#define INTERRUPTS_H
 
-#include "device.h"
-#include "plib_spi_common.h"
-
-/* Provide C++ Compatibility */
-#ifdef __cplusplus
-
-    extern "C" {
-
-#endif
-
-/****************************** SPI0 Interface *********************************/
-
-void SPI0_Initialize( void );
-
-bool SPI0_WriteRead( void* pTransmitData, size_t txSize, void* pReceiveData, size_t rxSize );
-
-bool SPI0_Write( void* pTransmitData, size_t txSize );
-
-bool SPI0_Read( void* pReceiveData, size_t rxSize );
-
-bool SPI0_TransferSetup( SPI_TRANSFER_SETUP *setup, uint32_t spiSourceClock );
-
-bool SPI0_IsBusy( void );
-
-void SPI0_CallbackRegister( const SPI_CALLBACK callback, uintptr_t context );
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+#include <stdint.h>
 
 
-/* Provide C++ Compatibility */
-#ifdef __cplusplus
+// *****************************************************************************
+// *****************************************************************************
+// Section: Handler Routines
+// *****************************************************************************
+// *****************************************************************************
 
-    }
+void Reset_Handler (void);
+void NonMaskableInt_Handler (void);
+void HardFault_Handler (void);
+void SPI0_InterruptHandler (void);
 
-#endif
 
-#endif // PLIB_SPI0_H
 
-/*******************************************************************************
- End of File
-*/
+#endif // INTERRUPTS_H
