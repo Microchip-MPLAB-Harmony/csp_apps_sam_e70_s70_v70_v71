@@ -5,10 +5,10 @@
     Microchip Technology Inc.
 
   File Name:
-    plib_spi.h
+    plib_spi_master_common.h
 
   Summary:
-    SPI PLIB Common Header File
+    SPI PLIB Master Common Header File
 
   Description:
     This file has prototype of all the interfaces which are common for all the
@@ -39,8 +39,8 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#ifndef PLIB_SPI_COMMON_H
-#define PLIB_SPI_COMMON_H
+#ifndef PLIB_SPI_MASTER_COMMON_H
+#define PLIB_SPI_MASTER_COMMON_H
 
 #include <stdint.h>
 #include <stddef.h>
@@ -53,8 +53,6 @@
     extern "C" {
 
 #endif
-
-/****************************** SPI${SPI_INDEX?string} Interface *********************************/
 
 typedef enum
 {
@@ -92,6 +90,15 @@ typedef enum
     SPI_DATA_BITS_INVALID = 0xFFFFFFFF
 
 }SPI_DATA_BITS;
+
+typedef enum
+{
+    SPI_CHIP_SELECT_NPCS0 = SPI_MR_PCS_NPCS0_Val,
+    SPI_CHIP_SELECT_NPCS1 = SPI_MR_PCS_NPCS1_Val,
+    SPI_CHIP_SELECT_NPCS2 = SPI_MR_PCS_NPCS2_Val,
+    SPI_CHIP_SELECT_NPCS3 = SPI_MR_PCS_NPCS3_Val,
+
+}SPI_CHIP_SELECT;
 
 typedef struct
 {
@@ -133,7 +140,7 @@ typedef struct
 
 #endif
 
-#endif // PLIB_SPI_COMMON_H
+#endif // PLIB_SPI_MASTER_COMMON_H
 
 /*******************************************************************************
  End of File
