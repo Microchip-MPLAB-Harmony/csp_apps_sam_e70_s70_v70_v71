@@ -41,6 +41,7 @@
 
 #include "device.h"
 #include "plib_trng.h"
+#include "interrupts.h"
 
 
 uint32_t TRNG_ReadData( void )
