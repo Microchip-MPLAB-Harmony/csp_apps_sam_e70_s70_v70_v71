@@ -1,0 +1,43 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: sdramc}
+children:
+- type: Symbols
+  children:
+  - type: KeyValueSet
+    attributes: {id: SDRAMC_CR__NB}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: sdramc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SDRAMC_CR__NC}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: sdramc, value: '2'}
+  - type: KeyValueSet
+    attributes: {id: SDRAMC_CR__NR}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: sdramc, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SDRAMC_MDR_MD}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: sdramc, value: '0'}
+  - type: Integer
+    attributes: {id: SDRAMC_TR_COUNT}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: sdramc, value: '2343'}
+- type: ElementPosition
+  attributes: {x: '21', y: '60', id: sdramc}
