@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-03-04T11:07:09Z */
+/* file generated from device description version 2020-11-26T11:15:04Z */
 #ifndef _SAMV71_TC_COMPONENT_H_
 #define _SAMV71_TC_COMPONENT_H_
 
