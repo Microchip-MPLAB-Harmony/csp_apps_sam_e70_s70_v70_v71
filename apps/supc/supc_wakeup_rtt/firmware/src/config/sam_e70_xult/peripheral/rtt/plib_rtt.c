@@ -42,6 +42,7 @@ Description:
 
 #include "device.h"
 #include "plib_rtt.h"
+#include "interrupts.h"
 
 RTT_OBJECT rtt;
 

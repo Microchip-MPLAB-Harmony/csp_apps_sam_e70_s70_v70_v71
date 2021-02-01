@@ -1,0 +1,38 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: rtt}
+children:
+- type: Symbols
+  children:
+  - type: Boolean
+    attributes: {id: rttINCIEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'false'}
+  - type: Boolean
+    attributes: {id: rttRTC1HZ}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'false'}
+  - type: Integer
+    attributes: {id: rttRTPRES}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '32768'}
+  - type: Comment
+    attributes: {id: rttResolution}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: 'RTT Counter Clock Resolution:   1000.000 ms'}
+- type: ElementPosition
+  attributes: {x: '160', y: '75', id: rtt}
