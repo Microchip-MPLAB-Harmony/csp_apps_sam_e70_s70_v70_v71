@@ -40,6 +40,7 @@
 
 #include "device.h"
 #include "plib_rswdt.h"
+#include "interrupts.h"
 
 
 void RSWDT_Initialize( void )

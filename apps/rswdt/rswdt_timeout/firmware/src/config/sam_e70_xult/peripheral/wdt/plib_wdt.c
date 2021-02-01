@@ -40,6 +40,7 @@
 
 #include "device.h"
 #include "plib_wdt.h"
+#include "interrupts.h"
 
 void WDT_Initialize( void )
 {
