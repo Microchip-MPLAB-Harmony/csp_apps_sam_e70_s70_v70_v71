@@ -52,7 +52,7 @@
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/xdmac/plib_xdmac.h"
-#include "peripheral/spi/plib_spi0.h"
+#include "peripheral/spi/spi_master/plib_spi0_master.h"
 #include "peripheral/efc/plib_efc.h"
 
 // DOM-IGNORE-BEGIN
@@ -62,6 +62,9 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* CPU clock frequency */
+#define CPU_CLOCK_FREQUENCY 300000000
 
 // *****************************************************************************
 // *****************************************************************************
