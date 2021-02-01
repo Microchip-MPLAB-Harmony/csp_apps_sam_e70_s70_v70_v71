@@ -5,10 +5,10 @@
     Microchip Technology Inc.
 
   File Name:
-    plib_spi0.c
+    plib_spi0_master.c
 
   Summary:
-    SPI0 Source File
+    SPI0 Master Source File
 
   Description:
     This file has implementation of all the interfaces provided for particular
@@ -39,7 +39,7 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#include "plib_spi0.h"
+#include "plib_spi0_master.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -52,16 +52,22 @@ void SPI0_Initialize( void )
     /* Disable and Reset the SPI*/
     SPI0_REGS->SPI_CR = SPI_CR_SPIDIS_Msk | SPI_CR_SWRST_Msk;
 
-    /* Enable Master mode, select particular NPCS line for chip select and disable mode fault detection */
-    SPI0_REGS->SPI_MR = SPI_MR_MSTR_Msk | SPI_MR_PCS_NPCS0 | SPI_MR_MODFDIS_Msk;
 
-    /* Set up clock Polarity, data phase, Communication Width, Baud Rate and Chip select active after transfer */
-    SPI0_REGS->SPI_CSR[0] = SPI_CSR_CPOL_IDLE_LOW | SPI_CSR_NCPHA_VALID_LEADING_EDGE | SPI_CSR_BITS_8_BIT | SPI_CSR_SCBR(150) | SPI_CSR_CSAAT_Msk;
+    /* Enable Master mode, select particular NPCS line for chip select and disable mode fault detection */
+    SPI0_REGS->SPI_MR = SPI_MR_MSTR_Msk | SPI_MR_DLYBCS(0) | SPI_MR_PCS_NPCS0  | SPI_MR_MODFDIS_Msk;
+
+    /* Set up clock Polarity, data phase, Communication Width, Baud Rate */
+    SPI0_REGS->SPI_CSR[0] = SPI_CSR_CPOL_IDLE_LOW | SPI_CSR_NCPHA_VALID_LEADING_EDGE | SPI_CSR_BITS_8_BIT | SPI_CSR_SCBR(150)| SPI_CSR_DLYBS(0) | SPI_CSR_DLYBCT(0) | SPI_CSR_CSAAT_Msk;
+
+
+
+
 
 
     /* Enable SPI0 */
     SPI0_REGS->SPI_CR = SPI_CR_SPIEN_Msk;
 }
+
 
 bool SPI0_WriteRead( void* pTransmitData, size_t txSize, void* pReceiveData, size_t rxSize )
 {
@@ -118,7 +124,14 @@ bool SPI0_WriteRead( void* pTransmitData, size_t txSize, void* pReceiveData, siz
             }
             else if (dummySize > 0)
             {
-                SPI0_REGS->SPI_TDR = 0xff;
+                if(dataBits == SPI_CSR_BITS_8_BIT)
+                {
+                    SPI0_REGS->SPI_TDR = 0xff;
+                }
+                else
+                {
+                    SPI0_REGS->SPI_TDR = (uint16_t)(0xffff);
+                }
                 dummySize--;
             }
 
@@ -197,7 +210,7 @@ bool SPI0_TransferSetup( SPI_TRANSFER_SETUP * setup, uint32_t spiSourceClock )
         scbr = 255;
     }
 
-    SPI0_REGS->SPI_CSR[0] = (uint32_t)setup->clockPolarity | (uint32_t)setup->clockPhase | (uint32_t)setup->dataBits | SPI_CSR_SCBR(scbr);
+    SPI0_REGS->SPI_CSR[0] = (SPI0_REGS->SPI_CSR[0] & ~(SPI_CSR_CPOL_Msk | SPI_CSR_NCPHA_Msk | SPI_CSR_BITS_Msk | SPI_CSR_SCBR_Msk)) |((uint32_t)setup->clockPolarity | (uint32_t)setup->clockPhase | (uint32_t)setup->dataBits | SPI_CSR_SCBR(scbr));
 
     return true;
 }
