@@ -51,7 +51,7 @@ The following table shows the target hardware for the application projects.
 ### Setting up [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
 - To run this demo two [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113) are required. One will be progammed as SPI master and other will be programmed as SPI slave.
-- Connect Pin 15, 16, 17, 18 on EXT1 of SPI slave to Pin 15, 16, 17, 18 on EXT1 of SPI master
+- Connect Pin 6, 16, 17, 18 on EXT1 of SPI slave to Pin 15, 16, 17, 18 on EXT1 of SPI master
     - Pin 15 - SPI Chip Select
     - Pin 16 - MOSI
     - Pin 17 - MISO
