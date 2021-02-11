@@ -61,10 +61,14 @@ Hardware setup requires two boards, one acting as the TWIHS Master and the other
 
 ## Running the Application
 
-1. Build and program TWIHS EEPROM application from *apps/twihs/master/twihs_eeprom/firmware* onto the evaluation kit used as TWIHS master
-2. Build and Program TWIHS slave application onto the evaluation kit used as TWIHS slave
-3. Run application on TWIHS slave board and then run the application on TWIHS master board
-4. LED on the TWIHS master board indicates success or failure:
+1. Open the twihs_eeprom application from *apps/twihs/master/twihs_eeprom/firmware* and open the *main.c* file. Make sure the following macro is defined to *false*.
+   ```
+   #define I2C_SLAVE_IS_ONBOARD_EEPROM           false
+   ```
+2. Build and program TWIHS EEPROM application from *apps/twihs/master/twihs_eeprom/firmware* onto the evaluation kit used as TWIHS master
+3. Build and Program TWIHS slave application onto the evaluation kit used as TWIHS slave
+4. Run application on TWIHS slave board and then run the application on TWIHS master board
+5. LED on the TWIHS master board indicates success or failure:
 
     - The LED is turned ON when the value read from the TWIHS slave matches with the written value
     - The LED is turned OFF when the value read from the TWIHS slave did not match with the written value
