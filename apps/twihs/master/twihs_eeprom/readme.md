@@ -43,15 +43,27 @@ The following table shows the target hardware for the application projects.
 ### Setting up [SAM E70 Xplained Ultra board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113)
 
 - Connect the Debug USB port on the board to the computer using a micro USB cable
+- If this application is used for communicating with apps/twihs/slave/i2c_eeprom_emulation application, then connect TWIHS SDA line on Pin 11 (PA03) of EXT1 connector and TWIHS SCL line on Pin 12 (PA04) of EXT1 connector with the corresponding SDA and SCL lines of the TWIHS slave
 
 ### Setting up [SAM V71 Xplained Ultra board](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult)
 
 - Connect the Debug USB port on the board to the computer using a micro USB cable
+- If this application is used for communicating with apps/twihs/slave/i2c_eeprom_emulation application, then connect TWIHS SDA line on Pin 11 (PA03) of EXT1 connector and TWIHS SCL line on Pin 12 (PA04) of EXT1 connector with the corresponding SDA and SCL lines of the TWIHS slave
 
 ## Running the Application
 
-1. Build and Program the application using its IDE
-2. The LED indicates the success or failure:
+1. Open the main.c file and make sure the following macro is defined to *true* when communicating with on-board EEPROM and to *false* when communicating with the *apps/twihs/slave/i2c_eeprom_emulation* application.
+
+   When communicating with on-board EEPROM:
+   ```
+   #define I2C_SLAVE_IS_ONBOARD_EEPROM           true
+   ```
+   When communicating with *apps/twihs/slave/i2c_eeprom_emulation* application
+   ```
+   #define I2C_SLAVE_IS_ONBOARD_EEPROM           false
+   ```
+2. Build and Program the application using its IDE
+3. The LED indicates the success or failure:
     - The LED is turned ON when the value read from the EEPROM matched with the written value
     - The LED is turned OFF when the value read from the EEPROM did not match with the written value
 

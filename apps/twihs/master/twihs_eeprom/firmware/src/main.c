@@ -52,21 +52,40 @@
 #include "definitions.h"                // SYS function prototypes
 #include <string.h>
 
-#define LED_ON()                       LED_Clear()
-#define LED_OFF()                      LED_Set()
+#define I2C_SLAVE_IS_ONBOARD_EEPROM           false
+
+#if I2C_SLAVE_IS_ONBOARD_EEPROM == true
 
 #define APP_AT24MAC_DEVICE_ADDR             (0x0057)
-#define APP_AT24MAC_MEMORY_ADDR             (0x00)
+#define APP_AT24MAC_MEMORY_ADDR             (0x40)
 #define APP_AT24MAC_PAGE_SIZE               (16)
-#define APP_TRANSMIT_DATA_LENGTH            (APP_AT24MAC_PAGE_SIZE + 1)
+#define APP_NUM_ADDRESS_BYTES               1
+#define APP_TRANSMIT_DATA_LENGTH            (APP_AT24MAC_PAGE_SIZE + APP_NUM_ADDRESS_BYTES)
 #define APP_RECEIVE_DATA_LENGTH             (APP_AT24MAC_PAGE_SIZE)
-#define APP_ACK_DATA_LENGTH                 (1)
-
 static uint8_t testTxData[APP_TRANSMIT_DATA_LENGTH] =
 {
-	APP_AT24MAC_MEMORY_ADDR,
+    APP_AT24MAC_MEMORY_ADDR,
     'A', 'T', 'S', 'A', 'M', ' ', 'T', 'W', 'I', 'H', 'S', ' ', 'D', 'e', 'm', 'o',
 };
+#else
+
+#define APP_AT24MAC_DEVICE_ADDR             (0x0054)
+#define APP_AT24MAC_MEMORY_ADDR             (0x00)
+#define APP_AT24MAC_MEMORY_ADDR1            (0x00)
+#define APP_NUM_ADDRESS_BYTES               2
+#define APP_TRANSMIT_DATA_LENGTH            (4 + APP_NUM_ADDRESS_BYTES)
+#define APP_RECEIVE_DATA_LENGTH             (4)
+static uint8_t testTxData[APP_TRANSMIT_DATA_LENGTH] =
+{
+    APP_AT24MAC_MEMORY_ADDR, APP_AT24MAC_MEMORY_ADDR1,
+    'M','C','H','P',
+};
+#endif
+
+#define APP_ACK_DATA_LENGTH                 (1)
+
+#define LED_ON()                       LED_Clear()
+#define LED_OFF()                      LED_Set()
 
 static uint8_t  testRxData[APP_RECEIVE_DATA_LENGTH];
 
@@ -192,7 +211,7 @@ int main ( void )
             case APP_STATE_EEPROM_READ:
                 /* Read the data from the page written earlier */
                 transferStatus = APP_TRANSFER_STATUS_IN_PROGRESS;
-                TWIHS0_Read(APP_AT24MAC_DEVICE_ADDR, &testRxData[0], APP_RECEIVE_DATA_LENGTH);
+                TWIHS0_WriteRead(APP_AT24MAC_DEVICE_ADDR, &testTxData[0], APP_NUM_ADDRESS_BYTES,  &testRxData[0], APP_RECEIVE_DATA_LENGTH);
                 state = APP_STATE_EEPROM_WAIT_READ_COMPLETE;
                 break;
 
@@ -209,7 +228,7 @@ int main ( void )
 
             case APP_STATE_VERIFY:
                 /* Verify the read data */
-                if (memcmp(&testTxData[1], &testRxData[0], APP_RECEIVE_DATA_LENGTH) == 0)
+                if (memcmp(&testTxData[APP_NUM_ADDRESS_BYTES], &testRxData[0], APP_RECEIVE_DATA_LENGTH) == 0)
                 {
                     /* It means received data is same as transmitted data */
                     state = APP_STATE_XFER_SUCCESSFUL;
