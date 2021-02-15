@@ -52,7 +52,7 @@
 #include "definitions.h"                // SYS function prototypes
 #include <string.h>
 
-#define I2C_SLAVE_IS_ONBOARD_EEPROM           false
+#define I2C_SLAVE_IS_ONBOARD_EEPROM           true
 
 #if I2C_SLAVE_IS_ONBOARD_EEPROM == true
 
