@@ -67,7 +67,8 @@ The following applications are provided to demonstrate the typical or interestin
 | [SPI ping pong with DMA](apps/spi/master/spi_ping_pong_with_dma/readme.md) | This example shows how to continuously transmit and receive data over a SPI interface using ping pong buffers with the DMA |
 | [SPI blocking](apps/spi/master/spi_self_loopback_blocking/readme.md) | This example shows how to use the SPI peripheral to transmit and receive a block of data in a blocking manner |
 | [SPI interrupt](apps/spi/master/spi_self_loopback_interrupt/readme.md) | This example shows how to use the SPI peripheral to transmit and receive a block of data using interrupts |
-| [SPI master read write](apps/spi/master/spi_write_read_test_app/readme.md) | This example uses the SPI peripheral library in master mode and serves as a test application to demonstrate communication between SPI master and corresponding SPI slave application |
+| [SPI Master read write test application](apps/spi/master/spi_write_read_test_app/readme.md) | This is a SPI Master test application which is provided to demonstrate communication between SPI master and the corresponding SPI slave application available under -  apps/spi/slave/spi_write_read/firmware  |
+| [SPI Slave read write](apps/spi/slave/spi_write_read/readme.md) | This example application demonstrates how to use the SPI peripheral in slave mode |
 | [SUPC wakeup using RTC](apps/supc/supc_wakeup_rtc/readme.md) | This example shows how to enter different low power modes and exit it using the RTC alarm |
 | [SUPC wakeup using RTT](apps/supc/supc_wakeup_rtt/readme.md) | This example shows how to enter different low power modes and exit it using the RTT alarm |
 | [SUPC wakeup using WKUP pin](apps/supc/supc_wakeup_wkup/readme.md) | his example shows how to enter different low power modes and exit it using WKUP pin |
@@ -78,7 +79,7 @@ The following applications are provided to demonstrate the typical or interestin
 | [TCM cache coherency](apps/tcm/data_tcm/readme.md) | This example shows how to  maintain cache coherency by allocating the DMA buffers in the Tightly Coupled Memory (TCM), which are not cacheable |
 | [TRNG random number](apps/trng/random_number/readme.md) | This example shows how to use the TRNG Peripheral library to generate and read a random number |
 | [TWIHS EEPROM read write](apps/twihs/master/twihs_eeprom/readme.md) | This example shows how to use the TWIHS peripheral to write and read from the I2C serial EEPROM memory |
-| [TWIHS EEPROM emulation](apps/twihs/slave/i2c_eeprom_emulation/readme.md) | This example shows how to use the TWIHS peripheral in slave mode |
+| [TWIHS EEPROM emulation](apps/twihs/slave/i2c_eeprom_emulation/readme.md) | This example application demonstrates how to use the TWIHS peripheral in slave mode |
 | [USART blocking](apps/usart/usart_echo_blocking/readme.md) | This example shows how to use the USART peripheral to transfer a block of data in a blocking manner |
 | [USART interrupt](apps/usart/usart_echo_interrupt/readme.md) | This example shows how to use the USART peripheral to transfer a block of data in a non-blocking manner |
 | [USART ring buffer](apps/usart/usart_ring_buffer_interrupt/readme.md) | This example shows how to use the USART peripheral in ring buffer mode |
