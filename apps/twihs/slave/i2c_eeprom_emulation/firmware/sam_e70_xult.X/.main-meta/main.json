@@ -1,0 +1,78 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_e70_s70_v70_v71_twihs_slave_i2c_eeprom_emulation_sam_e70_xult",
+		"version": "3.0.1",
+		"displayName": "TWIHS EEPROM emulation Example for SAM E70/S70/V70/V71 Family",
+		"projectName": "twihs_slave_i2c_eeprom_emulation_sam_e70_xult",
+		"shortDescription": "This example application demonstrates how to use the TWIHS peripheral in slave mode.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.45.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.50.0"
+			}
+		],
+		"dfp": {
+			"name": "SAME70_DFP",
+			"semverRange": "^4.4.78"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.7.0"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAME70Q21B",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM E70 Xplained Ultra board"
+			],
+			[
+				"Harmony", "Peripherals", "TWIHS"
+			],
+			[
+				"Peripherals", "TWIHS"
+			]
+		],
+		"peripherals": [
+			"TWIHS"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAME70Q21B",
+			"SAM E70/S70/V70/V71 Family",
+			"TWIHS",
+			"I2C",
+			"Serial Communication",
+			"SERCOM",
+			"TWI",
+			"FLEXCOM"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
