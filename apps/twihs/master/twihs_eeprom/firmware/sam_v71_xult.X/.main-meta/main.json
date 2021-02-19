@@ -4,18 +4,18 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_e70_s70_v70_v71_confg_v71_twihs_eeprom",
-		"version": "3.0.1",
+		"version": "3.1.0",
 		"displayName": "TWIHS EEPROM read write Example for SAM E70/S70/V70/V71 Family",
 		"projectName": "twihs_eeprom_sam_v71_xult",
 		"shortDescription": "This example shows how to use the TWIHS peripheral to write and read from the I2C serial EEPROM memory.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.40.0"
+			"semverRange": ">=5.45.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=2.40.0"
+				"semverRange": ">=2.50.0"
 			}
 		],
 		"dfp": {
@@ -24,7 +24,7 @@
 		},
 		"configurator": {
 			"name": "MHC",
-			"semverRange": ">=3.5.1"
+			"semverRange": ">=3.7.0"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
@@ -39,13 +39,17 @@
 		"author": "Microchip",
 		"subcategories": [
 			[
-				"Development Kit", "SAM V71 Xplained Ultra board"
+				"Development Kit",
+				"SAM V71 Xplained Ultra board"
 			],
 			[
-				"Harmony", "Peripherals", "TWIHS"
+				"Harmony",
+				"Peripherals",
+				"TWIHS"
 			],
 			[
-				"Peripherals", "TWIHS"
+				"Peripherals",
+				"TWIHS"
 			]
 		],
 		"peripherals": [
