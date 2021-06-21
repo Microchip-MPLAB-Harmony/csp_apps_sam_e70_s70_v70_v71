@@ -77,11 +77,11 @@ typedef enum
     BUFFER_TYPE_PONG
 }BUFFER_TYPE;
 
-uint8_t txPingBuffer[] = "INITIAL_DMA_DATA_FROM_PING_BUFFER";
-uint8_t rxPingBuffer[sizeof(txPingBuffer)];
+uint8_t txPingBuffer[1024];
+uint8_t rxPingBuffer[1024];
 
-uint8_t txPongBuffer[] = "initial_dma_data_from_pong_buffer";
-uint8_t rxPongBuffer[sizeof(txPongBuffer)];
+uint8_t txPongBuffer[1024];
+uint8_t rxPongBuffer[1024];
 
 volatile APP_STATES state = APP_STATE_INITIALIZE;
 
@@ -111,7 +111,7 @@ void APP_InitializeTxLinkedListDescriptor(void)
     pTxLinkedListDesc[0].mbr_ubc.blockDataLength = sizeof(txPingBuffer);
     pTxLinkedListDesc[0].mbr_ubc.nextDescriptorControl.fetchEnable = 1;
     pTxLinkedListDesc[0].mbr_ubc.nextDescriptorControl.sourceUpdate = 1;
-    pTxLinkedListDesc[0].mbr_ubc.nextDescriptorControl.destinationUpdate = 0;
+    pTxLinkedListDesc[0].mbr_ubc.nextDescriptorControl.destinationUpdate = 1;
     pTxLinkedListDesc[0].mbr_ubc.nextDescriptorControl.view = 1;
 
 
@@ -121,7 +121,7 @@ void APP_InitializeTxLinkedListDescriptor(void)
     pTxLinkedListDesc[1].mbr_ubc.blockDataLength = sizeof(txPongBuffer);
     pTxLinkedListDesc[1].mbr_ubc.nextDescriptorControl.fetchEnable = 1;
     pTxLinkedListDesc[1].mbr_ubc.nextDescriptorControl.sourceUpdate = 1;
-    pTxLinkedListDesc[1].mbr_ubc.nextDescriptorControl.destinationUpdate = 0;
+    pTxLinkedListDesc[1].mbr_ubc.nextDescriptorControl.destinationUpdate = 1;
     pTxLinkedListDesc[1].mbr_ubc.nextDescriptorControl.view = 1;
 }
 
@@ -133,7 +133,7 @@ void APP_InitializeRxLinkedListDescriptor(void)
     pRxLinkedListDesc[0].mbr_ubc.blockDataLength = sizeof(rxPingBuffer);
     pRxLinkedListDesc[0].mbr_ubc.nextDescriptorControl.fetchEnable= 1;
     pRxLinkedListDesc[0].mbr_ubc.nextDescriptorControl.sourceUpdate = 1;
-    pRxLinkedListDesc[0].mbr_ubc.nextDescriptorControl.destinationUpdate = 0;
+    pRxLinkedListDesc[0].mbr_ubc.nextDescriptorControl.destinationUpdate = 1;
     pRxLinkedListDesc[0].mbr_ubc.nextDescriptorControl.view= 1;
 
 
@@ -141,9 +141,9 @@ void APP_InitializeRxLinkedListDescriptor(void)
     pRxLinkedListDesc[1].mbr_sa = (uint32_t)SPI0_RECEIVE_ADDRESS;
     pRxLinkedListDesc[1].mbr_da = (uint32_t)&rxPongBuffer;
     pRxLinkedListDesc[1].mbr_ubc.blockDataLength = sizeof(rxPongBuffer);
-    pRxLinkedListDesc[1].mbr_ubc.nextDescriptorControl.fetchEnable = 0;
+    pRxLinkedListDesc[1].mbr_ubc.nextDescriptorControl.fetchEnable = 1;
     pRxLinkedListDesc[1].mbr_ubc.nextDescriptorControl.sourceUpdate = 1;
-    pRxLinkedListDesc[1].mbr_ubc.nextDescriptorControl.destinationUpdate= 0;
+    pRxLinkedListDesc[1].mbr_ubc.nextDescriptorControl.destinationUpdate= 1;
     pRxLinkedListDesc[1].mbr_ubc.nextDescriptorControl.view = 1;
 }
 
@@ -162,12 +162,12 @@ static void APP_DMA_RxCallbackHandler(XDMAC_TRANSFER_EVENT event, uintptr_t cont
     if(event == XDMAC_TRANSFER_COMPLETE)
     {
         if(bufferType == BUFFER_TYPE_PING)
-        {
+        {            
             state = VERIFY_AND_UPDATE_PING_BUFFER;
             bufferType = BUFFER_TYPE_PONG;
         }
         else
-        {
+        {           
             state = VERIFY_AND_UPDATE_PONG_BUFFER;
             bufferType = BUFFER_TYPE_PING;
         }
@@ -184,14 +184,26 @@ static void APP_DMA_RxCallbackHandler(XDMAC_TRANSFER_EVENT event, uintptr_t cont
 // *****************************************************************************
 // *****************************************************************************
 
+void bufferFill(uint8_t* pBuffer, uint32_t nBytes)
+{
+    uint32_t i;
+    
+    for (i = 0; i < nBytes; i++)
+    {
+        pBuffer[i] = i;
+    }
+}
+
 int main ( void )
 {
-    static uint8_t pingData=0, pongData=0x44;
-    uint8_t i=0;
+    uint32_t i = 0;
 
     /* Initialize all modules */
     SYS_Initialize ( NULL );
     LED_Off();
+    
+    bufferFill(txPingBuffer, sizeof(txPingBuffer));
+    bufferFill(txPongBuffer, sizeof(txPongBuffer));
     
     while ( true )
     {
@@ -232,7 +244,7 @@ int main ( void )
                      * Change the data for next transfer */
                     for(i=0; i<sizeof(txPingBuffer); i++)
                     {
-                        txPingBuffer[i] = pingData++;
+                        txPingBuffer[i] += 1;
                     }
                     state = APP_STATE_SPI_XFER_SUCCESSFUL;
                 }
@@ -251,7 +263,7 @@ int main ( void )
                      * Change the data for next transfer */
                     for(i=0; i<sizeof(txPongBuffer); i++)
                     {
-                        txPongBuffer[i] = pongData++;
+                        txPongBuffer[i] -= 1;
                     }
                     state = APP_STATE_SPI_XFER_SUCCESSFUL;
                 }

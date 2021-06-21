@@ -15,9 +15,9 @@ This example shows how to continuously transmit and receive data over a SPI inte
 
 DMA peripheral provides support to implement ping-pong buffering. DMA transmits and receives data from one pair of buffers, when CPU works on the second pair.
 
-When DMA is transmitting data from ping buffer, CPU works on pong buffer. When DMA completes transfer, it generates an interrupt to indicate transfer completion from ping buffer. DMA channel is automatically re-initialized to transmit data from pong buffer while the CPU works on the ping buffer.
+DMA uses linked list to continuously transfer data from ping and pong buffers. Linked list descriptor 0 is configured to transfer data from ping buffer. The linked list descriptor 0 points to descriptor 1 which is configured to transfer data from the pong buffer. The descriptor 1 is configured to point back to descriptor 0.
 
-When DMA is receiving data to ping buffer, CPU works on pong buffer. When DMA completes transfer, it generates an interrupt to indicate the availability of data in the ping buffer. DMA channel is automatically re-initialized to receive data in the pong buffer while the CPU works on the ping buffer.
+DMA generates an interrupt when it completes transferring data from ping buffer and starts transferring data from the pong buffer. While DMA is transferring data from pong buffer, CPU works on the ping buffer. When DMA completes transferring data from pong buffer it generates an interrupt and starts transferring data from the ping buffer. While DMA is transferring data from ping buffer, CPU works on the pong buffer.
 
 Data is transmitted and received in loopback mode by shorting the MISO and MOSI lines. At the end of transfer, received data is compared with transmitted data to confirm data match.
 
