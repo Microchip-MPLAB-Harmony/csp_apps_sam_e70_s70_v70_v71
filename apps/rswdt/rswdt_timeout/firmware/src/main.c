@@ -93,7 +93,11 @@ int main ( void )
         {   
             printf ("\n\r Emulating deadlock................ ");
             printf ("\n\r RSWDT should reset device in 4 seconds ");           
-            while(1);
+            while(1)
+            {
+                /* Clear the WDT timer to ensure reset is due to RSWDT */
+                WDT_Clear();
+            }
         }
 
     }
