@@ -419,5 +419,23 @@ children:
       children:
       - type: User
         attributes: {value: '7'}
+  - type: File
+    attributes: {id: instHeaderFile}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: source}
+        children:
+        - {type: Value, value: ../peripheral/mcan_11273/templates/plib_mcan_interrupt.h.ftl}
+  - type: File
+    attributes: {id: sourceFile}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: source}
+        children:
+        - {type: Value, value: ../peripheral/mcan_11273/templates/plib_mcan_interrupt.c.ftl}
 - type: ElementPosition
   attributes: {x: '378', y: '217', id: mcan1}

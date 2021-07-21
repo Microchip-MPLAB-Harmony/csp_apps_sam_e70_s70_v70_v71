@@ -21,7 +21,7 @@
 *******************************************************************************/
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2021 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -74,37 +74,36 @@
 // *****************************************************************************
 // *****************************************************************************
 /* MCAN1 Message RAM Configuration Size */
-#define MCAN1_RX_FIFO0_ELEMENT_SIZE       72
-#define MCAN1_RX_FIFO0_SIZE               72
-#define MCAN1_RX_FIFO1_ELEMENT_SIZE       72
-#define MCAN1_RX_FIFO1_SIZE               72
-#define MCAN1_RX_BUFFER_ELEMENT_SIZE      72
-#define MCAN1_RX_BUFFER_SIZE              72
-#define MCAN1_TX_FIFO_BUFFER_ELEMENT_SIZE 72
-#define MCAN1_TX_FIFO_BUFFER_SIZE         72
-#define MCAN1_TX_EVENT_FIFO_SIZE          8
-#define MCAN1_STD_MSG_ID_FILTER_SIZE      8
-#define MCAN1_EXT_MSG_ID_FILTER_SIZE      16
+#define MCAN1_RX_FIFO0_ELEMENT_SIZE       72U
+#define MCAN1_RX_FIFO0_SIZE               72U
+#define MCAN1_RX_FIFO1_ELEMENT_SIZE       72U
+#define MCAN1_RX_FIFO1_SIZE               72U
+#define MCAN1_RX_BUFFER_ELEMENT_SIZE      72U
+#define MCAN1_RX_BUFFER_SIZE              72U
+#define MCAN1_TX_FIFO_BUFFER_ELEMENT_SIZE 72U
+#define MCAN1_TX_FIFO_BUFFER_SIZE         72U
+#define MCAN1_TX_EVENT_FIFO_SIZE          8U
+#define MCAN1_STD_MSG_ID_FILTER_SIZE      8U
+#define MCAN1_EXT_MSG_ID_FILTER_SIZE      16U
 
 /* MCAN1_MESSAGE_RAM_CONFIG_SIZE to be used by application or driver
    for allocating buffer from non-cached contiguous memory */
-#define MCAN1_MESSAGE_RAM_CONFIG_SIZE     320
+#define MCAN1_MESSAGE_RAM_CONFIG_SIZE     320U
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
-void MCAN1_Initialize (void);
-bool MCAN1_MessageTransmit(uint32_t id, uint8_t length, uint8_t* data, MCAN_MODE mode, MCAN_MSG_TX_ATTRIBUTE msgAttr);
-bool MCAN1_MessageReceive(uint32_t *id, uint8_t *length, uint8_t *data, uint16_t *timestamp,
-                                          MCAN_MSG_RX_ATTRIBUTE msgAttr, MCAN_MSG_RX_FRAME_ATTRIBUTE *msgFrameAttr);
-bool MCAN1_TransmitEventFIFOElementGet(uint32_t *id, uint8_t *messageMarker, uint16_t *timestamp);
+void MCAN1_Initialize(void);
+bool MCAN1_MessageTransmitFifo(uint8_t numberOfMessage, MCAN_TX_BUFFER *txBuffer);
+uint8_t MCAN1_TxFifoFreeLevelGet(void);
+bool MCAN1_TxBufferIsBusy(uint8_t bufferNumber);
+bool MCAN1_TxEventFifoRead(uint8_t numberOfTxEvent, MCAN_TX_EVENT_FIFO *txEventFifo);
+bool MCAN1_MessageReceive(uint8_t bufferNumber, MCAN_RX_BUFFER *rxBuffer);
+bool MCAN1_MessageReceiveFifo(MCAN_RX_FIFO_NUM rxFifoNum, uint8_t numberOfMessage, MCAN_RX_BUFFER *rxBuffer);
 MCAN_ERROR MCAN1_ErrorGet(void);
 void MCAN1_ErrorCountGet(uint8_t *txErrorCount, uint8_t *rxErrorCount);
-bool MCAN1_InterruptGet(MCAN_INTERRUPT_MASK interruptMask);
-void MCAN1_InterruptClear(MCAN_INTERRUPT_MASK interruptMask);
-bool MCAN1_TxFIFOIsFull(void);
 void MCAN1_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress);
 bool MCAN1_StandardFilterElementSet(uint8_t filterNumber, mcan_sidfe_registers_t *stdMsgIDFilterElement);
 bool MCAN1_StandardFilterElementGet(uint8_t filterNumber, mcan_sidfe_registers_t *stdMsgIDFilterElement);
@@ -112,8 +111,10 @@ bool MCAN1_ExtendedFilterElementSet(uint8_t filterNumber, mcan_xidfe_registers_t
 bool MCAN1_ExtendedFilterElementGet(uint8_t filterNumber, mcan_xidfe_registers_t *extMsgIDFilterElement);
 void MCAN1_SleepModeEnter(void);
 void MCAN1_SleepModeExit(void);
-void MCAN1_TxCallbackRegister(MCAN_CALLBACK callback, uintptr_t contextHandle);
-void MCAN1_RxCallbackRegister(MCAN_CALLBACK callback, uintptr_t contextHandle, MCAN_MSG_RX_ATTRIBUTE msgAttr);
+void MCAN1_TxFifoCallbackRegister(MCAN_TX_FIFO_CALLBACK callback, uintptr_t contextHandle);
+void MCAN1_TxEventFifoCallbackRegister(MCAN_TX_EVENT_FIFO_CALLBACK callback, uintptr_t contextHandle);
+void MCAN1_RxBuffersCallbackRegister(MCAN_TXRX_BUFFERS_CALLBACK callback, uintptr_t contextHandle);
+void MCAN1_RxFifoCallbackRegister(MCAN_RX_FIFO_NUM rxFifoNum, MCAN_RX_FIFO_CALLBACK callback, uintptr_t contextHandle);
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
     }
