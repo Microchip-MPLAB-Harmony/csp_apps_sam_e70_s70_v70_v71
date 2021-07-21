@@ -53,11 +53,53 @@
 
 uint8_t Mcan1MessageRAM[MCAN1_MESSAGE_RAM_CONFIG_SIZE] __attribute__((aligned (32)))__attribute__((space(data), section (".ram_nocache")));
 
+/* Standard identifier id[28:18]*/
+#define WRITE_ID(id) (id << 18)
+#define READ_ID(id)  (id >> 18)
+
+static uint32_t status = 0;
+static uint8_t loop_count = 0;
+static uint8_t user_input = 0;
+
+static uint8_t txFiFo[MCAN1_TX_FIFO_BUFFER_SIZE];
+static uint8_t rxFiFo0[MCAN1_RX_FIFO0_SIZE];
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Local functions
+// *****************************************************************************
+// *****************************************************************************
+/* Menu */
 void print_menu(void)
 {
     printf(" ------------------------------ \r\n");   
     printf(" Press '1' to Transmit message \r\n");
-    printf(" Press '2' to Receive message \r\n");
+    printf(" Press 'm' to Display menu \r\n");
+}
+
+/* Print Rx Message */
+static void print_message(uint8_t numberOfMessage, MCAN_RX_BUFFER *rxBuf, uint8_t rxBufLen)
+{
+    uint8_t length = 0;
+    uint8_t msgLength = 0;
+    uint32_t id = 0;
+
+    for (uint8_t count = 0; count < numberOfMessage; count++)
+    {
+        /* Print message to Console */
+        printf(" Rx FIFO0 : New Message Received\r\n");
+        id = rxBuf->xtd ? rxBuf->id : READ_ID(rxBuf->id);
+        msgLength = rxBuf->dlc;
+        length = msgLength;
+        printf(" Message - ID : 0x%x Length : 0x%x ", (unsigned int)id, (unsigned int)msgLength);
+        printf("Message : ");
+        while(length)
+        {
+            printf("0x%x ", rxBuf->data[msgLength - length--]);
+        }
+        printf("\r\n");
+        rxBuf += rxBufLen;
+    }
 }
 
 // *****************************************************************************
@@ -68,22 +110,14 @@ void print_menu(void)
 
 int main ( void )
 {
-    uint8_t user_input = 0;
-    volatile uint32_t messageID = 0;
-    uint8_t message[8];
-    uint8_t messageLength = 0;
-    uint32_t status = 0;
-    
-    uint8_t rx_message[8];
-    uint32_t rx_messageID = 0;
-    uint8_t rx_messageLength = 0;
-    MCAN_MSG_RX_FRAME_ATTRIBUTE msgFrameAttr = MCAN_MSG_RX_DATA_FRAME;
+    MCAN_TX_BUFFER *txBuffer = NULL;
+    uint8_t        numberOfMessage = 0;
 
     /* Initialize all modules */
     SYS_Initialize ( NULL );
 
     printf(" ------------------------------ \r\n");
-    printf("           MCAN Demo            \r\n");
+    printf("            MCAN Demo            \r\n");
     printf(" ------------------------------ \r\n");
     
     /* Set Message RAM Configuration */
@@ -91,91 +125,73 @@ int main ( void )
 
     print_menu();
     
-    /* Prepare the message to send*/
-    messageID = 0x469;
-    messageLength = 8;
-    for (uint8_t count = 8; count >=1; count--){
-        message[count - 1] = count;
-    }
-    
     while ( true )
     {
-        /* Maintain state machines of all polled MPLAB Harmony modules. */
-        scanf("%c", (char *) &user_input);
-        
+        /* Rx FIFO0 */
+        if (MCAN1_InterruptGet(MCAN_INTERRUPT_RF0N_MASK))
+        {    
+            MCAN1_InterruptClear(MCAN_INTERRUPT_RF0N_MASK);
+
+            /* Check MCAN Status */
+            status = MCAN1_ErrorGet();
+
+            if (((status & MCAN_PSR_LEC_Msk) == MCAN_ERROR_NONE) || ((status & MCAN_PSR_LEC_Msk) == MCAN_ERROR_LEC_NO_CHANGE))
+            {
+                numberOfMessage = MCAN1_RxFifoFillLevelGet(MCAN_RX_FIFO_0);
+                if (numberOfMessage != 0)
+                {
+                    memset(rxFiFo0, 0x00, (numberOfMessage * MCAN1_RX_FIFO0_ELEMENT_SIZE));
+                    if (MCAN1_MessageReceiveFifo(MCAN_RX_FIFO_0, numberOfMessage, (MCAN_RX_BUFFER *)rxFiFo0) == true)
+                    {
+                        print_message(numberOfMessage, (MCAN_RX_BUFFER *)rxFiFo0, MCAN1_RX_FIFO0_ELEMENT_SIZE);
+                    }
+                    else
+                    {
+                        printf(" Error in received message\r\n");
+                    }
+                }
+            }
+            else
+            {
+                printf(" Error in received message\r\n");
+            }
+        }
+
+        /* User input */
+        if (USART1_ReceiverIsReady() == false)
+        {
+            continue;
+        }
+        user_input = (uint8_t)USART1_ReadByte();
+
         switch (user_input)
         {
             case '1': 
                 printf(" Transmitting Message:");
-                if (MCAN1_InterruptGet(MCAN_INTERRUPT_TC_MASK))
-                {
-                    MCAN1_InterruptClear(MCAN_INTERRUPT_TC_MASK);
-                }
-                if (MCAN1_MessageTransmit(messageID,messageLength,message,MCAN_MODE_NORMAL,MCAN_MSG_ATTR_TX_FIFO_DATA_FRAME) == true)
+                memset(txFiFo, 0x00, MCAN1_TX_FIFO_BUFFER_ELEMENT_SIZE);
+                txBuffer = (MCAN_TX_BUFFER *)txFiFo;
+                txBuffer->id = WRITE_ID(0x469);
+                txBuffer->dlc = 8;
+                for (loop_count = 0; loop_count < 8; loop_count++){
+                    txBuffer->data[loop_count] = loop_count;
+                }                
+                if (MCAN1_MessageTransmitFifo(1, txBuffer) == true)
                 {    
-                    printf("Success \r\n");
+                    printf(" Success \r\n");
                 }
                 else
                 {
-                    printf("Failed \r\n");
+                    printf(" Failed \r\n");
                 }             
                 break;
-            case '2':
-                printf(" Waiting for message: \r\n");
-                while (true)
-                {
-                    if (MCAN1_InterruptGet(MCAN_INTERRUPT_RF0N_MASK))
-                    {    
-                        MCAN1_InterruptClear(MCAN_INTERRUPT_RF0N_MASK);
-
-                        /* Check CAN Status */
-                        status = MCAN1_ErrorGet();
-
-                        if (((status & MCAN_PSR_LEC_Msk) == MCAN_ERROR_NONE) || ((status & MCAN_PSR_LEC_Msk) == MCAN_PSR_LEC_NO_CHANGE))
-                        {
-                            memset(rx_message, 0x00, sizeof(rx_message));
-                            
-                            /* Receive FIFO 0 New Message */
-                            if (MCAN1_MessageReceive(&rx_messageID, &rx_messageLength, rx_message, 0, MCAN_MSG_ATTR_RX_FIFO0, &msgFrameAttr) == true)  
-                            {
-                                printf(" New Message Received    \r\n");
-                                status = MCAN1_ErrorGet();
-                                if (((status & MCAN_PSR_LEC_Msk) == MCAN_ERROR_NONE) || ((status & MCAN_PSR_LEC_Msk) == MCAN_PSR_LEC_NO_CHANGE))
-                                {
-                                    /* Print message to Console */
-                                    uint8_t length = rx_messageLength;
-                                    printf(" Message - ID : 0x%x Length : 0x%x ", (unsigned int) rx_messageID,(unsigned int) rx_messageLength);
-                                    printf("Message : ");
-                                    while(length)
-                                    {
-                                        printf("0x%x ", rx_message[rx_messageLength - length--]);
-                                    }
-                                    printf("\r\n");
-                                    break;
-                                }
-                                else
-                                {
-                                    printf("Error in received message");
-                                }
-                            }
-                            else
-                            {
-                                printf("Message Reception Failed \r");
-                            }
-                        }
-                        else
-                        {
-                            printf("Error in last received message");
-                        }
-                    }
-                }
+            case 'm':
+            case 'M':
+                print_menu();
                 break;
             default:
-                printf("Invalid Input \r\n");
+                printf(" Invalid Input \r\n");
                 break;
         }
-        
-        print_menu();
         
     }
 
@@ -188,4 +204,3 @@ int main ( void )
 /*******************************************************************************
  End of File
 */
-
