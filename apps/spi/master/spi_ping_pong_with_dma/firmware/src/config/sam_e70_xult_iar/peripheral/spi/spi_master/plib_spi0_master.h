@@ -64,6 +64,8 @@ bool SPI0_Read( void* pReceiveData, size_t rxSize );
 
 bool SPI0_TransferSetup( SPI_TRANSFER_SETUP *setup, uint32_t spiSourceClock );
 
+bool SPI0_IsTransmitterBusy( void );
+
 
 bool SPI0_IsBusy( void );
 

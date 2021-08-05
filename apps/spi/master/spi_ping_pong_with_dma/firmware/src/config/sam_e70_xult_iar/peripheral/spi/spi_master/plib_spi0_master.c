@@ -209,6 +209,11 @@ bool SPI0_TransferSetup( SPI_TRANSFER_SETUP * setup, uint32_t spiSourceClock )
     return true;
 }
 
+bool SPI0_IsTransmitterBusy( void )
+{
+    return ((SPI0_REGS->SPI_SR & SPI_SR_TXEMPTY_Msk) == 0)? true : false;
+}
+
 void SPI0_CallbackRegister( SPI_CALLBACK callback, uintptr_t context )
 {
     spi0Obj.callback = callback;
