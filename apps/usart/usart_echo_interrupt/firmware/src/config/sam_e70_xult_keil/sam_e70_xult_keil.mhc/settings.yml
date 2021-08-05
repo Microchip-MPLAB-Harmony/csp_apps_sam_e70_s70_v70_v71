@@ -9,6 +9,6 @@ settings:
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
   TRUSTZONE: 'false'
-  CMSISPath: .\dev_packs\arm\CMSIS\5.6.0
+  CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
   MERGE_STRATEGY: OVERWRITE
   DFPPath: .\dev_packs\Microchip\SAME70_DFP\4.2.62\same70b\atdf\ATSAME70Q21B.atdf
