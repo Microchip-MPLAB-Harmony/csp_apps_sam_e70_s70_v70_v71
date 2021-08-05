@@ -1,27 +1,27 @@
 files:
 - generatedChecksum: 9D5EE038B893127B787BC03DFA6B467F
-  logicalPath: config\sam_e70_xult
+  logicalPath: config/sam_e70_xult
   name: exceptions.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
   userChecksum: 9D5EE038B893127B787BC03DFA6B467F
 - generatedChecksum: 41435836480956172E261DE1DB8FFB64
-  logicalPath: config\sam_e70_xult
+  logicalPath: config/sam_e70_xult
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
   userChecksum: 41435836480956172E261DE1DB8FFB64
 - generatedChecksum: 3B9F1BA8B0F74461C09EFD76F1B6FB78
-  logicalPath: config\sam_e70_xult
+  logicalPath: config/sam_e70_xult
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
   userChecksum: 3B9F1BA8B0F74461C09EFD76F1B6FB78
 - generatedChecksum: 6513F2461B8F476B68CA73906086047F
-  logicalPath: config\sam_e70_xult
+  logicalPath: config/sam_e70_xult
   name: libc_syscalls.c
   physicalPath: ''
   security: NON_SECURE
@@ -30,857 +30,857 @@ files:
 - generatedChecksum: null
   logicalPath: ''
   name: main.c
-  physicalPath: ..\..
+  physicalPath: ../..
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
 - generatedChecksum: D84EC9EF3C2070FA628A78F341DDA379
-  logicalPath: config\sam_e70_xult\peripheral\clk
+  logicalPath: config/sam_e70_xult/peripheral/clk
   name: plib_clk.c
-  physicalPath: peripheral\clk
+  physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
   userChecksum: D84EC9EF3C2070FA628A78F341DDA379
-- generatedChecksum: FE200EC8792729E8C9B163A12991C169
-  logicalPath: config\sam_e70_xult\peripheral\efc
+- generatedChecksum: D23DF612DB8267EDD9F5F3A463A02DB2
+  logicalPath: config/sam_e70_xult/peripheral/efc
   name: plib_efc.c
-  physicalPath: peripheral\efc
+  physicalPath: peripheral/efc
   security: NON_SECURE
   type: SOURCE
-  userChecksum: FE200EC8792729E8C9B163A12991C169
+  userChecksum: D23DF612DB8267EDD9F5F3A463A02DB2
 - generatedChecksum: 032742B03C2EEF9599BB1DDB256EA822
-  logicalPath: config\sam_e70_xult\peripheral\nvic
+  logicalPath: config/sam_e70_xult/peripheral/nvic
   name: plib_nvic.c
-  physicalPath: peripheral\nvic
+  physicalPath: peripheral/nvic
   security: NON_SECURE
   type: SOURCE
   userChecksum: 032742B03C2EEF9599BB1DDB256EA822
 - generatedChecksum: F2E8FE608466BF25851FA9D634F892C6
-  logicalPath: config\sam_e70_xult\peripheral\pio
+  logicalPath: config/sam_e70_xult/peripheral/pio
   name: plib_pio.c
-  physicalPath: peripheral\pio
+  physicalPath: peripheral/pio
   security: NON_SECURE
   type: SOURCE
   userChecksum: F2E8FE608466BF25851FA9D634F892C6
 - generatedChecksum: 3A35F794BD3C19E7B3142ED6806E4EFE
-  logicalPath: config\sam_e70_xult
+  logicalPath: config/sam_e70_xult
   name: startup_xc32.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
   userChecksum: 3A35F794BD3C19E7B3142ED6806E4EFE
 - generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
-  logicalPath: config\sam_e70_xult\stdio
+  logicalPath: config/sam_e70_xult/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
   userChecksum: 7806B30ECAE0D18D08CD583D8775530D
-- generatedChecksum: A553D25CC0BFBA89908652945E73296A
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+- generatedChecksum: 51AC9ADA7DD9FD74C608ABCB9A9A9B6F
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: acc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: A553D25CC0BFBA89908652945E73296A
-- generatedChecksum: 3AB100292CB044AB16C551BDE5D3DE4C
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 51AC9ADA7DD9FD74C608ABCB9A9A9B6F
+- generatedChecksum: CEC44F005018D6DE45B8A2C7C644940D
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: acc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3AB100292CB044AB16C551BDE5D3DE4C
-- generatedChecksum: 79E12E30266B16ED090263FFF5AA3864
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: CEC44F005018D6DE45B8A2C7C644940D
+- generatedChecksum: 0F9D447EFF54CFFBF5868408DFAD1CC8
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: aes.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 79E12E30266B16ED090263FFF5AA3864
-- generatedChecksum: BB9E4C8522C2EC7FBD809253A2F5A7CB
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 0F9D447EFF54CFFBF5868408DFAD1CC8
+- generatedChecksum: 0EF6B63EA6EE15C8A71A2F62305A183D
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: aes.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: BB9E4C8522C2EC7FBD809253A2F5A7CB
-- generatedChecksum: 7038E01A17FF9D9518DABAD6049F39A3
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 0EF6B63EA6EE15C8A71A2F62305A183D
+- generatedChecksum: B6158E5D03B37FC14E86D115D7828D8E
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: afec.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7038E01A17FF9D9518DABAD6049F39A3
-- generatedChecksum: 93E61C9E3681003BA203C285D31BF14A
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: B6158E5D03B37FC14E86D115D7828D8E
+- generatedChecksum: F5FA327CDE1A2C78139ADD033F251D40
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: afec0.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 93E61C9E3681003BA203C285D31BF14A
-- generatedChecksum: 39449433F4EB8594A2E95FA6AA05AE29
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: F5FA327CDE1A2C78139ADD033F251D40
+- generatedChecksum: E1C3E5DE9E5731F503977AF3DD75C7A0
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: afec1.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 39449433F4EB8594A2E95FA6AA05AE29
-- generatedChecksum: 01B82424BC59A54620F7E9E0DB808EBB
-  logicalPath: packs\CMSIS\CMSIS\Core\Include
+  userChecksum: E1C3E5DE9E5731F503977AF3DD75C7A0
+- generatedChecksum: 14F1AD56D242EFD0AF76849C6ADFECC4
+  logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cachel1_armv7.h
-  physicalPath: ..\..\packs\CMSIS\CMSIS\Core\Include
+  physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 01B82424BC59A54620F7E9E0DB808EBB
-- generatedChecksum: 8E52DC65FE771B24E204D7D3E49CC8FB
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 14F1AD56D242EFD0AF76849C6ADFECC4
+- generatedChecksum: D16A11FD137F4AA969FE886A519846E3
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: chipid.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 8E52DC65FE771B24E204D7D3E49CC8FB
-- generatedChecksum: 1F921DBC390AAA202CAC77C90EB995F3
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: D16A11FD137F4AA969FE886A519846E3
+- generatedChecksum: DE575C2BB9D471B4A4BFBE0D65286D61
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: chipid.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1F921DBC390AAA202CAC77C90EB995F3
-- generatedChecksum: 00A88E28C299A373117BC4D5B9E80C80
-  logicalPath: packs\CMSIS\CMSIS\Core\Include
+  userChecksum: DE575C2BB9D471B4A4BFBE0D65286D61
+- generatedChecksum: B79C08E0901948AD04D944B4BCE1B60D
+  logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_armcc.h
-  physicalPath: ..\..\packs\CMSIS\CMSIS\Core\Include
+  physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 00A88E28C299A373117BC4D5B9E80C80
-- generatedChecksum: 734DF6998F09B2D22A4D9FE1D544FDFC
-  logicalPath: packs\CMSIS\CMSIS\Core\Include
+  userChecksum: B79C08E0901948AD04D944B4BCE1B60D
+- generatedChecksum: 6B4E2EBA8708D9E04E6136F29460ACB9
+  logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_armclang.h
-  physicalPath: ..\..\packs\CMSIS\CMSIS\Core\Include
+  physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 734DF6998F09B2D22A4D9FE1D544FDFC
-- generatedChecksum: 5D653BEFE5E6B1D00AB3682CE5D24C11
-  logicalPath: packs\CMSIS\CMSIS\Core\Include
+  userChecksum: 6B4E2EBA8708D9E04E6136F29460ACB9
+- generatedChecksum: 415E22EBE7A3BACE87240A7F16492C46
+  logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_armclang_ltm.h
-  physicalPath: ..\..\packs\CMSIS\CMSIS\Core\Include
+  physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5D653BEFE5E6B1D00AB3682CE5D24C11
+  userChecksum: 415E22EBE7A3BACE87240A7F16492C46
 - generatedChecksum: 60385A5C6C9882B5D30709A1F6EAEC35
-  logicalPath: packs\CMSIS\CMSIS\Core\Include
+  logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_compiler.h
-  physicalPath: ..\..\packs\CMSIS\CMSIS\Core\Include
+  physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
   userChecksum: 60385A5C6C9882B5D30709A1F6EAEC35
-- generatedChecksum: 42E8B722917508A3A9373D13AD827ED6
-  logicalPath: packs\CMSIS\CMSIS\Core\Include
+- generatedChecksum: 4DC978B079559EB044AFD32A57768238
+  logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_gcc.h
-  physicalPath: ..\..\packs\CMSIS\CMSIS\Core\Include
+  physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 42E8B722917508A3A9373D13AD827ED6
-- generatedChecksum: 376D5C7FD29CAA507ACB1AAB8746B1AD
-  logicalPath: packs\CMSIS\CMSIS\Core\Include
+  userChecksum: 4DC978B079559EB044AFD32A57768238
+- generatedChecksum: 11521476050CAC6C1F3A91A5BB5DBB9A
+  logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_iccarm.h
-  physicalPath: ..\..\packs\CMSIS\CMSIS\Core\Include
+  physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 376D5C7FD29CAA507ACB1AAB8746B1AD
+  userChecksum: 11521476050CAC6C1F3A91A5BB5DBB9A
 - generatedChecksum: 52F91AC0727F2311EDA0E3BAA7719A9F
-  logicalPath: packs\CMSIS\CMSIS\Core\Include
+  logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_version.h
-  physicalPath: ..\..\packs\CMSIS\CMSIS\Core\Include
+  physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
   userChecksum: 52F91AC0727F2311EDA0E3BAA7719A9F
-- generatedChecksum: 8DA90CDFAED934C14DB1E81B104CEE2F
-  logicalPath: packs\CMSIS\CMSIS\Core\Include
+- generatedChecksum: 948CEA542F04017255B040816F368DF8
+  logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: core_cm7.h
-  physicalPath: ..\..\packs\CMSIS\CMSIS\Core\Include
+  physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 8DA90CDFAED934C14DB1E81B104CEE2F
-- generatedChecksum: 0FACFDAF3332824FEC24B015B57504E4
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 948CEA542F04017255B040816F368DF8
+- generatedChecksum: 37DFBC37399D78B0B614DB9102386836
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: dacc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0FACFDAF3332824FEC24B015B57504E4
-- generatedChecksum: 5CE65D2418F8900441F79FBEC5260051
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 37DFBC37399D78B0B614DB9102386836
+- generatedChecksum: CBD842DCA3BC175A2FE63AE2DBF3E71D
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: dacc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5CE65D2418F8900441F79FBEC5260051
+  userChecksum: CBD842DCA3BC175A2FE63AE2DBF3E71D
 - generatedChecksum: 93F4C42D6CF8D0D7D9858AA77ECEC5EA
-  logicalPath: config\sam_e70_xult
+  logicalPath: config/sam_e70_xult
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: 93F4C42D6CF8D0D7D9858AA77ECEC5EA
 - generatedChecksum: C679A77E2A1338BE090B760AD405B86C
-  logicalPath: config\sam_e70_xult
+  logicalPath: config/sam_e70_xult
   name: device.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: C679A77E2A1338BE090B760AD405B86C
 - generatedChecksum: 9FD18F0D30B89945CC141BA0DE2ABE90
-  logicalPath: config\sam_e70_xult
+  logicalPath: config/sam_e70_xult
   name: device_cache.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: 9FD18F0D30B89945CC141BA0DE2ABE90
 - generatedChecksum: 56C5CF9C2C712CAA93EFB1BA10BD1DEB
-  logicalPath: config\sam_e70_xult
+  logicalPath: config/sam_e70_xult
   name: device_vectors.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: 56C5CF9C2C712CAA93EFB1BA10BD1DEB
-- generatedChecksum: 9199842EA808F1342FF84CC027023724
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+- generatedChecksum: 8731ACF51B3EF064D46C3E756A8A9B89
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: efc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 9199842EA808F1342FF84CC027023724
-- generatedChecksum: 66A8B4BBE02A2C844C801778FBC57621
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 8731ACF51B3EF064D46C3E756A8A9B89
+- generatedChecksum: 168E6E1833E07D6D037861DC5BFC5DA8
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: efc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 66A8B4BBE02A2C844C801778FBC57621
-- generatedChecksum: 9E283C8628E61CFA155D21D0B42B1F60
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 168E6E1833E07D6D037861DC5BFC5DA8
+- generatedChecksum: 5CA16E2C606E5FFBF52605DFF52E7E06
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: gmac.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 9E283C8628E61CFA155D21D0B42B1F60
-- generatedChecksum: E9FEDDAE0B74278BA899881057CE6942
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 5CA16E2C606E5FFBF52605DFF52E7E06
+- generatedChecksum: 0D6E916FFDA71137E558A5053B6696FB
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: gmac.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: E9FEDDAE0B74278BA899881057CE6942
-- generatedChecksum: 08745A71E16EC2B62BD49038DABE68D6
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 0D6E916FFDA71137E558A5053B6696FB
+- generatedChecksum: 5F4E4278ECA2CA1729FE068D8513C599
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: gpbr.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 08745A71E16EC2B62BD49038DABE68D6
-- generatedChecksum: F4AF795DE2AEB9A3998A5686AE6B6375
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 5F4E4278ECA2CA1729FE068D8513C599
+- generatedChecksum: 261A77AE4EA2DF75D5F7FE85F3F1834F
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: gpbr.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: F4AF795DE2AEB9A3998A5686AE6B6375
-- generatedChecksum: 00104F6FF6D480499CA0F1FAE1E49B51
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 261A77AE4EA2DF75D5F7FE85F3F1834F
+- generatedChecksum: 87C1AF2B5B9D1255BAD59FFE8B6BA76B
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: hsmci.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 00104F6FF6D480499CA0F1FAE1E49B51
-- generatedChecksum: 31BBC87FAACE400A70A1BC5BCC2ED8CC
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 87C1AF2B5B9D1255BAD59FFE8B6BA76B
+- generatedChecksum: 0A26403DF4EFDB171EB4E61B61E69C2D
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: hsmci.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 31BBC87FAACE400A70A1BC5BCC2ED8CC
-- generatedChecksum: C265A1B57C1859ADCE19A81AFBFCCBED
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 0A26403DF4EFDB171EB4E61B61E69C2D
+- generatedChecksum: 1063A0C5AEA4294D8D4870D8810786B2
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: i2sc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: C265A1B57C1859ADCE19A81AFBFCCBED
-- generatedChecksum: E094D5CD87FC5A6255AA2E4CF3C4D773
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 1063A0C5AEA4294D8D4870D8810786B2
+- generatedChecksum: 807BBD4C17D560653FB4FD3F309D4434
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: i2sc0.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: E094D5CD87FC5A6255AA2E4CF3C4D773
-- generatedChecksum: F2300FB626C85B449D1328D7D70EB452
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 807BBD4C17D560653FB4FD3F309D4434
+- generatedChecksum: E3C20E29E43628F4D3151A0888E805A3
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: i2sc1.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: F2300FB626C85B449D1328D7D70EB452
-- generatedChecksum: 84EE721433B0232A694AC210E7F1481E
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: E3C20E29E43628F4D3151A0888E805A3
+- generatedChecksum: 92A1CD7F0A6E8C7FA4E51DFB9D1F7AE0
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: icm.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 84EE721433B0232A694AC210E7F1481E
-- generatedChecksum: 70241C6FFD1B0B27A04ED3FF524A453E
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 92A1CD7F0A6E8C7FA4E51DFB9D1F7AE0
+- generatedChecksum: 7A8E3BE8185C9931D8971956B17E0ED6
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: icm.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 70241C6FFD1B0B27A04ED3FF524A453E
+  userChecksum: 7A8E3BE8185C9931D8971956B17E0ED6
 - generatedChecksum: 8728C1E7B0B16209D819A1B4A99DF3C4
-  logicalPath: config\sam_e70_xult
+  logicalPath: config/sam_e70_xult
   name: interrupts.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: 8728C1E7B0B16209D819A1B4A99DF3C4
-- generatedChecksum: B1D460096D2ACDD8FE12DA78A8D3B144
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+- generatedChecksum: E8CBE32A33E6C8451FFD9A4924F7BF21
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: isi.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: B1D460096D2ACDD8FE12DA78A8D3B144
-- generatedChecksum: 2BDCF0EC4F2DC8AA0A0581EF4AAF1341
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: E8CBE32A33E6C8451FFD9A4924F7BF21
+- generatedChecksum: 16AD0B213FA8FCAE24C4DA8FBE3B7D2A
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: isi.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2BDCF0EC4F2DC8AA0A0581EF4AAF1341
-- generatedChecksum: 8EEE9F4252F07601073E1E2C53515097
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 16AD0B213FA8FCAE24C4DA8FBE3B7D2A
+- generatedChecksum: FA3D35B0ADD00D6154FA13CF89378140
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: matrix.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 8EEE9F4252F07601073E1E2C53515097
-- generatedChecksum: A454D64A3CF0B255FFADA7059C477F02
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: FA3D35B0ADD00D6154FA13CF89378140
+- generatedChecksum: 775A76EAB0A25AE83CC8B2DBEC234100
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: matrix.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: A454D64A3CF0B255FFADA7059C477F02
-- generatedChecksum: 270E72B67E9DFDA847E5EDA49FED714C
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 775A76EAB0A25AE83CC8B2DBEC234100
+- generatedChecksum: 7FE78489139B3E00D88DF51BFB22B6D6
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: mcan.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 270E72B67E9DFDA847E5EDA49FED714C
-- generatedChecksum: CA8B74A7F0827D48FEB1ECA28B70142E
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 7FE78489139B3E00D88DF51BFB22B6D6
+- generatedChecksum: 12348E160FF2095B03BF541C29B97093
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: mcan0.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: CA8B74A7F0827D48FEB1ECA28B70142E
-- generatedChecksum: F5FF4820F5A20E44973ACDB84E741C32
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 12348E160FF2095B03BF541C29B97093
+- generatedChecksum: 40BECA167C2EF8A284B7BF637DCBDE68
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: mcan1.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: F5FF4820F5A20E44973ACDB84E741C32
-- generatedChecksum: B96ADDA2C111E73B26EBA5E7B4498912
-  logicalPath: packs\CMSIS\CMSIS\Core\Include
+  userChecksum: 40BECA167C2EF8A284B7BF637DCBDE68
+- generatedChecksum: 47E760D36E42A7B436306A9CB4E72A0E
+  logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: mpu_armv7.h
-  physicalPath: ..\..\packs\CMSIS\CMSIS\Core\Include
+  physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: B96ADDA2C111E73B26EBA5E7B4498912
-- generatedChecksum: 24CA144A3DF621564DCDA14619A67F68
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 47E760D36E42A7B436306A9CB4E72A0E
+- generatedChecksum: DB80C02016007554F359199DBEEA8554
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: pio.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 24CA144A3DF621564DCDA14619A67F68
-- generatedChecksum: 3894808C0A8D5F3214A7309C80F8EC62
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: DB80C02016007554F359199DBEEA8554
+- generatedChecksum: 807C3CDE72C85336F14CA990E0194439
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: pioa.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3894808C0A8D5F3214A7309C80F8EC62
-- generatedChecksum: B6D8EBFE9359445CCD72209873C12865
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 807C3CDE72C85336F14CA990E0194439
+- generatedChecksum: E6E94F01F4DDF5F698D1ED793E4020EC
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: piob.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: B6D8EBFE9359445CCD72209873C12865
-- generatedChecksum: AC100555DB26970168DEED55F84A5DD0
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: E6E94F01F4DDF5F698D1ED793E4020EC
+- generatedChecksum: 00F3A03643C84D9FC357C4AD44E5D7C0
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: pioc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: AC100555DB26970168DEED55F84A5DD0
-- generatedChecksum: 411E550560D21C43BD3E6F9DEACE8778
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 00F3A03643C84D9FC357C4AD44E5D7C0
+- generatedChecksum: 6C711D045B098E09B0DAD792B327DCE1
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: piod.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 411E550560D21C43BD3E6F9DEACE8778
-- generatedChecksum: EEE7DF9F22B1ADAB5F438E241DB2CA25
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 6C711D045B098E09B0DAD792B327DCE1
+- generatedChecksum: 8A092165CFFF0236E26973A7FB029A2F
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: pioe.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: EEE7DF9F22B1ADAB5F438E241DB2CA25
+  userChecksum: 8A092165CFFF0236E26973A7FB029A2F
 - generatedChecksum: BFDB10EBEF4DBDE66563BA7DD136A98F
-  logicalPath: config\sam_e70_xult\peripheral\clk
+  logicalPath: config/sam_e70_xult/peripheral/clk
   name: plib_clk.h
-  physicalPath: peripheral\clk
+  physicalPath: peripheral/clk
   security: NON_SECURE
   type: HEADER
   userChecksum: BFDB10EBEF4DBDE66563BA7DD136A98F
-- generatedChecksum: FB046CED42CA3B2AE1895C186571EF71
-  logicalPath: config\sam_e70_xult\peripheral\efc
+- generatedChecksum: 0ABDA5C4051B45BB0C8746712B766240
+  logicalPath: config/sam_e70_xult/peripheral/efc
   name: plib_efc.h
-  physicalPath: peripheral\efc
+  physicalPath: peripheral/efc
   security: NON_SECURE
   type: HEADER
-  userChecksum: FB046CED42CA3B2AE1895C186571EF71
+  userChecksum: 0ABDA5C4051B45BB0C8746712B766240
 - generatedChecksum: 55ECCC7FA71BD15B46EF80DC0515ED7A
-  logicalPath: config\sam_e70_xult\peripheral\nvic
+  logicalPath: config/sam_e70_xult/peripheral/nvic
   name: plib_nvic.h
-  physicalPath: peripheral\nvic
+  physicalPath: peripheral/nvic
   security: NON_SECURE
   type: HEADER
   userChecksum: 55ECCC7FA71BD15B46EF80DC0515ED7A
 - generatedChecksum: 1D7825F78BD80C0F8B1B7D0E2C7109F9
-  logicalPath: config\sam_e70_xult\peripheral\pio
+  logicalPath: config/sam_e70_xult/peripheral/pio
   name: plib_pio.h
-  physicalPath: peripheral\pio
+  physicalPath: peripheral/pio
   security: NON_SECURE
   type: HEADER
   userChecksum: 1D7825F78BD80C0F8B1B7D0E2C7109F9
-- generatedChecksum: 5911C76E47DDDF3FA60B1E03AB3D2D58
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+- generatedChecksum: 14803DE91A29C406E647A774613322C7
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: pmc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5911C76E47DDDF3FA60B1E03AB3D2D58
-- generatedChecksum: 692D11DD0597F26819D4F24C1BF807CA
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 14803DE91A29C406E647A774613322C7
+- generatedChecksum: DF692A9BD9B984496E15DAC77E4D3FED
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: pmc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 692D11DD0597F26819D4F24C1BF807CA
-- generatedChecksum: F71758A24D3CF280997D4597A98FB6F6
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: DF692A9BD9B984496E15DAC77E4D3FED
+- generatedChecksum: 5132491C5E15330EAE4ADF6A0B6111CE
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: pwm.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: F71758A24D3CF280997D4597A98FB6F6
-- generatedChecksum: C3E4D17F920AF17E5BF9FAC443479A85
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 5132491C5E15330EAE4ADF6A0B6111CE
+- generatedChecksum: FA3B317DC63DAC1E1A78792533F66B1C
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: pwm0.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: C3E4D17F920AF17E5BF9FAC443479A85
-- generatedChecksum: 52ED0C387AEC81C406B83C86A141590C
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: FA3B317DC63DAC1E1A78792533F66B1C
+- generatedChecksum: 418F1E27EA027D751AC0EE1817ADA67C
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: pwm1.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 52ED0C387AEC81C406B83C86A141590C
-- generatedChecksum: 320347504D38B0B9011660BCAD539374
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 418F1E27EA027D751AC0EE1817ADA67C
+- generatedChecksum: D3B793D0EADD8B0CE21573168A0A1CA0
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: qspi.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 320347504D38B0B9011660BCAD539374
-- generatedChecksum: AFDB75FB557D975EEA4FFEB8F74947AE
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: D3B793D0EADD8B0CE21573168A0A1CA0
+- generatedChecksum: E74AED758BDC96AFDB060A08BCF952E2
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: qspi.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: AFDB75FB557D975EEA4FFEB8F74947AE
-- generatedChecksum: F26E8BF9937C2EBA6982398555BE3715
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: E74AED758BDC96AFDB060A08BCF952E2
+- generatedChecksum: 72CB4A06AD6A2BC96E67AADBD5C28387
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: rstc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: F26E8BF9937C2EBA6982398555BE3715
-- generatedChecksum: C26A53A0E49D4C979E9F6BD8899531FE
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 72CB4A06AD6A2BC96E67AADBD5C28387
+- generatedChecksum: FD17E2948D210C15E373EF4348C64180
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: rstc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: C26A53A0E49D4C979E9F6BD8899531FE
-- generatedChecksum: AB2EB635614CC4931D6C4C1104A49DF2
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: FD17E2948D210C15E373EF4348C64180
+- generatedChecksum: EFE43B702296459A05214C40D944D79C
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: rswdt.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: AB2EB635614CC4931D6C4C1104A49DF2
-- generatedChecksum: AAB2A95B36656D2146751BFA6F9410B4
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: EFE43B702296459A05214C40D944D79C
+- generatedChecksum: 4B68DFAEEB259D19B25281DB6A222C8A
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: rswdt.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: AAB2A95B36656D2146751BFA6F9410B4
-- generatedChecksum: 14AC5A25FD14544ADE354863F32C4F02
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 4B68DFAEEB259D19B25281DB6A222C8A
+- generatedChecksum: 657336BC4733CDFDE3323CA073843260
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: rtc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 14AC5A25FD14544ADE354863F32C4F02
-- generatedChecksum: 433849E429BD2E13ED23C66FF563DD14
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 657336BC4733CDFDE3323CA073843260
+- generatedChecksum: 7F789754F1C162F6CA6096916EB42DBD
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: rtc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 433849E429BD2E13ED23C66FF563DD14
-- generatedChecksum: 64C3137F5BDDE08F2306B38BFABC399F
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 7F789754F1C162F6CA6096916EB42DBD
+- generatedChecksum: 5D0FDF6A3459CB7D04AD5D7897701903
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: rtt.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 64C3137F5BDDE08F2306B38BFABC399F
-- generatedChecksum: A6208DEB3EE49293C214340FD93C20A9
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 5D0FDF6A3459CB7D04AD5D7897701903
+- generatedChecksum: 037AE593416C6AF5453910CF73047B3D
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: rtt.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: A6208DEB3EE49293C214340FD93C20A9
-- generatedChecksum: F230A07DB9CBA5FC97B3F044B369A47A
-  logicalPath: packs\ATSAME70Q21B_DFP
+  userChecksum: 037AE593416C6AF5453910CF73047B3D
+- generatedChecksum: A6C3A2B73EF916C4F81FC875B9E0FB33
+  logicalPath: packs/ATSAME70Q21B_DFP
   name: same70q21b.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP
+  physicalPath: ../../packs/ATSAME70Q21B_DFP
   security: NON_SECURE
   type: HEADER
-  userChecksum: F230A07DB9CBA5FC97B3F044B369A47A
-- generatedChecksum: 6DB20B5DC60FACDB9103A62552B1F509
-  logicalPath: packs\ATSAME70Q21B_DFP\pio
+  userChecksum: A6C3A2B73EF916C4F81FC875B9E0FB33
+- generatedChecksum: 286E18843C903585AC85C83341D9AF05
+  logicalPath: packs/ATSAME70Q21B_DFP/pio
   name: same70q21b.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\pio
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/pio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6DB20B5DC60FACDB9103A62552B1F509
-- generatedChecksum: C0933E903FC87C9A7B506E491CCEE28F
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 286E18843C903585AC85C83341D9AF05
+- generatedChecksum: 7F722EDB69BA4BB3E42D7DA82772EEF7
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: sdramc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: C0933E903FC87C9A7B506E491CCEE28F
-- generatedChecksum: D2AD08F42BCD78982E204F5BA1A59579
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 7F722EDB69BA4BB3E42D7DA82772EEF7
+- generatedChecksum: CDAE516CDBE2C6C2267B79DF35892DC8
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: sdramc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: D2AD08F42BCD78982E204F5BA1A59579
-- generatedChecksum: 521B40166EF546E9FB2D06941EC7EE2A
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: CDAE516CDBE2C6C2267B79DF35892DC8
+- generatedChecksum: C31044BE52ADD40C7CDBDB11B18F7DB6
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: smc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 521B40166EF546E9FB2D06941EC7EE2A
-- generatedChecksum: 00C838DC28DF10ACA1574CC8693561A0
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: C31044BE52ADD40C7CDBDB11B18F7DB6
+- generatedChecksum: 467F6414E4D017385E8C9DC920D7F0B5
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: smc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 00C838DC28DF10ACA1574CC8693561A0
-- generatedChecksum: 6E5D5BF788F21F5837376007016B1D79
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 467F6414E4D017385E8C9DC920D7F0B5
+- generatedChecksum: 8A37D4FCF3C162946EB1527CC6065F38
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: spi.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6E5D5BF788F21F5837376007016B1D79
-- generatedChecksum: 3DE3D0F2645CA167C0197D641BB71C6D
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 8A37D4FCF3C162946EB1527CC6065F38
+- generatedChecksum: 32EABC704DA9E13259554E056E4F4258
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: spi0.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3DE3D0F2645CA167C0197D641BB71C6D
-- generatedChecksum: AC6043DD6916364BAED724314A3009BD
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 32EABC704DA9E13259554E056E4F4258
+- generatedChecksum: 996F5554EFD2470B076E129C95636CA9
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: spi1.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: AC6043DD6916364BAED724314A3009BD
-- generatedChecksum: 22D8D198C5672D24833283BA0E6117B9
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 996F5554EFD2470B076E129C95636CA9
+- generatedChecksum: 27C8748F1FC5C3185A6FA99679E7C3F1
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: ssc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 22D8D198C5672D24833283BA0E6117B9
-- generatedChecksum: 750CC2EBB5EB3D06065F63FC90008C9A
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 27C8748F1FC5C3185A6FA99679E7C3F1
+- generatedChecksum: 311E5E97777D448026B84CE4432A0243
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: ssc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 750CC2EBB5EB3D06065F63FC90008C9A
-- generatedChecksum: 28DA4C500EFADCFBD7F90F0BF95810B3
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 311E5E97777D448026B84CE4432A0243
+- generatedChecksum: 97788E16DA80A8B066C5D82360AA875E
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: supc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 28DA4C500EFADCFBD7F90F0BF95810B3
-- generatedChecksum: 2FBCD8A88BE618AC0B6BBBCCF0A8F62D
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 97788E16DA80A8B066C5D82360AA875E
+- generatedChecksum: 7DBB18FBCEF54CF96CD8FF8DD696EF29
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: supc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2FBCD8A88BE618AC0B6BBBCCF0A8F62D
-- generatedChecksum: A60B36B2A82AE846D456442E6C699E0D
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 7DBB18FBCEF54CF96CD8FF8DD696EF29
+- generatedChecksum: 45059A42B00714EC78BECC1FABA599EF
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: tc.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: A60B36B2A82AE846D456442E6C699E0D
-- generatedChecksum: 56B3FF368E60E5F56F4026B640F748F0
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 45059A42B00714EC78BECC1FABA599EF
+- generatedChecksum: 12B7C325C70889E0C0554FFF18DE5F8F
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: tc0.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 56B3FF368E60E5F56F4026B640F748F0
-- generatedChecksum: F90CF1E96BC14CC2B06C1B7E4C1414FD
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 12B7C325C70889E0C0554FFF18DE5F8F
+- generatedChecksum: 982A90F5DE10A528C0AAF6C07C349081
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: tc1.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: F90CF1E96BC14CC2B06C1B7E4C1414FD
-- generatedChecksum: 60A8A4FB3A80A6CB4977E2BFBB55B316
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 982A90F5DE10A528C0AAF6C07C349081
+- generatedChecksum: 722F58BFC9693864C77BFFCA243935B7
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: tc2.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 60A8A4FB3A80A6CB4977E2BFBB55B316
-- generatedChecksum: C51EC56F3ECBD0EC33722E8E6004E90F
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 722F58BFC9693864C77BFFCA243935B7
+- generatedChecksum: 3BDF5D07FCE1023F99DC46F6B7BEC95D
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: tc3.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: C51EC56F3ECBD0EC33722E8E6004E90F
+  userChecksum: 3BDF5D07FCE1023F99DC46F6B7BEC95D
 - generatedChecksum: 812B613CCACA9D91D45F77BFA31F1E1F
-  logicalPath: config\sam_e70_xult
+  logicalPath: config/sam_e70_xult
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: 812B613CCACA9D91D45F77BFA31F1E1F
-- generatedChecksum: 510A39F42C5DCB55B08EBE4C9B78A5B0
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+- generatedChecksum: 290B8F68D1831E302E340BF91457437D
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: trng.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 510A39F42C5DCB55B08EBE4C9B78A5B0
-- generatedChecksum: 4ADE9F1FE86A35130933CF6DADE029CF
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 290B8F68D1831E302E340BF91457437D
+- generatedChecksum: 112FC5A71F077062570DCDF2D9DFFFC3
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: trng.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4ADE9F1FE86A35130933CF6DADE029CF
-- generatedChecksum: 8D7B9651F8F4A710DF7C62B42964092F
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 112FC5A71F077062570DCDF2D9DFFFC3
+- generatedChecksum: 7447B01464978AE0CF9E11686590BF82
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: twihs.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 8D7B9651F8F4A710DF7C62B42964092F
-- generatedChecksum: 1B9DE8751133F49B268660AC0AD565A1
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 7447B01464978AE0CF9E11686590BF82
+- generatedChecksum: 67319C79E2F68CC082AAABF225ED0E51
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: twihs0.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1B9DE8751133F49B268660AC0AD565A1
-- generatedChecksum: 0AA7BE4F1820D295F8D58B20A8644CBD
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 67319C79E2F68CC082AAABF225ED0E51
+- generatedChecksum: 2A4C08BE57C65514B51C1A6D26312416
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: twihs1.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0AA7BE4F1820D295F8D58B20A8644CBD
-- generatedChecksum: 76236EBB124A830B0B1A8C9191D19153
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 2A4C08BE57C65514B51C1A6D26312416
+- generatedChecksum: 9C809A9D5EFDC09FC59D0A55F39E405B
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: twihs2.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 76236EBB124A830B0B1A8C9191D19153
-- generatedChecksum: 570210C7B98BE6838A6D2C675F7FD643
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 9C809A9D5EFDC09FC59D0A55F39E405B
+- generatedChecksum: FCD6EACE6CC73F03D316809B50D10C6F
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: uart.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 570210C7B98BE6838A6D2C675F7FD643
-- generatedChecksum: 957C842847503804B1E4277A4F0BCF3E
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: FCD6EACE6CC73F03D316809B50D10C6F
+- generatedChecksum: CD38385055D1EC12406E7A7E3ED603EC
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: uart0.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 957C842847503804B1E4277A4F0BCF3E
-- generatedChecksum: 00B3181F1D8231D64ED167CE96BE1AD9
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: CD38385055D1EC12406E7A7E3ED603EC
+- generatedChecksum: 2B14130A177D7D09096DFF66EF495BD9
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: uart1.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 00B3181F1D8231D64ED167CE96BE1AD9
-- generatedChecksum: FD9D754BE7EE5ECD3DB8DF0C2DEBD34C
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 2B14130A177D7D09096DFF66EF495BD9
+- generatedChecksum: 31B5393D8D1F140E8B853E040F9DFBAB
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: uart2.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: FD9D754BE7EE5ECD3DB8DF0C2DEBD34C
-- generatedChecksum: 9429E78D7C0940CEC4250FC7DA9100F0
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 31B5393D8D1F140E8B853E040F9DFBAB
+- generatedChecksum: BB983D01B28593A5263222039E51FF11
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: uart3.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 9429E78D7C0940CEC4250FC7DA9100F0
-- generatedChecksum: E27D94511CBE1C350B4F95CB3580F09F
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: BB983D01B28593A5263222039E51FF11
+- generatedChecksum: 901D88C8335125924EB7AEC9D4F57D71
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: uart4.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: E27D94511CBE1C350B4F95CB3580F09F
-- generatedChecksum: 81358098BBACE8A15182639B23B76892
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 901D88C8335125924EB7AEC9D4F57D71
+- generatedChecksum: FAF8DAC36D7C1DD9BD39C1F31E1F6FA6
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: usart.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 81358098BBACE8A15182639B23B76892
-- generatedChecksum: E489B9BD125670C7465142F205E25653
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: FAF8DAC36D7C1DD9BD39C1F31E1F6FA6
+- generatedChecksum: 07F369F022CE7F062E03EF8DC4E8CBDF
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: usart0.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: E489B9BD125670C7465142F205E25653
-- generatedChecksum: F47D7B60C6612CE531A2AFC1947D3DEE
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 07F369F022CE7F062E03EF8DC4E8CBDF
+- generatedChecksum: 01B379502C7C027C0E81BF1E8639EA81
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: usart1.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: F47D7B60C6612CE531A2AFC1947D3DEE
-- generatedChecksum: D1B4AD0D654645B12D83F199F872D363
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 01B379502C7C027C0E81BF1E8639EA81
+- generatedChecksum: A3E5F00ACE80142843B35EC8B59C7C72
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: usart2.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: D1B4AD0D654645B12D83F199F872D363
-- generatedChecksum: AC1FB14B2204F118A862B66DC54C6B77
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: A3E5F00ACE80142843B35EC8B59C7C72
+- generatedChecksum: AB048081304736399CC4310B499AEC0D
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: usbhs.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: AC1FB14B2204F118A862B66DC54C6B77
-- generatedChecksum: 3588F8D52AF7314AF37B68A2CB303722
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: AB048081304736399CC4310B499AEC0D
+- generatedChecksum: F9724FE7567AD7120816705E0F32BFC5
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: usbhs.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3588F8D52AF7314AF37B68A2CB303722
-- generatedChecksum: 55169556324F662287615A9ED65949C4
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: F9724FE7567AD7120816705E0F32BFC5
+- generatedChecksum: 0DFE20D6B2278F02B24B6A6AB0D4451A
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: utmi.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 55169556324F662287615A9ED65949C4
-- generatedChecksum: C9A27D4661005A7F3385A61C431CF679
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 0DFE20D6B2278F02B24B6A6AB0D4451A
+- generatedChecksum: E4D8C175731E9456AABAEF048A1D8203
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: utmi.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: C9A27D4661005A7F3385A61C431CF679
-- generatedChecksum: 552BB1367CAC71CBAC5D78CD9580AAEA
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: E4D8C175731E9456AABAEF048A1D8203
+- generatedChecksum: 70132F601218A64A0C7227CFF660E3AF
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: wdt.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 552BB1367CAC71CBAC5D78CD9580AAEA
-- generatedChecksum: 80C8B0F6A993C852FC072FE4F5D25912
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 70132F601218A64A0C7227CFF660E3AF
+- generatedChecksum: 91AEB54BFBEBEECFFCE8F149017200AF
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: wdt.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 80C8B0F6A993C852FC072FE4F5D25912
-- generatedChecksum: 1BF26855E8302ED8BD9BF8572A562EB4
-  logicalPath: packs\ATSAME70Q21B_DFP\component
+  userChecksum: 91AEB54BFBEBEECFFCE8F149017200AF
+- generatedChecksum: 129716EE02A5C0F86C7C2DAB83B41014
+  logicalPath: packs/ATSAME70Q21B_DFP/component
   name: xdmac.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\component
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1BF26855E8302ED8BD9BF8572A562EB4
-- generatedChecksum: BFEECD5F0CC2A7719CA0C67DDA7E0D7C
-  logicalPath: packs\ATSAME70Q21B_DFP\instance
+  userChecksum: 129716EE02A5C0F86C7C2DAB83B41014
+- generatedChecksum: 65870F619A9A267C8E5B1C2238CE3E44
+  logicalPath: packs/ATSAME70Q21B_DFP/instance
   name: xdmac.h
-  physicalPath: ..\..\packs\ATSAME70Q21B_DFP\instance
+  physicalPath: ../../packs/ATSAME70Q21B_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: BFEECD5F0CC2A7719CA0C67DDA7E0D7C
-- generatedChecksum: 9007938AD21A4AE37630C58DB033198B
-  logicalPath: config\sam_e70_xult
+  userChecksum: 65870F619A9A267C8E5B1C2238CE3E44
+- generatedChecksum: 5EBD2C0F705BD09380237D53AA3C9044
+  logicalPath: config/sam_e70_xult
   name: ATSAME70Q21B.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 9007938AD21A4AE37630C58DB033198B
+  userChecksum: 5EBD2C0F705BD09380237D53AA3C9044
 format_version: v1.0
 libraries: []
 settings:
