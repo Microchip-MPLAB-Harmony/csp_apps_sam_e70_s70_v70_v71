@@ -877,7 +877,14 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: DACC_Transmit}
+        attributes: {value: DACC_CH0_Transmit}
+  - type: Integer
+    attributes: {id: XDMAC_CC0_PERID_VAL}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '30'}
   - type: KeyValueSet
     attributes: {id: XDMAC_CC0_SAM}
     children:
