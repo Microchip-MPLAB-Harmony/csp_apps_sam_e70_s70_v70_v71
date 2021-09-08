@@ -4,18 +4,18 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_e70_s70_v70_v71_confg_v71_mpu_coherent_region",
-		"version": "3.1.0",
+		"version": "3.2.0",
 		"displayName": "MPU cache coherency Example for SAM E70/S70/V70/V71 Family",
 		"projectName": "mpu_coherent_region_sam_v71_xult",
 		"shortDescription": "This example shows how to maintain cache coherency by allocating DMA buffers in non-cacheable SRAM region defined by MPU.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.45.0"
+			"semverRange": ">=5.50.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=2.50.0"
+				"semverRange": ">=3.01.0"
 			}
 		],
 		"dfp": {
@@ -24,7 +24,7 @@
 		},
 		"configurator": {
 			"name": "MHC",
-			"semverRange": ">=3.7.0"
+			"semverRange": ">=3.8.0"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
