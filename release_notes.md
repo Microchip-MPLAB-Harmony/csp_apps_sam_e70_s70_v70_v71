@@ -14,7 +14,7 @@ nav_order: 99
 
 Following table provides number of peripheral library examples available for different development kits.
 
-| Development Kits  | MPLABx applications | IAR applications | KEIL applications |
+| Development Kits  | MPLAB X applications | IAR applications | KEIL applications |
 |:-----------------:|:-------------------:|:----------------:|:-----------------:|
 | [SAM E70 Xplained Ultra Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113) | 49 | 3 | 1 |
 | [SAM V71 Xplained Ultra Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult) | 41 | 0 | 0 |
@@ -42,7 +42,7 @@ Following table provides number of peripheral library examples available for dif
 
 Following table provides number of peripheral library examples available for different development kits.
 
-| Development Kits  | MPLABx applications | IAR applications | KEIL applications |
+| Development Kits  | MPLAB X applications | IAR applications | KEIL applications |
 |:-----------------:|:-------------------:|:----------------:|:-----------------:|
 | [SAM E70 Xplained Ultra Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113) | 49 | 3 | 1 |
 | [SAM V71 Xplained Ultra Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult) | 41 | 0 | 0 |
@@ -85,7 +85,7 @@ Following table provides number of peripheral library examples available for dif
 
 Following table provides number of peripheral library examples available for different development kits.
 
-| Development Kits  | MPLABx applications | IAR applications | KEIL applications |
+| Development Kits  | MPLAB X applications | IAR applications | KEIL applications |
 |:-----------------:|:-------------------:|:----------------:|:-----------------:|
 | [SAM V71 Xplained Ultra Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult) | 41 | 0 | 0 |
 | [SAM E70 Xplained Ultra Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113) | 46 | 3 | 1 |
