@@ -16,12 +16,12 @@ Following table provides number of peripheral library examples available for dif
 
 | Development Kits  | MPLAB X applications | IAR applications | KEIL applications |
 |:-----------------:|:-------------------:|:----------------:|:-----------------:|
-| [SAM E70 Xplained Ultra Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113) | 49 | 3 | 1 |
-| [SAM V71 Xplained Ultra Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult) | 41 | 0 | 0 |
+| [SAM E70 Xplained Ultra Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113) | 47 | 3 | 1 |
+| [SAM V71 Xplained Ultra Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult) | 39 | 0 | 0 |
 
 ### New Features
 
-- None
+- All MPLAB X applications are updated to work with both MHC and MCC tools
 
 ### Known Issues
 

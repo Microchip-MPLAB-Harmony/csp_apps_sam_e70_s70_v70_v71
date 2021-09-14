@@ -61,8 +61,6 @@ The following applications are provided to demonstrate the typical or interestin
 | [RSWDT timeout](apps/rswdt/rswdt_timeout/readme.md) | This example shows how to generate a RSWDT reset by emulating a deadlock |
 | [RTC alarm interrupt](apps/rtc/rtc_alarm/readme.md) | This example shows how to use the RTC to configure the time and generate the alarm |
 | [RTT periodic interrupt](apps/rtt/rtt_periodic_timeout/readme.md) | This example shows how to use the RTT to generate periodic interrupts |
-| [SDRAM read write](apps/sdramc/sdramc_read_write/readme.md) | This example shows how to configure the external SDRAM using SDRAM controller to write and read data |
-| [SDRAM read write performance](apps/sdramc/sdramc_read_write_perf/readme.md) | This example shows how to configure the SDRAM interface and measures the read/write throughput with DMA |
 | [SPI EEPROM write read](apps/spi/master/spi_eeprom_write_read/readme.md) | This example shows how to use the SPI peripheral to write and read from the SPI serial EEPROM memory |
 | [SPI ping pong with DMA](apps/spi/master/spi_ping_pong_with_dma/readme.md) | This example shows how to continuously transmit and receive data over a SPI interface using ping pong buffers with the DMA |
 | [SPI blocking](apps/spi/master/spi_self_loopback_blocking/readme.md) | This example shows how to use the SPI peripheral to transmit and receive a block of data in a blocking manner |
