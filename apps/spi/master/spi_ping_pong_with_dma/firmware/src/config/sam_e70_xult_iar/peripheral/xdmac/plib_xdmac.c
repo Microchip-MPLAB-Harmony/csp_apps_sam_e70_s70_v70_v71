@@ -54,7 +54,6 @@ typedef struct
     XDMAC_CHANNEL_CALLBACK callback;
     uintptr_t              context;
     uint8_t                busyStatus;
-
 } XDMAC_CH_OBJECT ;
 
 XDMAC_CH_OBJECT xdmacChannelObj[XDMAC_ACTIVE_CHANNELS_MAX];
@@ -118,7 +117,6 @@ void XDMAC_Initialize( void )
         xdmacChObj->callback = NULL;
         xdmacChObj->context = 0U;
         xdmacChObj->busyStatus = false;
-
         /* Point to next channel object */
         xdmacChObj += 1U;
     }
@@ -135,10 +133,9 @@ void XDMAC_Initialize( void )
                                             XDMAC_CC_DWIDTH_BYTE |
                                             XDMAC_CC_CSIZE_CHK_1 |\
                                             XDMAC_CC_MBSIZE_SINGLE);
-                XDMAC_REGS->XDMAC_CHID[0].XDMAC_CIE= (XDMAC_CIE_BIE_Msk | XDMAC_CIE_RBIE_Msk | XDMAC_CIE_WBIE_Msk | XDMAC_CIE_ROIE_Msk);
-                    XDMAC_REGS->XDMAC_GIE= (XDMAC_GIE_IE0_Msk << 0);
-                xdmacChannelObj[0].inUse = 1U;
-
+    XDMAC_REGS->XDMAC_CHID[0].XDMAC_CIE= (XDMAC_CIE_BIE_Msk | XDMAC_CIE_RBIE_Msk | XDMAC_CIE_WBIE_Msk | XDMAC_CIE_ROIE_Msk);
+    XDMAC_REGS->XDMAC_GIE= (XDMAC_GIE_IE0_Msk << 0);
+    xdmacChannelObj[0].inUse = 1U;
     /* Configure Channel 1 */
     XDMAC_REGS->XDMAC_CHID[1].XDMAC_CC =  (XDMAC_CC_TYPE_PER_TRAN |
                                             XDMAC_CC_PERID(1U) |
@@ -151,10 +148,9 @@ void XDMAC_Initialize( void )
                                             XDMAC_CC_DWIDTH_BYTE |
                                             XDMAC_CC_CSIZE_CHK_1 |\
                                             XDMAC_CC_MBSIZE_SINGLE);
-                XDMAC_REGS->XDMAC_CHID[1].XDMAC_CIE= (XDMAC_CIE_BIE_Msk | XDMAC_CIE_RBIE_Msk | XDMAC_CIE_WBIE_Msk | XDMAC_CIE_ROIE_Msk);
-                    XDMAC_REGS->XDMAC_GIE= (XDMAC_GIE_IE0_Msk << 1);
-                xdmacChannelObj[1].inUse = 1U;
-
+    XDMAC_REGS->XDMAC_CHID[1].XDMAC_CIE= (XDMAC_CIE_BIE_Msk | XDMAC_CIE_RBIE_Msk | XDMAC_CIE_WBIE_Msk | XDMAC_CIE_ROIE_Msk);
+    XDMAC_REGS->XDMAC_GIE= (XDMAC_GIE_IE0_Msk << 1);
+    xdmacChannelObj[1].inUse = 1U;
     return;
 }
 

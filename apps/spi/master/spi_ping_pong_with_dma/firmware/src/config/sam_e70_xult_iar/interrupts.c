@@ -73,17 +73,12 @@ void Dummy_Handler( void )
 
     }
 }
+
+/* MISRAC 2012 deviation block start */
+/* MISRA C-2012 Rule 8.6 deviated 70 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 /* Device vectors list dummy definition*/
-extern void MemoryManagement_Handler ( void );
-#pragma weak MemoryManagement_Handler=Dummy_Handler
-extern void BusFault_Handler ( void );
-#pragma weak BusFault_Handler=Dummy_Handler
-extern void UsageFault_Handler ( void );
-#pragma weak UsageFault_Handler=Dummy_Handler
 extern void SVCall_Handler ( void );
 #pragma weak SVCall_Handler=Dummy_Handler
-extern void DebugMonitor_Handler ( void );
-#pragma weak DebugMonitor_Handler=Dummy_Handler
 extern void PendSV_Handler ( void );
 #pragma weak PendSV_Handler=Dummy_Handler
 extern void SysTick_Handler ( void );
@@ -200,8 +195,6 @@ extern void PWM1_Handler ( void );
 #pragma weak PWM1_Handler=Dummy_Handler
 extern void FPU_Handler ( void );
 #pragma weak FPU_Handler=Dummy_Handler
-extern void SDRAMC_Handler ( void );
-#pragma weak SDRAMC_Handler=Dummy_Handler
 extern void RSWDT_Handler ( void );
 #pragma weak RSWDT_Handler=Dummy_Handler
 extern void CCW_Handler ( void );
@@ -226,6 +219,7 @@ extern void GMAC_Q5_Handler ( void );
 #pragma weak GMAC_Q5_Handler=Dummy_Handler
 
 
+/* MISRAC 2012 deviation block end */
 
 /* Multiple handlers for vector */
 
@@ -305,7 +299,6 @@ __root const H3DeviceVectors __vector_table=
     .pfnISI_Handler                = ISI_Handler,
     .pfnPWM1_Handler               = PWM1_Handler,
     .pfnFPU_Handler                = FPU_Handler,
-    .pfnSDRAMC_Handler             = SDRAMC_Handler,
     .pfnRSWDT_Handler              = RSWDT_Handler,
     .pfnCCW_Handler                = CCW_Handler,
     .pfnCCF_Handler                = CCF_Handler,
