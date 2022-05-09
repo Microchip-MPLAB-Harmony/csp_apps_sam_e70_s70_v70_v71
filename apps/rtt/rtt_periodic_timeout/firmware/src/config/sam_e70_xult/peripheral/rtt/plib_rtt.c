@@ -44,12 +44,12 @@ Description:
 #include "plib_rtt.h"
 #include "interrupts.h"
 
-RTT_OBJECT rtt;
+static RTT_OBJECT rtt;
 
 void RTT_Initialize(void)
 {
     RTT_REGS->RTT_MR = RTT_MR_RTTRST_Msk;
-    RTT_REGS->RTT_MR = RTT_MR_RTPRES(32768) | RTT_MR_RTTDIS_Msk | RTT_MR_RTTINCIEN_Msk;
+    RTT_REGS->RTT_MR = RTT_MR_RTPRES(32768U) | RTT_MR_RTTDIS_Msk | RTT_MR_RTTINCIEN_Msk;
 }
 
 void RTT_Enable(void)
@@ -69,7 +69,7 @@ void RTT_PrescalarUpdate(uint16_t prescale)
     uint32_t flag = rtt_mr & RTT_MR_RTTINCIEN_Msk;
     rtt_mr &= ~(RTT_MR_RTPRES_Msk | RTT_MR_RTTINCIEN_Msk);
     RTT_REGS->RTT_MR = rtt_mr | prescale | RTT_MR_RTTRST_Msk;
-    if (flag)
+    if (flag != 0U)
     {
         RTT_REGS->RTT_MR|=  RTT_MR_RTTINCIEN_Msk;
     }
@@ -81,18 +81,18 @@ void RTT_AlarmValueSet(uint32_t alarm)
 	flag = RTT_REGS->RTT_MR& (RTT_MR_ALMIEN_Msk);
 	RTT_REGS->RTT_MR&= ~(RTT_MR_ALMIEN_Msk);
 	RTT_REGS->RTT_AR = alarm;
-	if (flag)
+	if (flag != 0U)
 	{
 		RTT_REGS->RTT_MR|= RTT_MR_ALMIEN_Msk;
 	}
 }
 void RTT_EnableInterrupt (RTT_INTERRUPT_TYPE type)
 {
-	RTT_REGS->RTT_MR|= type;
+	RTT_REGS->RTT_MR|= (uint32_t)type;
 }
 void RTT_DisableInterrupt(RTT_INTERRUPT_TYPE type)
 {
-	RTT_REGS->RTT_MR&= ~(type);
+	RTT_REGS->RTT_MR&= ~((uint32_t)type);
 }
 void RTT_CallbackRegister( RTT_CALLBACK callback, uintptr_t context )
 {
@@ -116,32 +116,32 @@ uint32_t RTT_FrequencyGet(void)
 
     flag =  (RTT_REGS->RTT_MR) & (RTT_MR_RTC1HZ_Msk);
 
-    if (flag)
+    if (flag !=0U)
     {
         return 1;
     }
     else
     {
         flag = (RTT_REGS->RTT_MR) & (RTT_MR_RTPRES_Msk);
-        if (flag == 0)
+        if (flag == 0U)
         {
             return (0);
         }
         else
         {
-            return (32768 / flag);
+            return (32768U / flag);
         }
     }
 }
 
 void RTT_InterruptHandler(void)
 {
-	uint32_t status = RTT_REGS->RTT_SR;
+	uint32_t rtt_status = RTT_REGS->RTT_SR;
 	uint32_t flags = RTT_REGS->RTT_MR;
 	RTT_REGS->RTT_MR&= ~(RTT_MR_ALMIEN_Msk | RTT_MR_RTTINCIEN_Msk);
-	if(flags & RTT_MR_RTTINCIEN_Msk)
+	if((flags & RTT_MR_RTTINCIEN_Msk) != 0U)
 	{
-		if(status & RTT_SR_RTTINC_Msk)
+		if((rtt_status & RTT_SR_RTTINC_Msk) != 0U)
 		{
 			if (rtt.callback != NULL)
 			{
@@ -150,9 +150,9 @@ void RTT_InterruptHandler(void)
 		}
 		RTT_REGS->RTT_MR|= (RTT_MR_RTTINCIEN_Msk);
 	}
-	if(flags & RTT_MR_ALMIEN_Msk)
+	if((flags & RTT_MR_ALMIEN_Msk) != 0U)
 	{
-		if(status & RTT_SR_ALMS_Msk)
+		if((rtt_status & RTT_SR_ALMS_Msk) != 0U)
 		{
 			if (rtt.callback != NULL)
 			{
