@@ -252,19 +252,9 @@ SECTIONS
     {
     . = ALIGN(4);
     _s_ram_nocache = .;
-    *(.ram_nocache)
+    *(.ram_nocache .ram_nocache.*)
     . = ALIGN(4);
     _e_ram_nocache = .;
-    } > ram_nocache
-
-    .ram_nocache_data : AT (_etext)
-    {
-    . = ALIGN(4);
-    _s_ram_nocache_vma = .;
-    _s_ram_nocache_lma = LOADADDR(.ram_nocache_data);
-    *(.ram_nocache_data)
-    . = ALIGN(4);
-    _e_ram_nocache_vma = .;
     } > ram_nocache
 
     /*
