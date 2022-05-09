@@ -419,6 +419,11 @@
             <FilePath>..\src\packs\ATSAME70Q21B_DFP\component\efc.h</FilePath>
           </File>
           <File>
+            <FileName>fuses.h</FileName>
+            <FileType>5</FileType>
+            <FilePath>..\src\packs\ATSAME70Q21B_DFP\component\fuses.h</FilePath>
+          </File>
+          <File>
             <FileName>gmac.h</FileName>
             <FileType>5</FileType>
             <FilePath>..\src\packs\ATSAME70Q21B_DFP\component\gmac.h</FilePath>
@@ -497,11 +502,6 @@
             <FileName>rtt.h</FileName>
             <FileType>5</FileType>
             <FilePath>..\src\packs\ATSAME70Q21B_DFP\component\rtt.h</FilePath>
-          </File>
-          <File>
-            <FileName>sdramc.h</FileName>
-            <FileType>5</FileType>
-            <FilePath>..\src\packs\ATSAME70Q21B_DFP\component\sdramc.h</FilePath>
           </File>
           <File>
             <FileName>smc.h</FileName>
@@ -602,6 +602,11 @@
             <FileName>efc.h</FileName>
             <FileType>5</FileType>
             <FilePath>..\src\packs\ATSAME70Q21B_DFP\instance\efc.h</FilePath>
+          </File>
+          <File>
+            <FileName>fuses.h</FileName>
+            <FileType>5</FileType>
+            <FilePath>..\src\packs\ATSAME70Q21B_DFP\instance\fuses.h</FilePath>
           </File>
           <File>
             <FileName>gmac.h</FileName>
@@ -717,11 +722,6 @@
             <FileName>rtt.h</FileName>
             <FileType>5</FileType>
             <FilePath>..\src\packs\ATSAME70Q21B_DFP\instance\rtt.h</FilePath>
-          </File>
-          <File>
-            <FileName>sdramc.h</FileName>
-            <FileType>5</FileType>
-            <FilePath>..\src\packs\ATSAME70Q21B_DFP\instance\sdramc.h</FilePath>
           </File>
           <File>
             <FileName>smc.h</FileName>
