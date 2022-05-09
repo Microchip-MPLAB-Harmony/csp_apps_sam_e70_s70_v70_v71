@@ -45,7 +45,7 @@
 void WDT_Initialize( void )
 {
 
-    WDT_REGS->WDT_MR = WDT_MR_WDD (1023) | WDT_MR_WDV(1023) \
+    WDT_REGS->WDT_MR = WDT_MR_WDD (1023U) | WDT_MR_WDV(1023U) \
                | WDT_MR_WDRSTEN_Msk;
 
 }
