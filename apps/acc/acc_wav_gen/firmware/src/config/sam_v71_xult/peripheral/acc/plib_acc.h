@@ -38,8 +38,8 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#ifndef _PLIB_ACC_H
-#define _PLIB_ACC_H
+#ifndef PLIB_ACC_H
+#define PLIB_ACC_H
 
 #include <stddef.h>
 #include <stdbool.h>
@@ -61,9 +61,7 @@
 
 /*************************** ACC API ***************************/
 void ACC_Initialize (void);
-
-bool ACC_StatusGet (ACC_STATUS_SOURCE status);
-
+bool ACC_StatusGet (ACC_STATUS_SOURCE status_var);
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
