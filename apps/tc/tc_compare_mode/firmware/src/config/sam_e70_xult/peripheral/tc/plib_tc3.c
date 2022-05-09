@@ -118,7 +118,7 @@ void TC3_CH2_ComparePeriodSet (uint16_t period)
 /* Read the period value */
 uint16_t TC3_CH2_ComparePeriodGet (void)
 {
-    return TC3_REGS->TC_CHANNEL[2].TC_RC;
+    return (uint16_t)TC3_REGS->TC_CHANNEL[2].TC_RC;
 }
 
 /* Set the compare A value */
