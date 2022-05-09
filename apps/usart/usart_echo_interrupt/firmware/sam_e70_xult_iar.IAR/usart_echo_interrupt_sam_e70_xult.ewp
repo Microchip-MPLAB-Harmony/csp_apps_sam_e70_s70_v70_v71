@@ -2205,6 +2205,9 @@
                             <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\component\efc.h</name>
                         </file>
                         <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\component\fuses.h</name>
+                        </file>
+                        <file>
                             <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\component\gmac.h</name>
                         </file>
                         <file>
@@ -2251,9 +2254,6 @@
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\component\rtt.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\component\sdramc.h</name>
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\component\smc.h</name>
@@ -2317,6 +2317,9 @@
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\efc.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\fuses.h</name>
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\gmac.h</name>
@@ -2386,9 +2389,6 @@
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\rtt.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\sdramc.h</name>
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\packs\ATSAME70Q21B_DFP\instance\smc.h</name>
