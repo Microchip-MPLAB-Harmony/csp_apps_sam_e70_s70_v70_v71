@@ -291,6 +291,15 @@ children:
         attributes: {id: text}
         children:
         - {type: Value, value: '**** PWM Frequency is 10000.0 Hz ****'}
+  - type: Menu
+    attributes: {id: PWM_COMPARE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
   - type: Integer
     attributes: {id: PWM_COMP_0_CMPV_CV}
     children:
