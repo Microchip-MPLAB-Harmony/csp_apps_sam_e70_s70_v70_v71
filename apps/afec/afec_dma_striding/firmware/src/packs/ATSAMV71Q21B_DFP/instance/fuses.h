@@ -21,16 +21,7 @@
  */
 
 /* file generated from device description version 2022-04-21T07:58:40Z */
-#ifndef _SAMV71_UART4_INSTANCE_
-#define _SAMV71_UART4_INSTANCE_
+#ifndef _SAMV71_FUSES_INSTANCE_
+#define _SAMV71_FUSES_INSTANCE_
 
-
-/* ========== Instance Parameter definitions for UART4 peripheral ========== */
-#define UART4_DMAC_ID_RX                         (29)       
-#define UART4_DMAC_ID_TX                         (28)       
-#define UART4_INSTANCE_ID                        (46)       
-#define UART4_CLOCK_ID                           (46)       
-#define UART4_BRSRCCK_PERIPH_CLK                 (0)        /* MCK */
-#define UART4_BRSRCCK_PMC_PCK                    (0)        /* PCK4 */
-
-#endif /* _SAMV71_UART4_INSTANCE_ */
+#endif /* _SAMV71_FUSES_INSTANCE_ */
