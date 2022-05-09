@@ -49,17 +49,17 @@
 
 void DACC_Initialize (void)
 {
-	
+
     /* Reset DACC Peripheral */
     DACC_REGS->DACC_CR = DACC_CR_SWRST_Msk;
 
-    DACC_REGS->DACC_MR = DACC_MR_PRESCALER(11) ;
-    
+    DACC_REGS->DACC_MR = DACC_MR_PRESCALER(11U) ;
+
     /* Configure DACC Bias Current */
-	DACC_REGS->DACC_ACR = DACC_ACR_IBCTLCH0(3) | DACC_ACR_IBCTLCH1(3);
-	
-	/* Enable DAC Channel */
-	DACC_REGS->DACC_CHER = DACC_CHER_CH0_Msk | DACC_CHER_CH1_Msk;
+    DACC_REGS->DACC_ACR = DACC_ACR_IBCTLCH0(3) | DACC_ACR_IBCTLCH1(3);
+
+    /* Enable DAC Channel */
+    DACC_REGS->DACC_CHER = DACC_CHER_CH0_Msk | DACC_CHER_CH1_Msk;
 
     /* Wait until DAC Channel 0 and Channel 1 is ready*/
     while(!(DACC_REGS->DACC_CHSR& (DACC_CHSR_DACRDY0_Msk | DACC_CHSR_DACRDY1_Msk)));
@@ -67,10 +67,10 @@ void DACC_Initialize (void)
 
 bool DACC_IsReady (DACC_CHANNEL_NUM channel)
 {
-    return (bool)(((DACC_REGS->DACC_ISR>> channel) & DACC_ISR_TXRDY0_Msk) == DACC_ISR_TXRDY0_Msk);
+    return (bool)(((DACC_REGS->DACC_ISR>> (uint32_t)channel) & DACC_ISR_TXRDY0_Msk) == DACC_ISR_TXRDY0_Msk);
 }
 
 void DACC_DataWrite (DACC_CHANNEL_NUM channel, uint32_t data)
 {
-    DACC_REGS->DACC_CDR[channel]= data;  
+    DACC_REGS->DACC_CDR[channel]= data;
 }
