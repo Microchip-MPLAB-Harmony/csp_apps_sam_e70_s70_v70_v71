@@ -97,13 +97,13 @@ uint32_t TC0_CH0_CaptureFrequencyGet( void )
 /* Read last captured value of Capture A */
 uint16_t TC0_CH0_CaptureAGet (void)
 {
-    return TC0_REGS->TC_CHANNEL[0].TC_RA;
+    return (uint16_t)TC0_REGS->TC_CHANNEL[0].TC_RA;
 }
 
 /* Read last captured value of Capture B */
 uint16_t TC0_CH0_CaptureBGet (void)
 {
-    return TC0_REGS->TC_CHANNEL[0].TC_RB;
+    return (uint16_t)TC0_REGS->TC_CHANNEL[0].TC_RB;
 }
 
 TC_CAPTURE_STATUS TC0_CH0_CaptureStatusGet(void)
