@@ -78,25 +78,22 @@ Data Type definition of Reset Controller (RSTC) Peripheral Library (PLIB).
   Remarks:
     Refer to the specific device data sheet to determine availability.
 */
-
-typedef enum
-{
     /* First power-up reset */
-    RSTC_GENERAL_RESET = RSTC_SR_RSTTYP_GENERAL_RST,
+#define    RSTC_GENERAL_RESET = RSTC_SR_RSTTYP_GENERAL_RST 
 
     /* Return from Backup Mode */
-    RSTC_BACKUP_RESET = RSTC_SR_RSTTYP_BACKUP_RST,
+#define    RSTC_BACKUP_RESET = RSTC_SR_RSTTYP_BACKUP_RST 
 
     /* Watchdog fault occurred */
-    RSTC_WATCHDOG_RESET = RSTC_SR_RSTTYP_WDT_RST,
+#define    RSTC_WATCHDOG_RESET = RSTC_SR_RSTTYP_WDT_RST 
 
     /* Processor reset required by the software */
-    RSTC_SOFTWARE_RESET = RSTC_SR_RSTTYP_SOFT_RST,
+#define    RSTC_SOFTWARE_RESET = RSTC_SR_RSTTYP_SOFT_RST 
 
     /* NRST pin detected low */
-    RSTC_USER_RESET = RSTC_SR_RSTTYP_USER_RST
+#define    RSTC_USER_RESET = RSTC_SR_RSTTYP_USER_RST
 
-} RSTC_RESET_CAUSE;
+typedef uint32_t RSTC_RESET_CAUSE;
 
 typedef void (*RSTC_CALLBACK) (uintptr_t context);
 
@@ -108,9 +105,9 @@ typedef void (*RSTC_CALLBACK) (uintptr_t context);
 
 typedef struct
 {
-    RSTC_CALLBACK callback; 
+    RSTC_CALLBACK callback;
     uintptr_t     context;
-    
+
 } RSTC_OBJECT ;
 
 
