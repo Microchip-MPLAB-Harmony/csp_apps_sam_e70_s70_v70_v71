@@ -47,7 +47,11 @@
 uint32_t TRNG_ReadData( void )
 {
 	TRNG_REGS->TRNG_CR = TRNG_CR_KEY_PASSWD | TRNG_CR_ENABLE_Msk;
-	while(((TRNG_REGS->TRNG_ISR) & (TRNG_ISR_DATRDY_Msk)) != TRNG_ISR_DATRDY_Msk);			
+	while(((TRNG_REGS->TRNG_ISR) & (TRNG_ISR_DATRDY_Msk)) != TRNG_ISR_DATRDY_Msk)
+   {
+		
+                 /* Do Nothing*/		
+   }
 	TRNG_REGS->TRNG_CR = TRNG_CR_KEY_PASSWD;
 	return (TRNG_REGS->TRNG_ODATA);
 }
