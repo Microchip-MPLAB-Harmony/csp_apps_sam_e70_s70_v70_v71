@@ -113,7 +113,9 @@ void MCAN1_Initialize(void)
     MCAN1_REGS->MCAN_GFC = MCAN_GFC_ANFS(2) | MCAN_GFC_ANFE(2);
 
     /* Set the operation mode */
-    MCAN1_REGS->MCAN_CCCR = MCAN_CCCR_INIT_DISABLED;
+
+
+    MCAN1_REGS->MCAN_CCCR &= ~MCAN_CCCR_INIT_Msk;
     while ((MCAN1_REGS->MCAN_CCCR & MCAN_CCCR_INIT_Msk) == MCAN_CCCR_INIT_Msk)
     {
         /* Wait for initialization complete */
@@ -447,8 +449,7 @@ MCAN_ERROR MCAN1_ErrorGet(void)
 
     if ((MCAN1_REGS->MCAN_CCCR & MCAN_CCCR_INIT_Msk) == MCAN_CCCR_INIT_Msk)
     {
-        MCAN1_REGS->MCAN_CCCR |= MCAN_CCCR_CCE_Msk;
-        MCAN1_REGS->MCAN_CCCR = MCAN_CCCR_INIT_DISABLED;
+        MCAN1_REGS->MCAN_CCCR &= ~MCAN_CCCR_INIT_Msk;
         while ((MCAN1_REGS->MCAN_CCCR & MCAN_CCCR_INIT_Msk) == MCAN_CCCR_INIT_Msk)
         {
             /* Wait for initialization complete */
@@ -550,7 +551,7 @@ void MCAN1_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress)
     memset((void*)msgRAMConfigBaseAddress, 0x00, MCAN1_MESSAGE_RAM_CONFIG_SIZE);
 
     /* Set MCAN CCCR Init for Message RAM Configuration */
-    MCAN1_REGS->MCAN_CCCR = MCAN_CCCR_INIT_ENABLED;
+    MCAN1_REGS->MCAN_CCCR |= MCAN_CCCR_INIT_ENABLED;
     while ((MCAN1_REGS->MCAN_CCCR & MCAN_CCCR_INIT_Msk) != MCAN_CCCR_INIT_Msk)
     {
         /* Wait for configuration complete */
@@ -600,7 +601,7 @@ void MCAN1_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress)
     (void)offset;
 
     /* Complete Message RAM Configuration by clearing MCAN CCCR Init */
-    MCAN1_REGS->MCAN_CCCR = MCAN_CCCR_INIT_DISABLED;
+    MCAN1_REGS->MCAN_CCCR &= ~MCAN_CCCR_INIT_Msk;
     while ((MCAN1_REGS->MCAN_CCCR & MCAN_CCCR_INIT_Msk) == MCAN_CCCR_INIT_Msk)
     {
         /* Wait for configuration complete */
