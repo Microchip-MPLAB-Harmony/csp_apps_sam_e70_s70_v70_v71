@@ -39,6 +39,7 @@
 *******************************************************************************/
 
 #include "plib_rstc.h"
+#include "interrupts.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -48,7 +49,7 @@
 
 void RSTC_Initialize (void)
 {
-    RSTC_REGS->RSTC_MR = (RSTC_MR_URSTIEN_Msk | RSTC_MR_ERSTL(0) | RSTC_MR_KEY_PASSWD);
+    RSTC_REGS->RSTC_MR = (RSTC_MR_URSTIEN_Msk | RSTC_MR_ERSTL(0U) | RSTC_MR_KEY_PASSWD);
 }
 
 void RSTC_Reset (RSTC_RESET_TYPE type)
@@ -56,8 +57,10 @@ void RSTC_Reset (RSTC_RESET_TYPE type)
     /* Issue reset command              */
     RSTC_REGS->RSTC_CR = RSTC_CR_KEY_PASSWD | type;
 
-    /*Wait for processing reset command */
-    while (RSTC_REGS->RSTC_SR& (uint32_t) RSTC_SR_SRCMP_Msk);
+    while ((RSTC_REGS->RSTC_SR& (uint32_t) RSTC_SR_SRCMP_Msk) != 0U)
+    {
+        /*Wait for processing reset command */
+    }
 }
 
 RSTC_RESET_CAUSE RSTC_ResetCauseGet (void)
@@ -66,7 +69,7 @@ RSTC_RESET_CAUSE RSTC_ResetCauseGet (void)
 }
 
 
-RSTC_OBJECT rstcObj;
+static RSTC_OBJECT rstcObj;
 
 void RSTC_CallbackRegister (RSTC_CALLBACK callback, uintptr_t context)
 {
