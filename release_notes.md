@@ -8,6 +8,34 @@ nav_order: 99
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Harmony 3 peripheral library application examples for SAM E70/S70/V70/V71 family  v3.3.0
+
+### Development kit and demo application support
+
+Following table provides number of peripheral library examples available for different development kits.
+
+| Development Kits  | MPLAB X applications | IAR applications | KEIL applications |
+|:-----------------:|:-------------------:|:----------------:|:-----------------:|
+| [SAM E70 Xplained Ultra Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM320113) | 47 | 3 | 1 |
+| [SAM V71 Xplained Ultra Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamv71-xult) | 39 | 0 | 0 |
+
+### New Features
+
+- None
+
+### Known Issues
+
+- None
+
+### Development Tools
+
+- [MPLAB® X IDE v6.00](https://www.microchip.com/mplab/mplab-x-ide)
+- MPLAB® X IDE plug-ins:
+  - MPLAB® Code Configurator (MCC) v5.1.9
+- [MPLAB® XC32 C/C++ Compiler v4.10](https://www.microchip.com/mplab/compilers)
+- [KEIL MDK v5.35 or above](https://www2.keil.com/mdk5)
+- [IAR Embedded workbench for ARM v9.10 or above](https://www.iar.com/iar-embedded-workbench/#!?architecture=Arm)
+
 ## Harmony 3 peripheral library application examples for SAM E70/S70/V70/V71 family  v3.2.0
 
 ### Development kit and demo application support
