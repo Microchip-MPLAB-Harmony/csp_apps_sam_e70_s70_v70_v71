@@ -3,7 +3,7 @@
 
   Company:
     Microchip Technology Inc.
-  
+
   File Name:
     main.c
 
@@ -12,7 +12,7 @@
 
   Description:
     This file contains the "main" function for a project.  The
-    "main" function calls the "SYS_Initialize" function to initialize the state 
+    "main" function calls the "SYS_Initialize" function to initialize the state
     machines of all modules in the system
  *******************************************************************************/
 
@@ -72,7 +72,7 @@ int main ( void )
     printf ("\n\r -------------------------------------------------------------");
     printf ("\n\r                           WDT DEMO                           ");
     printf ("\n\r -------------------------------------------------------------");
-    printf ("\n\r Press switch to emulate deadlock "); 
+    printf ("\n\r Press SW0 to emulate deadlock ");
     SYSTICK_TimerStart();
     PIO_PinInterruptCallbackRegister(SWITCH_PIN, &switch_handler, (uintptr_t) NULL );
     PIO_PinInterruptEnable(SWITCH_PIN);
@@ -88,9 +88,9 @@ int main ( void )
             }
         }
         else
-        {   
+        {
             printf ("\n\r Emulating deadlock................ ");
-            printf ("\n\r WDT should reset device in 4 seconds ");           
+            printf ("\n\r WDT should reset device in 4 seconds ");
             while(1);
         }
     }
