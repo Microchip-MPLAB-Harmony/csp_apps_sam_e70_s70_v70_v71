@@ -52,7 +52,7 @@ The following table shows the target hardware for the application projects.
 
 1. Build and Program the application using its IDE
 2. LED indicates success or failure:
-    - The LED is toggled when the value read from the QSPI Serial Flash memory matched with the written value
+    - The LED will blink when the value read from the QSPI Serial Flash memory matched with the written value
     - The LED is turned ON when the value read from the QSPI Serial Flash did not match with the written value
 
 The following table provides the LED name
