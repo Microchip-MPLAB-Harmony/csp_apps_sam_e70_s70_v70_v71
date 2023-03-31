@@ -86,9 +86,9 @@ static uint8_t *qspi_loadMemAddr;
 static uint32_t qspi_length;
 uint8_t *verify_qspiMemory = NULL;
 
-qspi_command_xfer_t qspi_command_xfer = { 0 };
-qspi_register_xfer_t qspi_register_xfer = { 0 };
-qspi_memory_xfer_t qspi_memory_xfer = { 0 };
+static qspi_command_xfer_t qspi_command_xfer = { 0 };
+static qspi_register_xfer_t qspi_register_xfer = { 0 };
+static qspi_memory_xfer_t qspi_memory_xfer = { 0 };
 
 // *****************************************************************************
 // *****************************************************************************
@@ -422,7 +422,7 @@ static APP_TRANSFER_STATUS APP_SectorErase(uint32_t address)
  * 
  * "noinline" attribute is used so that compiler does not make this function inline
  */
-__attribute__((noinline, long_call)) void delay_ms(uint32_t delay, char const * caller_name)
+static __attribute__((noinline, long_call)) void delay_ms(uint32_t delay, char const * caller_name)
 {
     SYSTICK_DelayMs(delay);
 

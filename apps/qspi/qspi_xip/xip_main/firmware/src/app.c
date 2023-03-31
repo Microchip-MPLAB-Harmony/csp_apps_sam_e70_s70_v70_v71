@@ -77,9 +77,9 @@ APP_DATA appData;
 
 static uint32_t write_index = 0;
 
-qspi_command_xfer_t qspi_command_xfer = { 0 };
-qspi_register_xfer_t qspi_register_xfer = { 0 };
-qspi_memory_xfer_t qspi_memory_xfer = { 0 };
+static qspi_command_xfer_t qspi_command_xfer = { 0 };
+static qspi_register_xfer_t qspi_register_xfer = { 0 };
+static qspi_memory_xfer_t qspi_memory_xfer = { 0 };
 
 uint8_t *read_memory = (uint8_t *)(QSPIMEM_ADDR | MEM_ADDRESS );
 
