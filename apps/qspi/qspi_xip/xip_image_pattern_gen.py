@@ -28,7 +28,7 @@ import sys
 filename = "./xip_image/firmware/sam_e70_xult.X/dist/sam_e70_xult\
 /production/sam_e70_xult.X.production.bin"
 destinationFile = "./xip_main/firmware/src/config/sam_e70_xult/\
-xip_image_pattern_hex.h"
+app_xip_image_pattern_hex.h"
 if os.path.exists(filename):
     count = 16
 
@@ -40,8 +40,8 @@ if os.path.exists(filename):
 
     size = os.stat(filename)
 
-    headerfile.write("#ifndef XIP_IMAGE_PATTERN_HEX_H_\n")
-    headerfile.write("#define XIP_IMAGE_PATTERN_HEX_H_\n")
+    headerfile.write("#ifndef APP_XIP_IMAGE_PATTERN_HEX_H_\n")
+    headerfile.write("#define APP_XIP_IMAGE_PATTERN_HEX_H_\n")
     headerfile.write("\nconst uint8_t xip_image_pattern[" + str(
         size.st_size) + "] = \n{\n")
 
