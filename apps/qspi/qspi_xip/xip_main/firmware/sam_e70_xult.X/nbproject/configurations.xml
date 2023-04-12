@@ -37,7 +37,6 @@
           <itemPath>../src/config/sam_e70_xult/device.h</itemPath>
           <itemPath>../src/config/sam_e70_xult/interrupts.h</itemPath>
           <itemPath>../src/config/sam_e70_xult/device_vectors.h</itemPath>
-          <itemPath>../src/config/sam_e70_xult/app_xip_image_pattern_hex.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -166,6 +165,7 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
+      <itemPath>../src/app_xip_image_pattern_hex.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

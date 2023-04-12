@@ -27,8 +27,7 @@ import sys
 
 filename = "./xip_image/firmware/sam_e70_xult.X/dist/sam_e70_xult\
 /production/sam_e70_xult.X.production.bin"
-destinationFile = "./xip_main/firmware/src/config/sam_e70_xult/\
-app_xip_image_pattern_hex.h"
+destinationFile = "./xip_main/firmware/src/app_xip_image_pattern_hex.h"
 if os.path.exists(filename):
     count = 16
 
