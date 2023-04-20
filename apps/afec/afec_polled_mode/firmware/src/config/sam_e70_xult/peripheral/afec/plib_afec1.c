@@ -63,7 +63,7 @@ void AFEC1_Initialize(void)
     AFEC1_REGS->AFEC_CR = AFEC_CR_SWRST_Msk;
 
     /* Prescaler and different time settings as per CLOCK section  */
-    AFEC1_REGS->AFEC_MR = AFEC_MR_PRESCAL(7U) | AFEC_MR_TRACKTIM(15U) | AFEC_MR_STARTUP_SUT64 |
+    AFEC1_REGS->AFEC_MR = AFEC_MR_PRESCAL(7U) | AFEC_MR_STARTUP_SUT64 |
         AFEC_MR_TRANSFER(2U) | AFEC_MR_ONE_Msk   ;
 
     /* resolution and sign mode of result */
@@ -80,6 +80,7 @@ void AFEC1_Initialize(void)
     /* Offset */
     AFEC1_REGS->AFEC_CSELR = (uint32_t)AFEC_CH0;
     AFEC1_REGS->AFEC_COCR = 512U;
+
 
 
 
@@ -140,9 +141,9 @@ void AFEC1_ConversionSequenceSet(AFEC_CHANNEL_NUM *channelList, uint8_t numChann
     for (channelIndex = 0U; channelIndex < AFEC_SEQ1_CHANNEL_NUM; channelIndex++)
     {
         if (channelIndex >= numChannel)
-		{
+        {
             break;
-		}
+        }
         AFEC1_REGS->AFEC_SEQ1R |= (uint32_t)channelList[channelIndex] << (channelIndex * 4U);
     }
     if (numChannel > AFEC_SEQ1_CHANNEL_NUM)
