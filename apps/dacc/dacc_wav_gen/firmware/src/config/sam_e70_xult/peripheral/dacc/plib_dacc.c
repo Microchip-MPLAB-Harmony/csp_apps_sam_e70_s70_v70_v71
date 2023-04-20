@@ -61,8 +61,10 @@ void DACC_Initialize (void)
     /* Enable DAC Channel */
     DACC_REGS->DACC_CHER = DACC_CHER_CH0_Msk | DACC_CHER_CH1_Msk;
 
-    /* Wait until DAC Channel 0 and Channel 1 is ready*/
-    while(!(DACC_REGS->DACC_CHSR& (DACC_CHSR_DACRDY0_Msk | DACC_CHSR_DACRDY1_Msk)));
+    while((DACC_REGS->DACC_CHSR& (DACC_CHSR_DACRDY0_Msk | DACC_CHSR_DACRDY1_Msk)) == 0U)
+    {
+        /* Wait until DAC Channel 0 and Channel 1 is ready*/
+    }
 }
 
 bool DACC_IsReady (DACC_CHANNEL_NUM channel)
