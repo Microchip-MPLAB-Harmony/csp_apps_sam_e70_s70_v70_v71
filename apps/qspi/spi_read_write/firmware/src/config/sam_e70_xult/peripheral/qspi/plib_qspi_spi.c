@@ -45,8 +45,7 @@
 #include "string.h" // memmove
 #include "interrupts.h"
 
-static qspi_spi_obj qspiObj;
-
+volatile static qspi_spi_obj qspiObj;
 
 void QSPI_Initialize(void)
 {
@@ -88,7 +87,7 @@ bool QSPI_WriteRead (void* pTransmitData, size_t txSize, void* pReceiveData, siz
     uint32_t dummyData;
 
     /* Verify the request */
-    if((((txSize > 0U) && (pTransmitData != NULL)) || ((rxSize > 0U) && (pReceiveData != NULL))) && (qspiObj.transferIsBusy == false))
+    if((qspiObj.transferIsBusy == false) && (((txSize > 0U) && (pTransmitData != NULL)) || ((rxSize > 0U) && (pReceiveData != NULL))))
     {
         isRequestAccepted = true;
         qspiObj.txBuffer = pTransmitData;
@@ -120,15 +119,17 @@ bool QSPI_WriteRead (void* pTransmitData, size_t txSize, void* pReceiveData, siz
         dummyData = (QSPI_REGS->QSPI_RDR & QSPI_RDR_RD_Msk) >> QSPI_RDR_RD_Pos;
         (void)dummyData;
 
-        if (qspiObj.rxSize > qspiObj.txSize)
+        size_t txSz = qspiObj.txSize;
+
+        if (qspiObj.rxSize > txSz)
         {
-            qspiObj.dummySize = qspiObj.rxSize - qspiObj.txSize;
+            qspiObj.dummySize = qspiObj.rxSize - txSz;
         }
 
         /* Start the first write here itself, rest will happen in ISR context */
         if((QSPI_REGS->QSPI_MR & QSPI_MR_NBBITS_Msk) == QSPI_MR_NBBITS_8_BIT)
         {
-            if (qspiObj.txCount < qspiObj.txSize)
+            if (qspiObj.txCount < txSz)
             {
                 QSPI_REGS->QSPI_TDR = *((uint8_t*)qspiObj.txBuffer);
                 qspiObj.txCount++;
@@ -149,7 +150,9 @@ bool QSPI_WriteRead (void* pTransmitData, size_t txSize, void* pReceiveData, siz
             qspiObj.dummySize >>= 1;
             qspiObj.rxSize >>= 1;
 
-            if (qspiObj.txCount < qspiObj.txSize)
+            txSz = qspiObj.txSize;
+
+            if (qspiObj.txCount < txSz)
             {
                 QSPI_REGS->QSPI_TDR = *((uint16_t*)qspiObj.txBuffer);
                 qspiObj.txCount++;
@@ -169,7 +172,7 @@ bool QSPI_WriteRead (void* pTransmitData, size_t txSize, void* pReceiveData, siz
             ; /* No action required - ; is optional */
         }
 
-        if (rxSize > 0)
+        if (rxSize > 0U)
         {
             /* Enable receive interrupt to complete the transfer in ISR context */
             QSPI_REGS->QSPI_IER = QSPI_IER_RDRF_Msk;
@@ -235,13 +238,19 @@ void QSPI_CallbackRegister (QSPI_CALLBACK callback, uintptr_t context)
 
 bool QSPI_IsBusy(void)
 {
-    return ((qspiObj.transferIsBusy) || ((QSPI_REGS->QSPI_SR & QSPI_SR_TXEMPTY_Msk ) == 0U));
+    bool transferIsBusy = qspiObj.transferIsBusy;
+
+    return (((QSPI_REGS->QSPI_SR & QSPI_SR_TXEMPTY_Msk ) == 0U) || (transferIsBusy));
 }
 
-void QSPI_InterruptHandler(void)
+void __attribute__((used)) QSPI_InterruptHandler(void)
 {
     uint32_t dataBits ;
     uint32_t receivedData;
+    size_t rxCount = qspiObj.rxCount;
+    size_t txCount = qspiObj.txCount;
+    size_t txSize = qspiObj.txSize;
+
     static bool isLastByteTransferInProgress = false;
 
     dataBits = QSPI_REGS->QSPI_MR & QSPI_MR_NBBITS_Msk;
@@ -251,18 +260,20 @@ void QSPI_InterruptHandler(void)
     {
         receivedData = (QSPI_REGS->QSPI_RDR & QSPI_RDR_RD_Msk) >> QSPI_RDR_RD_Pos;
 
-        if (qspiObj.rxCount < qspiObj.rxSize)
+        if (rxCount < qspiObj.rxSize)
         {
             if(dataBits == QSPI_MR_NBBITS_8_BIT)
             {
-                ((uint8_t*)qspiObj.rxBuffer)[qspiObj.rxCount] = (uint8_t)receivedData;
-                qspiObj.rxCount++;
+                ((uint8_t*)qspiObj.rxBuffer)[rxCount] = (uint8_t)receivedData;
+                rxCount++;
             }
             else
             {
-                ((uint16_t*)qspiObj.rxBuffer)[qspiObj.rxCount] = (uint16_t)receivedData;
-                qspiObj.rxCount++;
+                ((uint16_t*)qspiObj.rxBuffer)[rxCount] = (uint16_t)receivedData;
+                rxCount++;
             }
+
+            qspiObj.rxCount = rxCount;
         }
     }
 
@@ -275,10 +286,10 @@ void QSPI_InterruptHandler(void)
 
         if(dataBits == QSPI_MR_NBBITS_8_BIT)
         {
-            if (qspiObj.txCount < qspiObj.txSize)
+            if (txCount < qspiObj.txSize)
             {
-                QSPI_REGS->QSPI_TDR = ((uint8_t*)qspiObj.txBuffer)[qspiObj.txCount];
-                qspiObj.txCount++;
+                QSPI_REGS->QSPI_TDR = ((uint8_t*)qspiObj.txBuffer)[txCount];
+                txCount++;
             }
             else if (qspiObj.dummySize > 0U)
             {
@@ -292,10 +303,10 @@ void QSPI_InterruptHandler(void)
         }
         else
         {
-            if (qspiObj.txCount < qspiObj.txSize)
+            if (txCount < qspiObj.txSize)
             {
-                QSPI_REGS->QSPI_TDR = ((uint16_t*)qspiObj.txBuffer)[qspiObj.txCount];
-                qspiObj.txCount++;
+                QSPI_REGS->QSPI_TDR = ((uint16_t*)qspiObj.txBuffer)[txCount];
+                txCount++;
             }
             else if (qspiObj.dummySize > 0U)
             {
@@ -307,7 +318,10 @@ void QSPI_InterruptHandler(void)
                 ; /* No action required - ; is optional */
             }
         }
-        if ((qspiObj.txCount == qspiObj.txSize) && (qspiObj.dummySize == 0U))
+
+        qspiObj.txCount = txCount;
+
+        if ((qspiObj.dummySize == 0U) && (txCount == txSize))
         {
             /* At higher baud rates, the data in the shift register can be
              * shifted out and TXEMPTY flag can get set resulting in a
@@ -322,7 +336,7 @@ void QSPI_InterruptHandler(void)
             /* Set Last transfer to deassert NPCS after the last byte written in TDR has been transferred. */
             QSPI_REGS->QSPI_CR = QSPI_CR_LASTXFER_Msk;
         }
-        else if (qspiObj.rxCount == qspiObj.rxSize)
+        else if (rxCount == qspiObj.rxSize)
         {
             /* Enable TDRE interrupt as all the requested bytes are received
              * and can now make use of the internal transmit shift register.
@@ -339,7 +353,7 @@ void QSPI_InterruptHandler(void)
     /* See if Exchange is complete */
     if ((isLastByteTransferInProgress == true) && ((QSPI_REGS->QSPI_SR & QSPI_SR_TXEMPTY_Msk) == QSPI_SR_TXEMPTY_Msk))
     {
-        if (qspiObj.rxCount == qspiObj.rxSize)
+        if (rxCount == qspiObj.rxSize)
         {
             qspiObj.transferIsBusy = false;
 
@@ -350,7 +364,9 @@ void QSPI_InterruptHandler(void)
 
             if(qspiObj.callback != NULL)
             {
-                qspiObj.callback(qspiObj.context);
+                uintptr_t context = qspiObj.context;
+
+                qspiObj.callback(context);
             }
         }
     }
