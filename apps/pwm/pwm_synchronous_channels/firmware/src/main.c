@@ -66,7 +66,7 @@
 #define DUTY_INCREMENT (10U)
 
 /* Save PWM period */
-uint16_t period;
+static uint16_t period;
 
 /* This function is called after PWM0 counter event */
 void PWM0_CounterEventHandler(uint32_t status, uintptr_t context)

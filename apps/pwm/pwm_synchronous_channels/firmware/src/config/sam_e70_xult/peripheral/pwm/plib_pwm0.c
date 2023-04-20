@@ -57,7 +57,7 @@
 
 
 /* Object to hold callback function and context */
-PWM_CALLBACK_OBJECT PWM0_CallbackObj;
+volatile static PWM_CALLBACK_OBJECT PWM0_CallbackObj;
 
 /* Initialize enabled PWM channels */
 void PWM0_Initialize (void)
@@ -79,7 +79,7 @@ void PWM0_Initialize (void)
     /* PWM duty cycle */
     PWM0_REGS->PWM_CH_NUM[0].PWM_CDTY = 0U;
     /* Dead time */
-    PWM0_REGS->PWM_CH_NUM[0].PWM_DT = (100U << PWM_DT_DTL_Pos) | (100U);
+    PWM0_REGS->PWM_CH_NUM[0].PWM_DT = (100UL << PWM_DT_DTL_Pos) | (100U);
          
     /* Enable counter event */
     PWM0_REGS->PWM_IER1 = 0x1;
@@ -92,7 +92,7 @@ void PWM0_Initialize (void)
     PWM0_REGS->PWM_CH_NUM[1].PWM_CDTY = 0U;
     PWM0_REGS->PWM_CH_NUM[1].PWM_CMR = PWM_CMR_DTE_Msk;
     /* Dead time */
-    PWM0_REGS->PWM_CH_NUM[1].PWM_DT = (100U << PWM_DT_DTL_Pos) | (100U);
+    PWM0_REGS->PWM_CH_NUM[1].PWM_DT = (100UL << PWM_DT_DTL_Pos) | (100U);
          
     /* Enable counter event */
     PWM0_REGS->PWM_IER1 = 0x1;
@@ -105,7 +105,7 @@ void PWM0_Initialize (void)
     PWM0_REGS->PWM_CH_NUM[2].PWM_CDTY = 0U;
     PWM0_REGS->PWM_CH_NUM[2].PWM_CMR = PWM_CMR_DTE_Msk;
     /* Dead time */
-    PWM0_REGS->PWM_CH_NUM[2].PWM_DT = (100U << PWM_DT_DTL_Pos) | (100U);
+    PWM0_REGS->PWM_CH_NUM[2].PWM_DT = (100UL << PWM_DT_DTL_Pos) | (100U);
          
     /* Enable counter event */
     PWM0_REGS->PWM_IER1 = 0x1;
@@ -196,13 +196,16 @@ void PWM0_CallbackRegister(PWM_CALLBACK callback, uintptr_t context)
 }
 
 /* Interrupt Handler */
-void PWM0_InterruptHandler(void)
+void __attribute__((used)) PWM0_InterruptHandler(void)
 {
-    uint32_t status;
-    status = PWM0_REGS->PWM_ISR1;
+    uint32_t status = PWM0_REGS->PWM_ISR1;
+
+    /* Additional temporary variable used to prevent MISRA violations (Rule 13.x) */
+    uintptr_t context = PWM0_CallbackObj.context;
+
     if (PWM0_CallbackObj.callback_fn != NULL)
     {
-        PWM0_CallbackObj.callback_fn(status, PWM0_CallbackObj.context);
+        PWM0_CallbackObj.callback_fn(status, context);
     }
 }
 
