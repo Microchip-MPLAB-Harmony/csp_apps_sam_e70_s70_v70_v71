@@ -54,8 +54,8 @@
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/systick/plib_systick.h"
 #include "peripheral/supc/plib_supc.h"
-#include "peripheral/rtt/plib_rtt.h"
 #include "peripheral/efc/plib_efc.h"
+#include "peripheral/rtt/plib_rtt.h"
 #include "peripheral/usart/plib_usart1.h"
 
 // DOM-IGNORE-BEGIN
@@ -65,6 +65,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "ATSAME70Q21B"
+#define DEVICE_ARCH			 "CORTEX-M7"
+#define DEVICE_FAMILY		 "SAME"
+#define DEVICE_SERIES		 "SAME70"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 300000000
