@@ -49,6 +49,7 @@
 
 #include "device.h"
 #include "plib_twihs0_slave.h"
+#include "interrupts.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -56,7 +57,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
-static TWIHS_SLAVE_OBJ twihs0Obj;
+volatile static TWIHS_SLAVE_OBJ twihs0Obj;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -103,12 +104,12 @@ void TWIHS0_WriteByte(uint8_t wrByte)
 
 TWIHS_SLAVE_TRANSFER_DIR TWIHS0_TransferDirGet(void)
 {
-    return (TWIHS0_REGS->TWIHS_SR & TWIHS_SR_SVREAD_Msk)? TWIHS_SLAVE_TRANSFER_DIR_READ: TWIHS_SLAVE_TRANSFER_DIR_WRITE;
+    return ((TWIHS0_REGS->TWIHS_SR & TWIHS_SR_SVREAD_Msk) != 0U)? TWIHS_SLAVE_TRANSFER_DIR_READ: TWIHS_SLAVE_TRANSFER_DIR_WRITE;
 }
 
 TWIHS_SLAVE_ACK_STATUS TWIHS0_LastByteAckStatusGet(void)
 {
-    return (TWIHS0_REGS->TWIHS_SR & TWIHS_SR_NACK_Msk)? TWIHS_SLAVE_ACK_STATUS_RECEIVED_NAK : TWIHS_SLAVE_ACK_STATUS_RECEIVED_ACK;
+    return ((TWIHS0_REGS->TWIHS_SR & TWIHS_SR_NACK_Msk) != 0U)? TWIHS_SLAVE_ACK_STATUS_RECEIVED_NAK : TWIHS_SLAVE_ACK_STATUS_RECEIVED_ACK;
 }
 
 void TWIHS0_NACKDataPhase(bool isNACKEnable)
@@ -136,13 +137,14 @@ bool TWIHS0_IsBusy(void)
     return twihs0Obj.isBusy;
 }
 
-void TWIHS0_InterruptHandler( void )
+void __attribute__((used)) TWIHS0_InterruptHandler( void )
 {
     uint32_t status = TWIHS0_REGS->TWIHS_SR;
+    uintptr_t context = twihs0Obj.context;
 
-    if (status & TWIHS0_REGS->TWIHS_IMR)
+    if ((status & TWIHS0_REGS->TWIHS_IMR) != 0U)
     {
-        if(status & TWIHS_SR_SVACC_Msk)
+        if((status & TWIHS_SR_SVACC_Msk) != 0U)
         {
             if (twihs0Obj.isAddrMatchEventNotified == false)
             {
@@ -164,7 +166,7 @@ void TWIHS0_InterruptHandler( void )
 
                 if (twihs0Obj.callback != NULL)
                 {
-                    twihs0Obj.callback(TWIHS_SLAVE_TRANSFER_EVENT_ADDR_MATCH, twihs0Obj.context);
+                    (void) twihs0Obj.callback(TWIHS_SLAVE_TRANSFER_EVENT_ADDR_MATCH, context);
                 }
 
                 twihs0Obj.isAddrMatchEventNotified = true;
@@ -173,13 +175,13 @@ void TWIHS0_InterruptHandler( void )
             /* I2C Master reads from slave */
             if (TWIHS0_TransferDirGet() == TWIHS_SLAVE_TRANSFER_DIR_READ)
             {
-                if (status & TWIHS_SR_TXRDY_Msk)
+                if ((status & TWIHS_SR_TXRDY_Msk) != 0U)
                 {
-                    if ((twihs0Obj.isFirstTxPending == true) || (!(status & TWIHS_SR_NACK_Msk)))
+                    if ((twihs0Obj.isFirstTxPending == true) || ((status & TWIHS_SR_NACK_Msk) == 0U))
                     {
                         if (twihs0Obj.callback != NULL)
                         {
-                            twihs0Obj.callback(TWIHS_SLAVE_TRANSFER_EVENT_TX_READY, twihs0Obj.context);
+                            (void) twihs0Obj.callback(TWIHS_SLAVE_TRANSFER_EVENT_TX_READY, context);
                         }
                         twihs0Obj.isFirstTxPending = false;
                     }
@@ -193,16 +195,16 @@ void TWIHS0_InterruptHandler( void )
             else
             {
                 /* I2C Master writes to slave */
-                if (status & TWIHS_SR_RXRDY_Msk)
+                if ((status & TWIHS_SR_RXRDY_Msk) != 0U)
                 {
                     if (twihs0Obj.callback != NULL)
                     {
-                        twihs0Obj.callback(TWIHS_SLAVE_TRANSFER_EVENT_RX_READY, twihs0Obj.context);
+                        (void) twihs0Obj.callback(TWIHS_SLAVE_TRANSFER_EVENT_RX_READY, context);
                     }
                 }
             }
         }
-        else if (status & TWIHS_SR_EOSACC_Msk)
+        else if ((status & TWIHS_SR_EOSACC_Msk) != 0U)
         {
             /* Either Repeated Start or Stop condition received */
 
@@ -211,7 +213,7 @@ void TWIHS0_InterruptHandler( void )
             TWIHS0_REGS->TWIHS_IDR = TWIHS_IDR_TXRDY_Msk | TWIHS_IDR_RXRDY_Msk;
             TWIHS0_REGS->TWIHS_IER = TWIHS_IER_SVACC_Msk;
 
-            if (status & TWIHS_SR_TXCOMP_Msk)
+            if ((status & TWIHS_SR_TXCOMP_Msk) != 0U)
             {
                 /* Stop condition received OR start condition with other slave address detected */
 
@@ -219,11 +221,15 @@ void TWIHS0_InterruptHandler( void )
 
                 if (twihs0Obj.callback != NULL)
                 {
-                    twihs0Obj.callback(TWIHS_SLAVE_TRANSFER_EVENT_TRANSMISSION_COMPLETE, twihs0Obj.context);
+                    (void) twihs0Obj.callback(TWIHS_SLAVE_TRANSFER_EVENT_TRANSMISSION_COMPLETE, context);
                 }
 
                 TWIHS0_REGS->TWIHS_IDR = TWIHS_IDR_TXCOMP_Msk;
             }
+        }
+        else
+        {
+            /* Do Nothing*/
         }
     }
 }
