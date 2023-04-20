@@ -272,6 +272,8 @@ bool QSPI_RegisterWrite( qspi_register_xfer_t *qspi_register_xfer, uint32_t *tx_
     return true;
 }
 
+/* MISRA C-2012 Rule 11.3 violated 2 times below. Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1*/
+
 bool
 QSPI_MemoryRead(
     qspi_memory_xfer_t *    qspi_memory_xfer,
@@ -379,6 +381,7 @@ QSPI_MemoryRead(
                     (uint32_t *) qspi_mem,
                     numWordTransferBytes / 4U
                 );
+
             qspi_mem += numWordTransferBytes;
             pRxBuffer += numWordTransferBytes;
         }
@@ -446,6 +449,8 @@ QSPI_MemoryRead(
     }
     return readStatus;
 }
+
+/* MISRAC 2012 deviation block end */
 
 bool QSPI_MemoryWrite( qspi_memory_xfer_t *qspi_memory_xfer, uint32_t *tx_data, uint32_t tx_data_length, uint32_t address )
 {
