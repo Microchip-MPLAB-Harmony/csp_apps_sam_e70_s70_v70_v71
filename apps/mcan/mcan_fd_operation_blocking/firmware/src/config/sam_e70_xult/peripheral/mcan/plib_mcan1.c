@@ -155,7 +155,7 @@ void MCAN1_Initialize(void)
         /* Wait for initialization complete */
     }
 
-    memset(&mcan1Obj.msgRAMConfig, 0x00, sizeof(MCAN_MSG_RAM_CONFIG));
+    (void) memset(&mcan1Obj.msgRAMConfig, 0x00, sizeof(MCAN_MSG_RAM_CONFIG));
 }
 
 
@@ -193,11 +193,11 @@ bool MCAN1_MessageTransmitFifo(uint8_t numberOfMessage, MCAN_TX_BUFFER *txBuffer
 
     tfqpi = (uint8_t)((MCAN1_REGS->MCAN_TXFQS & MCAN_TXFQS_TFQPI_Msk) >> MCAN_TXFQS_TFQPI_Pos);
 
-    for (count = 0; count < numberOfMessage; count++)
+    for (count = 0U; count < numberOfMessage; count++)
     {
         txFifo = (uint8_t *)((uint8_t*)mcan1Obj.msgRAMConfig.txBuffersAddress + ((uint32_t)tfqpi * MCAN1_TX_FIFO_BUFFER_ELEMENT_SIZE));
 
-        memcpy(txFifo, txBuf, MCAN1_TX_FIFO_BUFFER_ELEMENT_SIZE);
+        (void) memcpy(txFifo, txBuf, MCAN1_TX_FIFO_BUFFER_ELEMENT_SIZE);
 
         txBuf += MCAN1_TX_FIFO_BUFFER_ELEMENT_SIZE;
         bufferNumber |= (1UL << tfqpi);
@@ -207,6 +207,8 @@ bool MCAN1_MessageTransmitFifo(uint8_t numberOfMessage, MCAN_TX_BUFFER *txBuffer
             tfqpi = 0U;
         }
     }
+
+    __DSB();
 
     /* Set Transmission request */
     MCAN1_REGS->MCAN_TXBAR = bufferNumber;
@@ -290,13 +292,13 @@ bool MCAN1_TxEventFifoRead(uint8_t numberOfTxEvent, MCAN_TX_EVENT_FIFO *txEventF
 
     /* Read data from the Rx FIFO0 */
     txefgi = (uint8_t)((MCAN1_REGS->MCAN_TXEFS & MCAN_TXEFS_EFGI_Msk) >> MCAN_TXEFS_EFGI_Pos);
-    for (count = 0; count < numberOfTxEvent; count++)
+    for (count = 0U; count < numberOfTxEvent; count++)
     {
         txEvent = (uint8_t *) ((uint8_t *)mcan1Obj.msgRAMConfig.txEventFIFOAddress + ((uint32_t)txefgi * sizeof(MCAN_TX_EVENT_FIFO)));
 
-        memcpy(txEvtFifo, txEvent, sizeof(MCAN_TX_EVENT_FIFO));
+        (void) memcpy(txEvtFifo, txEvent, sizeof(MCAN_TX_EVENT_FIFO));
 
-        if ((count + 1) == numberOfTxEvent)
+        if ((count + 1U) == numberOfTxEvent)
         {
             break;
         }
@@ -357,27 +359,19 @@ uint8_t MCAN1_TxEventFifoFillLevelGet(void)
 bool MCAN1_MessageReceive(uint8_t bufferNumber, MCAN_RX_BUFFER *rxBuffer)
 {
     uint8_t *rxBuf = NULL;
+    bool message_receive_event = false;
 
-    if ((bufferNumber >= 1U) || (rxBuffer == NULL))
+    if((rxBuffer != NULL) && (bufferNumber < 1U))
     {
-        return false;
-    }
+        rxBuf = (uint8_t *) ((uint8_t *)mcan1Obj.msgRAMConfig.rxBuffersAddress + ((uint32_t)bufferNumber * MCAN1_RX_BUFFER_ELEMENT_SIZE));
 
-    rxBuf = (uint8_t *) ((uint8_t *)mcan1Obj.msgRAMConfig.rxBuffersAddress + ((uint32_t)bufferNumber * MCAN1_RX_BUFFER_ELEMENT_SIZE));
+        (void) memcpy((uint8_t *)rxBuffer, rxBuf, MCAN1_RX_BUFFER_ELEMENT_SIZE);
 
-    memcpy((uint8_t *)rxBuffer, rxBuf, MCAN1_RX_BUFFER_ELEMENT_SIZE);
-
-    /* Clear new data flag */
-    if (bufferNumber < 32U)
-    {
+        /* Clear new data flag */
         MCAN1_REGS->MCAN_NDAT1 = (1UL << bufferNumber);
+        message_receive_event = true;
     }
-    else
-    {
-        MCAN1_REGS->MCAN_NDAT2 = (1UL << (bufferNumber - 32U));
-    }
-
-    return true;
+    return message_receive_event;
 }
 
 // *****************************************************************************
@@ -401,7 +395,7 @@ bool MCAN1_MessageReceive(uint8_t bufferNumber, MCAN_RX_BUFFER *rxBuffer)
 bool MCAN1_RxBufferNumberGet(uint8_t* bufferNumber)
 {
     bool     status = false;
-    uint8_t  bufferNum = 0;
+    uint8_t  bufferNum = 0U;
     uint32_t newData1 = MCAN1_REGS->MCAN_NDAT1;
 
     if (newData1 != 0U)
@@ -458,13 +452,13 @@ bool MCAN1_MessageReceiveFifo(MCAN_RX_FIFO_NUM rxFifoNum, uint8_t numberOfMessag
         case MCAN_RX_FIFO_0:
             /* Read data from the Rx FIFO0 */
             rxgi = (uint8_t)((MCAN1_REGS->MCAN_RXF0S & MCAN_RXF0S_F0GI_Msk) >> MCAN_RXF0S_F0GI_Pos);
-            for (count = 0; count < numberOfMessage; count++)
+            for (count = 0U; count < numberOfMessage; count++)
             {
                 rxFifo = (uint8_t *) ((uint8_t *)mcan1Obj.msgRAMConfig.rxFIFO0Address + ((uint32_t)rxgi * MCAN1_RX_FIFO0_ELEMENT_SIZE));
 
-                memcpy(rxBuf, rxFifo, MCAN1_RX_FIFO0_ELEMENT_SIZE);
+                (void) memcpy(rxBuf, rxFifo, MCAN1_RX_FIFO0_ELEMENT_SIZE);
 
-                if ((count + 1) == numberOfMessage)
+                if ((count + 1U) == numberOfMessage)
                 {
                     break;
                 }
@@ -484,13 +478,13 @@ bool MCAN1_MessageReceiveFifo(MCAN_RX_FIFO_NUM rxFifoNum, uint8_t numberOfMessag
         case MCAN_RX_FIFO_1:
             /* Read data from the Rx FIFO1 */
             rxgi = (uint8_t)((MCAN1_REGS->MCAN_RXF1S & MCAN_RXF1S_F1GI_Msk) >> MCAN_RXF1S_F1GI_Pos);
-            for (count = 0; count < numberOfMessage; count++)
+            for (count = 0U; count < numberOfMessage; count++)
             {
                 rxFifo = (uint8_t *) ((uint8_t *)mcan1Obj.msgRAMConfig.rxFIFO1Address + ((uint32_t)rxgi * MCAN1_RX_FIFO1_ELEMENT_SIZE));
 
-                memcpy(rxBuf, rxFifo, MCAN1_RX_FIFO1_ELEMENT_SIZE);
+                (void) memcpy(rxBuf, rxFifo, MCAN1_RX_FIFO1_ELEMENT_SIZE);
 
-                if ((count + 1) == numberOfMessage)
+                if ((count + 1U) == numberOfMessage)
                 {
                     break;
                 }
@@ -665,8 +659,9 @@ void MCAN1_InterruptClear(MCAN_INTERRUPT_MASK interruptMask)
 void MCAN1_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress)
 {
     uint32_t offset = 0U;
+    uint32_t msgRAMConfigBaseAddr = (uint32_t)msgRAMConfigBaseAddress;
 
-    memset((void*)msgRAMConfigBaseAddress, 0x00, MCAN1_MESSAGE_RAM_CONFIG_SIZE);
+    (void) memset(msgRAMConfigBaseAddress, 0x00, MCAN1_MESSAGE_RAM_CONFIG_SIZE);
 
     /* Set MCAN CCCR Init for Message RAM Configuration */
     MCAN1_REGS->MCAN_CCCR |= MCAN_CCCR_INIT_ENABLED;
@@ -678,46 +673,46 @@ void MCAN1_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress)
     /* Set CCE to unlock the configuration registers */
     MCAN1_REGS->MCAN_CCCR |= MCAN_CCCR_CCE_Msk;
 
-    mcan1Obj.msgRAMConfig.rxFIFO0Address = (mcan_rxf0e_registers_t *)msgRAMConfigBaseAddress;
+    mcan1Obj.msgRAMConfig.rxFIFO0Address = (mcan_rxf0e_registers_t *)msgRAMConfigBaseAddr;
     offset = MCAN1_RX_FIFO0_SIZE;
     /* Receive FIFO 0 Configuration Register */
     MCAN1_REGS->MCAN_RXF0C = MCAN_RXF0C_F0S(1UL) | MCAN_RXF0C_F0WM(0UL) | MCAN_RXF0C_F0OM_Msk |
             MCAN_RXF0C_F0SA(((uint32_t)mcan1Obj.msgRAMConfig.rxFIFO0Address >> 2));
 
-    mcan1Obj.msgRAMConfig.rxFIFO1Address = (mcan_rxf1e_registers_t *)(msgRAMConfigBaseAddress + offset);
+    mcan1Obj.msgRAMConfig.rxFIFO1Address = (mcan_rxf1e_registers_t *)(msgRAMConfigBaseAddr + offset);
     offset += MCAN1_RX_FIFO1_SIZE;
     /* Receive FIFO 1 Configuration Register */
     MCAN1_REGS->MCAN_RXF1C = MCAN_RXF1C_F1S(1UL) | MCAN_RXF1C_F1WM(0UL) | MCAN_RXF1C_F1OM_Msk |
             MCAN_RXF1C_F1SA(((uint32_t)mcan1Obj.msgRAMConfig.rxFIFO1Address >> 2));
 
-    mcan1Obj.msgRAMConfig.rxBuffersAddress = (mcan_rxbe_registers_t *)(msgRAMConfigBaseAddress + offset);
+    mcan1Obj.msgRAMConfig.rxBuffersAddress = (mcan_rxbe_registers_t *)(msgRAMConfigBaseAddr + offset);
     offset += MCAN1_RX_BUFFER_SIZE;
     MCAN1_REGS->MCAN_RXBC = MCAN_RXBC_RBSA(((uint32_t)mcan1Obj.msgRAMConfig.rxBuffersAddress >> 2));
 
-    mcan1Obj.msgRAMConfig.txBuffersAddress = (mcan_txbe_registers_t *)(msgRAMConfigBaseAddress + offset);
+    mcan1Obj.msgRAMConfig.txBuffersAddress = (mcan_txbe_registers_t *)(msgRAMConfigBaseAddr + offset);
     offset += MCAN1_TX_FIFO_BUFFER_SIZE;
     /* Transmit Buffer/FIFO Configuration Register */
     MCAN1_REGS->MCAN_TXBC = MCAN_TXBC_TFQS(1UL) |
             MCAN_TXBC_TBSA(((uint32_t)mcan1Obj.msgRAMConfig.txBuffersAddress >> 2));
 
-    mcan1Obj.msgRAMConfig.txEventFIFOAddress =  (mcan_txefe_registers_t *)(msgRAMConfigBaseAddress + offset);
+    mcan1Obj.msgRAMConfig.txEventFIFOAddress =  (mcan_txefe_registers_t *)(msgRAMConfigBaseAddr + offset);
     offset += MCAN1_TX_EVENT_FIFO_SIZE;
     /* Transmit Event FIFO Configuration Register */
     MCAN1_REGS->MCAN_TXEFC = MCAN_TXEFC_EFWM(0UL) | MCAN_TXEFC_EFS(1UL) |
             MCAN_TXEFC_EFSA(((uint32_t)mcan1Obj.msgRAMConfig.txEventFIFOAddress >> 2));
 
-    mcan1Obj.msgRAMConfig.stdMsgIDFilterAddress = (mcan_sidfe_registers_t *)(msgRAMConfigBaseAddress + offset);
-    memcpy((void *)mcan1Obj.msgRAMConfig.stdMsgIDFilterAddress,
-           (const void *)mcan1StdFilter,
+    mcan1Obj.msgRAMConfig.stdMsgIDFilterAddress = (mcan_sidfe_registers_t *)(msgRAMConfigBaseAddr + offset);
+    (void) memcpy((void*)mcan1Obj.msgRAMConfig.stdMsgIDFilterAddress,
+           (const void*)mcan1StdFilter,
            MCAN1_STD_MSG_ID_FILTER_SIZE);
     offset += MCAN1_STD_MSG_ID_FILTER_SIZE;
     /* Standard ID Filter Configuration Register */
     MCAN1_REGS->MCAN_SIDFC = MCAN_SIDFC_LSS(2UL) |
             MCAN_SIDFC_FLSSA(((uint32_t)mcan1Obj.msgRAMConfig.stdMsgIDFilterAddress >> 2));
 
-    mcan1Obj.msgRAMConfig.extMsgIDFilterAddress = (mcan_xidfe_registers_t *)(msgRAMConfigBaseAddress + offset);
-    memcpy((void *)mcan1Obj.msgRAMConfig.extMsgIDFilterAddress,
-           (const void *)mcan1ExtFilter,
+    mcan1Obj.msgRAMConfig.extMsgIDFilterAddress = (mcan_xidfe_registers_t *)(msgRAMConfigBaseAddr + offset);
+    (void) memcpy((void*)mcan1Obj.msgRAMConfig.extMsgIDFilterAddress,
+           (const void*)mcan1ExtFilter,
            MCAN1_EXT_MSG_ID_FILTER_SIZE);
     /* Extended ID Filter Configuration Register */
     MCAN1_REGS->MCAN_XIDFC = MCAN_XIDFC_LSE(2UL) |
@@ -725,7 +720,7 @@ void MCAN1_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress)
 
     /* Set 16-bit MSB of mcan1 base address */
     MATRIX_REGS->CCFG_SYSIO = (MATRIX_REGS->CCFG_SYSIO & ~CCFG_SYSIO_CAN1DMABA_Msk)
-                            | CCFG_SYSIO_CAN1DMABA(((uint32_t)msgRAMConfigBaseAddress >> 16));
+                            | CCFG_SYSIO_CAN1DMABA(((uint32_t)msgRAMConfigBaseAddr >> 16));
 
     /* Reference offset variable once to remove warning about the variable not being used after increment */
     (void)offset;
@@ -885,6 +880,133 @@ void MCAN1_SleepModeExit(void)
     {
         /* Wait for initialization complete */
     }
+}
+
+bool MCAN1_BitTimingCalculationGet(MCAN_BIT_TIMING_SETUP *setup, MCAN_BIT_TIMING *bitTiming)
+{
+    bool status = false;
+    uint32_t numOfTimeQuanta;
+    uint8_t tseg1;
+    float temp1;
+    float temp2;
+
+    if ((setup != NULL) && (bitTiming != NULL))
+    {
+        if (setup->nominalBitTimingSet == true)
+        {
+            numOfTimeQuanta = MCAN1_CLOCK_FREQUENCY / (setup->nominalBitRate * ((uint32_t)setup->nominalPrescaler + 1U));
+            if ((numOfTimeQuanta >= 4U) && (numOfTimeQuanta <= 385U))
+            {
+                if (setup->nominalSamplePoint < 50.0f)
+                {
+                    setup->nominalSamplePoint = 50.0f;
+                }
+                temp1 = (float)numOfTimeQuanta;
+                temp2 = (temp1 * setup->nominalSamplePoint) / 100.0f;
+                tseg1 = (uint8_t)temp2;
+                bitTiming->nominalBitTiming.nominalTimeSegment2 = (uint8_t)(numOfTimeQuanta - tseg1 - 1U);
+                bitTiming->nominalBitTiming.nominalTimeSegment1 = tseg1 - 2U;
+                bitTiming->nominalBitTiming.nominalSJW = bitTiming->nominalBitTiming.nominalTimeSegment2;
+                bitTiming->nominalBitTiming.nominalPrescaler = setup->nominalPrescaler;
+                bitTiming->nominalBitTimingSet = true;
+                status = true;
+            }
+            else
+            {
+                bitTiming->nominalBitTimingSet = false;
+            }
+        }
+        if (setup->dataBitTimingSet == true)
+        {
+            numOfTimeQuanta = MCAN1_CLOCK_FREQUENCY / (setup->dataBitRate * ((uint32_t)setup->dataPrescaler + 1U));
+            if ((numOfTimeQuanta >= 4U) && (numOfTimeQuanta <= 49U))
+            {
+                if (setup->dataSamplePoint < 50.0f)
+                {
+                    setup->dataSamplePoint = 50.0f;
+                }
+                temp1 = (float)numOfTimeQuanta;
+                temp2 = (temp1 * setup->dataSamplePoint) / 100.0f;
+                tseg1 = (uint8_t)temp2;
+                bitTiming->dataBitTiming.dataTimeSegment2 = (uint8_t)(numOfTimeQuanta - tseg1 - 1U);
+                bitTiming->dataBitTiming.dataTimeSegment1 = tseg1 - 2U;
+                bitTiming->dataBitTiming.dataSJW = bitTiming->dataBitTiming.dataTimeSegment2;
+                bitTiming->dataBitTiming.dataPrescaler = setup->dataPrescaler;
+                bitTiming->dataBitTimingSet = true;
+                status = true;
+            }
+            else
+            {
+                bitTiming->dataBitTimingSet = false;
+                status = false;
+            }
+        }
+    }
+
+    return status;
+}
+
+bool MCAN1_BitTimingSet(MCAN_BIT_TIMING *bitTiming)
+{
+    bool status = false;
+    bool nominalBitTimingSet = false;
+    bool dataBitTimingSet = false;
+
+    if ((bitTiming->nominalBitTimingSet == true)
+    && (bitTiming->nominalBitTiming.nominalTimeSegment1 >= 0x1U)
+    && (bitTiming->nominalBitTiming.nominalTimeSegment2 <= 0x7FU)
+    && (bitTiming->nominalBitTiming.nominalPrescaler <= 0x1FFU)
+    && (bitTiming->nominalBitTiming.nominalSJW <= 0x7FU))
+    {
+        nominalBitTimingSet = true;
+    }
+
+    if  ((bitTiming->dataBitTimingSet == true)
+    &&  ((bitTiming->dataBitTiming.dataTimeSegment1 >= 0x1U) && (bitTiming->dataBitTiming.dataTimeSegment1 <= 0x1FU))
+    &&  (bitTiming->dataBitTiming.dataTimeSegment2 <= 0xFU)
+    &&  (bitTiming->dataBitTiming.dataPrescaler <= 0x1FU)
+    &&  (bitTiming->dataBitTiming.dataSJW <= 0xFU))
+    {
+        dataBitTimingSet = true;
+    }
+
+    if ((nominalBitTimingSet == true) || (dataBitTimingSet == true))
+    {
+        /* Start MCAN initialization */
+        MCAN1_REGS->MCAN_CCCR = MCAN_CCCR_INIT_Msk;
+        while ((MCAN1_REGS->MCAN_CCCR & MCAN_CCCR_INIT_Msk) != MCAN_CCCR_INIT_Msk)
+        {
+            /* Wait for initialization complete */
+        }
+
+        /* Set CCE to unlock the configuration registers */
+        MCAN1_REGS->MCAN_CCCR |= MCAN_CCCR_CCE_Msk;
+
+        if (dataBitTimingSet == true)
+        {
+            /* Set Data Bit Timing and Prescaler Register */
+            MCAN1_REGS->MCAN_DBTP = MCAN_DBTP_DTSEG2(bitTiming->dataBitTiming.dataTimeSegment2) | MCAN_DBTP_DTSEG1(bitTiming->dataBitTiming.dataTimeSegment1) | MCAN_DBTP_DBRP(bitTiming->dataBitTiming.dataPrescaler) | MCAN_DBTP_DSJW(bitTiming->dataBitTiming.dataSJW);
+
+        }
+
+        if (nominalBitTimingSet == true)
+        {
+            /* Set Nominal Bit timing and Prescaler Register */
+            MCAN1_REGS->MCAN_NBTP  = MCAN_NBTP_NTSEG2(bitTiming->nominalBitTiming.nominalTimeSegment2) | MCAN_NBTP_NTSEG1(bitTiming->nominalBitTiming.nominalTimeSegment1) | MCAN_NBTP_NBRP(bitTiming->nominalBitTiming.nominalPrescaler) | MCAN_NBTP_NSJW(bitTiming->nominalBitTiming.nominalSJW);
+        }
+
+        /* Set the operation mode */
+        MCAN1_REGS->MCAN_CCCR |= MCAN_CCCR_FDOE_ENABLED | MCAN_CCCR_BRSE_ENABLED;
+
+
+        MCAN1_REGS->MCAN_CCCR &= ~MCAN_CCCR_INIT_Msk;
+        while ((MCAN1_REGS->MCAN_CCCR & MCAN_CCCR_INIT_Msk) == MCAN_CCCR_INIT_Msk)
+        {
+            /* Wait for initialization complete */
+        }
+        status = true;
+    }
+    return status;
 }
 
 /*******************************************************************************
