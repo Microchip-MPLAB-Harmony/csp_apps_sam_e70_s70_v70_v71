@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <configurationDescriptor version="65">
   <logicalFolder displayName="root" name="root" projectFiles="true">
     <logicalFolder displayName="Header Files" name="HeaderFiles" projectFiles="true">
@@ -225,12 +225,12 @@
         <targetPluginBoard/>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <languageToolchainVersion>4.21</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAME70_DFP" vendor="Microchip" version="4.5.86"/>
+        <pack name="SAME70_DFP" vendor="Microchip" version="4.9.129"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
