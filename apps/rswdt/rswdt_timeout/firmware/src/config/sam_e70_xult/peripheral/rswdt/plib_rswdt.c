@@ -45,7 +45,7 @@
 
 void RSWDT_Initialize( void )
 {
-    RSWDT_REGS->RSWDT_MR = RSWDT_MR_ALLONES_Msk | RSWDT_MR_WDV(1023U) \
+    RSWDT_REGS->RSWDT_MR = RSWDT_MR_ALLONES_Msk | RSWDT_MR_WDV(1023) \
                              | RSWDT_MR_WDRSTEN_Msk;
 
 }
