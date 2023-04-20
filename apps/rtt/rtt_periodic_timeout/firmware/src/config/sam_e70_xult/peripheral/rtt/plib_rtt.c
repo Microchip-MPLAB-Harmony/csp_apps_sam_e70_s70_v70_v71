@@ -44,7 +44,7 @@ Description:
 #include "plib_rtt.h"
 #include "interrupts.h"
 
-static RTT_OBJECT rtt;
+volatile static RTT_OBJECT rtt;
 
 void RTT_Initialize(void)
 {
@@ -134,31 +134,33 @@ uint32_t RTT_FrequencyGet(void)
     }
 }
 
-void RTT_InterruptHandler(void)
+void __attribute__((used)) RTT_InterruptHandler(void)
 {
-	uint32_t rtt_status = RTT_REGS->RTT_SR;
-	uint32_t flags = RTT_REGS->RTT_MR;
-	RTT_REGS->RTT_MR&= ~(RTT_MR_ALMIEN_Msk | RTT_MR_RTTINCIEN_Msk);
-	if((flags & RTT_MR_RTTINCIEN_Msk) != 0U)
-	{
-		if((rtt_status & RTT_SR_RTTINC_Msk) != 0U)
-		{
-			if (rtt.callback != NULL)
-			{
-				rtt.callback(RTT_PERIODIC, rtt.context);
-			}
-		}
-		RTT_REGS->RTT_MR|= (RTT_MR_RTTINCIEN_Msk);
-	}
-	if((flags & RTT_MR_ALMIEN_Msk) != 0U)
-	{
-		if((rtt_status & RTT_SR_ALMS_Msk) != 0U)
-		{
-			if (rtt.callback != NULL)
-			{
-				rtt.callback(RTT_ALARM, rtt.context);
-			}
-		}
-		RTT_REGS->RTT_MR|= (RTT_MR_ALMIEN_Msk);
-	}
+    uint32_t rtt_status = RTT_REGS->RTT_SR;
+    uint32_t flags = RTT_REGS->RTT_MR;
+    /* Additional temporary variable used to prevent MISRA violations (Rule 13.x) */
+    uintptr_t context = rtt.context;
+    RTT_REGS->RTT_MR&= ~(RTT_MR_ALMIEN_Msk | RTT_MR_RTTINCIEN_Msk);
+    if((flags & RTT_MR_RTTINCIEN_Msk) != 0U)
+    {
+        if((rtt_status & RTT_SR_RTTINC_Msk) != 0U)
+        {
+            if (rtt.callback != NULL)
+            {
+                rtt.callback(RTT_PERIODIC, context);
+            }
+        }
+        RTT_REGS->RTT_MR|= (RTT_MR_RTTINCIEN_Msk);
+    }
+    if((flags & RTT_MR_ALMIEN_Msk) != 0U)
+    {
+        if((rtt_status & RTT_SR_ALMS_Msk) != 0U)
+        {
+            if (rtt.callback != NULL)
+            {
+                rtt.callback(RTT_ALARM, context);
+            }
+        }
+        RTT_REGS->RTT_MR|= (RTT_MR_ALMIEN_Msk);
+    }
 }
