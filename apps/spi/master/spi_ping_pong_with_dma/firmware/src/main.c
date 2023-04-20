@@ -83,7 +83,7 @@ uint8_t rxPingBuffer[1024];
 uint8_t txPongBuffer[1024];
 uint8_t rxPongBuffer[1024];
 
-volatile APP_STATES state = APP_STATE_INITIALIZE;
+static volatile APP_STATES state = APP_STATE_INITIALIZE;
 
 XDMAC_DESCRIPTOR_VIEW_1 pTxLinkedListDesc[2], pRxLinkedListDesc[2];
 
