@@ -23,7 +23,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -9226,7 +9226,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\systick\plib_systick.c</file>
-         <hash>c0ac98dfb2683ed3e76cf864db6260e7e65ec6db8e8065bdade8f944144f6710</hash>
+         <hash>5a2226e14719f938eaac6793497a981f87dffbf33a14048670b11bb8ea56eaaf</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\xdmac.h</file>
@@ -9250,7 +9250,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\startup_xc32.c</file>
-         <hash>1f8af85fb610ccbc9f2083b2dd88a42cdffe68c5d77e602f0e3eb2e79080f165</hash>
+         <hash>f7b14be251f5909a830e4acc385c05eef35d2393328380b9bdf4c19aba912003</hash>
       </entry>
       <entry>
          <file>..\src\main.c</file>
@@ -9326,7 +9326,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\exceptions.c</file>
-         <hash>db36e13722b65cfd3c4f1241411f4d0d37e2db9f2b88b9b991b3baa0ad88d8f4</hash>
+         <hash>1fd383302c4cdf1cc6a804aa03b8abe8c1e5e5e9ea3450438c34dcea441e6b34</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\spi.h</file>
@@ -9394,7 +9394,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\interrupts.c</file>
-         <hash>417c150b0111a6fc6a9d6cf53900db2bdd1168a8810b9d42e05306a90080b144</hash>
+         <hash>bb048b50f48c362f476f71b69a0690249f263449485cebadee3cdc4fdd3004a0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\mcan.h</file>
@@ -9530,7 +9530,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\qspi\plib_qspi.c</file>
-         <hash>1a6b1b9fdb61e75da6bea8e199ed779949bdc9b77d1d7d7376025bfa0b0425d3</hash>
+         <hash>51999bd29a41efcc499525c45b48a6e757cce0c60b7c7de4d9f12d0acadd5dc5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\device.h</file>

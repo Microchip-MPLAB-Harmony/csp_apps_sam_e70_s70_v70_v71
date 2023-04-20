@@ -91,7 +91,7 @@ __STATIC_INLINE void __attribute__((optimize("-O1"))) TCM_Disable(void)
 #define GPNVM_TCM_SIZE_Msk        (0x3u << GPNVM_TCM_SIZE_Pos)
 
 /** Program GPNVM fuse for TCM configuration */
-__STATIC_INLINE void TCM_Configure(uint32_t neededGpnvmValue)
+__STATIC_INLINE void __attribute__((optimize("-O1"))) TCM_Configure(uint32_t neededGpnvmValue)
 {
     static uint32_t gpnvmReg;
     static uint32_t cmd;
@@ -146,7 +146,7 @@ __STATIC_INLINE void TCM_Configure(uint32_t neededGpnvmValue)
 #if (__ARM_FP==14) || (__ARM_FP==4)
 
 /* Enable FPU */
-__STATIC_INLINE void FPU_Enable(void)
+__STATIC_INLINE void __attribute__((optimize("-O1"))) FPU_Enable(void)
 {
     uint32_t primask = __get_PRIMASK();
     __disable_irq();
