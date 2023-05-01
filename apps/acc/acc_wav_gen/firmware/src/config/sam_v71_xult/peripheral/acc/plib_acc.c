@@ -56,6 +56,7 @@ void ACC_Initialize (void)
       Output Edge type*/
     regValue |= ACC_MR_SELMINUS(0x2U);
     regValue |= ACC_MR_SELPLUS(0x0U);
+    regValue |= ACC_MR_EDGETYP_ANY;
     regValue |= 0U;
     regValue |= 0U;
     regValue |= ACC_MR_SELFS_CE;
