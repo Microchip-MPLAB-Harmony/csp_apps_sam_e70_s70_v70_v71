@@ -56,7 +56,7 @@
 // *****************************************************************************
 // *****************************************************************************
 /* Object to hold callback function and context */
-static AFEC_CALLBACK_OBJECT AFEC1_CallbackObj;
+volatile static AFEC_CALLBACK_OBJECT AFEC1_CallbackObj;
 
 /* Initialize AFEC peripheral */
 void AFEC1_Initialize(void)
@@ -65,7 +65,7 @@ void AFEC1_Initialize(void)
     AFEC1_REGS->AFEC_CR = AFEC_CR_SWRST_Msk;
 
     /* Prescaler and different time settings as per CLOCK section  */
-    AFEC1_REGS->AFEC_MR = AFEC_MR_PRESCAL(7U) | AFEC_MR_TRACKTIM(15U) | AFEC_MR_STARTUP_SUT64 |
+    AFEC1_REGS->AFEC_MR = AFEC_MR_PRESCAL(7U) | AFEC_MR_STARTUP_SUT64 |
         AFEC_MR_TRANSFER(2U) | AFEC_MR_ONE_Msk   | (AFEC_MR_TRGEN_Msk) | (AFEC_MR_TRGSEL_AFEC_TRIG1);
 
     /* resolution and sign mode of result */
@@ -96,6 +96,7 @@ void AFEC1_Initialize(void)
    AFEC1_REGS->AFEC_SEQ1R = AFEC_SEQ1R_USCH0(AFEC_CH5) | 
 		AFEC_SEQ1R_USCH1(AFEC_CH6) | 
 		AFEC_SEQ1R_USCH2(AFEC_CH0);
+
 
     /* Enable interrupt */
     AFEC1_REGS->AFEC_IER = AFEC_IER_EOC0_Msk;
@@ -220,12 +221,13 @@ void AFEC1_CallbackRegister(AFEC_CALLBACK callback, uintptr_t context)
 }
 
 /* Interrupt Handler */
-void AFEC1_InterruptHandler(void)
+void __attribute__((used)) AFEC1_InterruptHandler(void)
 {
     uint32_t var_status;
     var_status = AFEC1_REGS->AFEC_ISR;
     if (AFEC1_CallbackObj.callback_fn != NULL)
     {
-        AFEC1_CallbackObj.callback_fn(var_status, AFEC1_CallbackObj.context);
+        uintptr_t context = AFEC1_CallbackObj.context;
+        AFEC1_CallbackObj.callback_fn(var_status, context);
     }
 }
