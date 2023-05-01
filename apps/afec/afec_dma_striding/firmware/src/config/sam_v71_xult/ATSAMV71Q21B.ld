@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC32 Compiler -  ATSAMV71Q21B linker script
  * 
- * Copyright (c) 2022, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its
@@ -99,6 +99,7 @@ ENTRY(__XC32_RESET_HANDLER_NAME)
 #endif
 
 
+
 /*************************************************************************
  * Memory-Region Definitions
  * The MEMORY command describes the location and size of blocks of memory
@@ -120,6 +121,9 @@ dtcm (WX!R) : ORIGIN = DTCM_ORIGIN, LENGTH = __XC32_DTCM_LENGTH
  * 
  * CODE_REGION defaults to 'rom', if rom is present (non-zero length),
  * and 'ram' otherwise.
+ * N.B. The BFA will still allocate code to any MEMORY named 'rom' regardless
+ * of CODE_REGION's value. If you wish to use rom for something else please
+ * rename the MEMORY entry.
  * DATA_REGION defaults to 'ram', which must be present.
  * VECTOR_REGION defaults to CODE_REGION, unless 'boot_rom' is present.
  */

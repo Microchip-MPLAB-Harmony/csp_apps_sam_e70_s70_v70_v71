@@ -65,7 +65,7 @@
  
 
 /* Callback object for channel 0 */
-static TC_COMPARE_CALLBACK_OBJECT TC1_CH0_CallbackObj;
+volatile static TC_COMPARE_CALLBACK_OBJECT TC1_CH0_CallbackObj;
 
 /* Initialize channel in compare mode */
 void TC1_CH0_CompareInitialize (void)
@@ -142,15 +142,20 @@ void TC1_CH0_CompareCallbackRegister(TC_COMPARE_CALLBACK callback, uintptr_t con
 }
 
 /* Interrupt handler for Channel 0 */
-void TC1_CH0_InterruptHandler(void)
+void __attribute__((used)) TC1_CH0_InterruptHandler(void)
 {
     TC_COMPARE_STATUS compare_status = (TC_COMPARE_STATUS)(TC1_REGS->TC_CHANNEL[0].TC_SR & TC_COMPARE_STATUS_MSK);
+
+    /* Additional temporary variable used to prevent MISRA violations (Rule 13.x) */
+    uintptr_t context = TC1_CH0_CallbackObj.context;
+
     /* Call registered callback function */
-    if ((TC_COMPARE_NONE != compare_status) && TC1_CH0_CallbackObj.callback_fn != NULL)
+    if ((TC1_CH0_CallbackObj.callback_fn != NULL) && (TC_COMPARE_NONE != compare_status))
     {
-        TC1_CH0_CallbackObj.callback_fn(compare_status, TC1_CH0_CallbackObj.context);
+        TC1_CH0_CallbackObj.callback_fn(compare_status, context);
     }
 }
+
  
 
  
