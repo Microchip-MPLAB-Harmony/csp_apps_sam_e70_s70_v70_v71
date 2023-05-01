@@ -40,7 +40,7 @@
 *******************************************************************************/
 
 #ifndef PLIB_SPI0_MASTER_H
-#define PLIB_SPI0_MASTER__H
+#define PLIB_SPI0_MASTER_H
 
 #include "device.h"
 #include "plib_spi_master_common.h"
