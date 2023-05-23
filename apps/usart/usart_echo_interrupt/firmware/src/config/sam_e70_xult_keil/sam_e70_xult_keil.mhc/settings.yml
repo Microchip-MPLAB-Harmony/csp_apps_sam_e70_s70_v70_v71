@@ -5,10 +5,10 @@ frameworkPath: D:\Projects\h3
 processor: ATSAME70Q21B
 projectName: usart_echo_interrupt_sam_e70_xult_keil
 settings:
-  PackageFilter: bsp;core;csp;net;
+  PackageFilter: azure_rtos;bootloader;bsp;core;cryptoauthlib;csp;Devices;dev_packs;harmony-services;mc_apps_pic32cm_mc;mc_apps_pic32mk;mc_apps_sam_c2x;mc_apps_sam_d5x_e5x;mc_apps_sam_e7x_s7x_v7x;mc_apps_sam_rh707;mc_apps_sam_rh71;motor_control;net;quick_docs;usb;x2c
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
   TRUSTZONE: 'false'
   CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
   MERGE_STRATEGY: OVERWRITE
-  DFPPath: .\dev_packs\Microchip\SAME70_DFP\4.2.62\same70b\atdf\ATSAME70Q21B.atdf
+  DFPPath: .\dev_packs\Microchip\SAME70_DFP\4.10.248\same70b\atdf\ATSAME70Q21B.atdf
