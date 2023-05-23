@@ -399,7 +399,7 @@ int main ( void )
                 
             case APP_STATE_RESET:
                 APP_Reset();
-                appData.state = APP_STATE_JEDEC_ID_READ;
+                appData.state = APP_STATE_GLOBAL_BLK_PROTECTION_UNLOCK;
                 break;
                 
             case APP_STATE_GLOBAL_BLK_PROTECTION_UNLOCK:
