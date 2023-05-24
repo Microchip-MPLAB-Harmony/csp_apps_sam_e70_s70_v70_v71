@@ -76,7 +76,7 @@ char __attribute__  ((space(data), section (".ram_nocache"))) echoBuffer[READ_SI
 
 /* Application Status Data */
 char failureMessage[] = "\r\n**** Data transfer error ****\r\n";
-bool errorStatus = false;
+static bool errorStatus = false;
 bool writeStatus = false;
 bool readStatus = false;
 
