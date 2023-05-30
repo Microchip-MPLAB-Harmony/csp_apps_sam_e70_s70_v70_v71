@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_e70_s70_v70_v71_confg_v71_mcan_normal_operation_blocking",
-		"version": "3.2.0",
+		"version": "3.4.0",
 		"displayName": "MCAN blocking Example for SAM E70/S70/V70/V71 Family",
 		"projectName": "mcan_demo_sam_v71_xult",
 		"shortDescription": "This example shows how to use the MCAN module to transmit and receive CAN messages in polling mode.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.0.0"
+			"semverRange": ">=6.5.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.1.0"
+				"semverRange": ">=4.21.0"
 			}
 		],
 		"dfp": {
-			"name": "CMSIS",
-			"semverRange": "^5.4.0"
+			"name": "SAMV71_DFP",
+			"semverRange": "^4.9.117"
 		},
 		"configurator": {
-			"name": "MHC",
-			"semverRange": ">=3.8.5"
+			"name": "MCC",
+			"semverRange": ">=5.3.0"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",

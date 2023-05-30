@@ -4,27 +4,27 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_e70_s70_v70_v71_rtt_periodic_timeout",
-		"version": "3.2.0",
+		"version": "3.4.0",
 		"displayName": "RTT periodic interrupt Example for SAM E70/S70/V70/V71 Family",
 		"projectName": "rtt_periodic_timeout_sam_e70_xult",
 		"shortDescription": "This example shows how to use the RTT to generate periodic interrupts.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.0.0"
+			"semverRange": ">=6.5.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.1.0"
+				"semverRange": ">=4.21.0"
 			}
 		],
 		"dfp": {
 			"name": "SAME70_DFP",
-			"semverRange": "^4.3.67"
+			"semverRange": "^4.9.129"
 		},
 		"configurator": {
-			"name": "MHC",
-			"semverRange": ">=3.8.5"
+			"name": "MCC",
+			"semverRange": ">=5.3.0"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
