@@ -8,11 +8,6 @@
         <logicalFolder name="sam_e70_xult"
                        displayName="sam_e70_xult"
                        projectFiles="true">
-          <logicalFolder name="osal" displayName="osal" projectFiles="true">
-            <itemPath>../src/config/sam_e70_xult/osal/osal_definitions.h</itemPath>
-            <itemPath>../src/config/sam_e70_xult/osal/osal_impl_basic.h</itemPath>
-            <itemPath>../src/config/sam_e70_xult/osal/osal.h</itemPath>
-          </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="clk" displayName="clk" projectFiles="true">
               <itemPath>../src/config/sam_e70_xult/peripheral/clk/plib_clk.h</itemPath>
@@ -34,35 +29,12 @@
               <itemPath>../src/config/sam_e70_xult/peripheral/usart/plib_usart_lin_common.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="system" displayName="system" projectFiles="true">
-            <logicalFolder name="cache" displayName="cache" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/system/cache/sys_cache.h</itemPath>
-            </logicalFolder>
-            <logicalFolder name="debug" displayName="debug" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/system/debug/sys_debug.h</itemPath>
-            </logicalFolder>
-            <logicalFolder name="int" displayName="int" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/system/int/sys_int.h</itemPath>
-              <itemPath>../src/config/sam_e70_xult/system/int/sys_int_mapping.h</itemPath>
-            </logicalFolder>
-            <logicalFolder name="time" displayName="time" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/system/time/src/sys_time_local.h</itemPath>
-              <itemPath>../src/config/sam_e70_xult/system/time/sys_time.h</itemPath>
-              <itemPath>../src/config/sam_e70_xult/system/time/sys_time_definitions.h</itemPath>
-            </logicalFolder>
-            <itemPath>../src/config/sam_e70_xult/system/system_common.h</itemPath>
-            <itemPath>../src/config/sam_e70_xult/system/system.h</itemPath>
-            <itemPath>../src/config/sam_e70_xult/system/system_module.h</itemPath>
-          </logicalFolder>
           <itemPath>../src/config/sam_e70_xult/device_vectors.h</itemPath>
           <itemPath>../src/config/sam_e70_xult/device_cache.h</itemPath>
           <itemPath>../src/config/sam_e70_xult/interrupts.h</itemPath>
           <itemPath>../src/config/sam_e70_xult/definitions.h</itemPath>
           <itemPath>../src/config/sam_e70_xult/device.h</itemPath>
           <itemPath>../src/config/sam_e70_xult/toolchain_specifics.h</itemPath>
-          <itemPath>../src/config/sam_e70_xult/user.h</itemPath>
-          <itemPath>../src/config/sam_e70_xult/sys_tasks.h</itemPath>
-          <itemPath>../src/config/sam_e70_xult/configuration.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -190,6 +162,12 @@
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>usart_lin_master_sam_e70_xult.mc3</itemPath>
+    </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
@@ -231,33 +209,15 @@
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
             <itemPath>../src/config/sam_e70_xult/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="system" displayName="system" projectFiles="true">
-            <logicalFolder name="cache" displayName="cache" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/system/cache/sys_cache.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="int" displayName="int" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/system/int/src/sys_int.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="time" displayName="time" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/system/time/src/sys_time.c</itemPath>
-            </logicalFolder>
-          </logicalFolder>
           <itemPath>../src/config/sam_e70_xult/exceptions.c</itemPath>
           <itemPath>../src/config/sam_e70_xult/initialization.c</itemPath>
           <itemPath>../src/config/sam_e70_xult/libc_syscalls.c</itemPath>
           <itemPath>../src/config/sam_e70_xult/interrupts.c</itemPath>
           <itemPath>../src/config/sam_e70_xult/startup_xc32.c</itemPath>
-          <itemPath>../src/config/sam_e70_xult/tasks.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/config/sam_e70_xult/pin_configurations.csv</itemPath>
       <itemPath>../src/main.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>usart_lin_master_sam_e70_xult.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

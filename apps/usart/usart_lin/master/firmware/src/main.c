@@ -154,6 +154,7 @@ int main ( void )
 {
     /* Initialize all modules */
     SYS_Initialize ( NULL );
+    SYSTICK_TimerStart();
     SYSTICK_DelayMs(100);
     
     while (1)

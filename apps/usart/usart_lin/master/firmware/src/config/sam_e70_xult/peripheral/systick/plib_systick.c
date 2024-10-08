@@ -41,7 +41,6 @@
 #include "device.h"
 #include "interrupts.h"
 #include "plib_systick.h"
-#include "peripheral/nvic/plib_nvic.h"
 
 volatile static SYSTICK_OBJECT systick;
 
@@ -152,40 +151,6 @@ void SYSTICK_DelayUs ( uint32_t delay_us)
            elapsedCount = elapsedCount + deltaCount;
        }
    }
-}
-bool SYSTICK_TimerInterruptDisable ( void )
-{
-    bool interruptStatus = false;
-
-    if ((SysTick->CTRL & SysTick_CTRL_TICKINT_Msk) != 0U)
-    {
-        interruptStatus = true;
-    }
-    SysTick->CTRL = 0x05U;
-
-    return interruptStatus;
-}
-
-void SYSTICK_TimerInterruptEnable ( void )
-{
-    /* Disable gloabl interrupt to avoid potentially generating systick interrupt twice */
-    bool interruptState = NVIC_INT_Disable();
-
-    SysTick->CTRL = 0x07U;
-    if((SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk) != 0U)
-    {
-        SCB->ICSR |= SCB_ICSR_PENDSTSET_Msk;
-    }
-
-    NVIC_INT_Restore(interruptState);
-}
-
-void SYSTICK_TimerInterruptRestore ( bool interruptStatus )
-{
-    if (interruptStatus == true)
-    {
-        SYSTICK_TimerInterruptEnable();
-    }
 }
 
 

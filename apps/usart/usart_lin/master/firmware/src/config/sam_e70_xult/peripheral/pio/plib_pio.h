@@ -63,12 +63,12 @@
 
 
 /*** Macros for LIN_EN pin ***/
-#define LIN_EN_Set()               (PIOA_REGS->PIO_SODR = (1<<5))
-#define LIN_EN_Clear()             (PIOA_REGS->PIO_CODR = (1<<5))
-#define LIN_EN_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<5))
-#define LIN_EN_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<5))
-#define LIN_EN_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<5))
-#define LIN_EN_Get()               ((PIOA_REGS->PIO_PDSR >> 5) & 0x1)
+#define LIN_EN_Set()               (PIOA_REGS->PIO_SODR = ((uint32_t)1U<<5U))
+#define LIN_EN_Clear()             (PIOA_REGS->PIO_CODR = ((uint32_t)1U<<5U))
+#define LIN_EN_Toggle()            (PIOA_REGS->PIO_ODSR ^= ((uint32_t)1U<<5U))
+#define LIN_EN_OutputEnable()      (PIOA_REGS->PIO_OER = ((uint32_t)1U<<5U))
+#define LIN_EN_InputEnable()       (PIOA_REGS->PIO_ODR = ((uint32_t)1U<<5U))
+#define LIN_EN_Get()               ((PIOA_REGS->PIO_PDSR >> 5U) & 0x1U)
 #define LIN_EN_PIN                  PIO_PIN_PA5
 
 

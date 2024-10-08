@@ -761,6 +761,7 @@ void __attribute__((used)) USART0_InterruptHandler( void )
 }
 
 
+
 void USART0_LIN_NodeActionSet( USART_LIN_NACT action )
 {
     USART0_REGS->US_LINMR &= ~(US_LINMR_NACT_Msk);

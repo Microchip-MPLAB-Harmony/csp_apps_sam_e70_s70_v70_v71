@@ -43,7 +43,6 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include "configuration.h"
 #include "definitions.h"
 #include "device.h"
 
@@ -66,9 +65,10 @@
 // *****************************************************************************
 // *****************************************************************************
 /* Following MISRA-C rules are deviated in the below code block */
-/* MISRA C-2012 Rule 11.1 */
-/* MISRA C-2012 Rule 11.3 */
-/* MISRA C-2012 Rule 11.8 */
+/* MISRA C-2012 Rule 7.2 - Deviation record ID - H3_MISRAC_2012_R_7_2_DR_1 */
+/* MISRA C-2012 Rule 11.1 - Deviation record ID - H3_MISRAC_2012_R_11_1_DR_1 */
+/* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 
 
 
@@ -77,8 +77,6 @@
 // Section: System Data
 // *****************************************************************************
 // *****************************************************************************
-/* Structure to hold the object handles for the modules in the system. */
-SYSTEM_OBJECTS sysObj;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -92,25 +90,6 @@ SYSTEM_OBJECTS sysObj;
 // Section: System Initialization
 // *****************************************************************************
 // *****************************************************************************
-// <editor-fold defaultstate="collapsed" desc="SYS_TIME Initialization Data">
-
-static const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
-    .timerCallbackSet = (SYS_TIME_PLIB_CALLBACK_REGISTER)SYSTICK_TimerCallbackSet,
-    .timerStart = (SYS_TIME_PLIB_START)SYSTICK_TimerStart,
-    .timerStop = (SYS_TIME_PLIB_STOP)SYSTICK_TimerStop,
-    .timerFrequencyGet = (SYS_TIME_PLIB_FREQUENCY_GET)SYSTICK_TimerFrequencyGet,
-    .timerInterruptRestore = (SYS_TIME_PLIB_INTERRUPT_RESTORE)SYSTICK_TimerInterruptRestore,
-    .timerInterruptDisable = (SYS_TIME_PLIB_INTERRUPT_DISABLE)SYSTICK_TimerInterruptDisable,
-    .timerPeriodSet = (SYS_TIME_PLIB_PERIOD_SET)SYSTICK_TimerPeriodSet,
-};
-
-static const SYS_TIME_INIT sysTimeInitData =
-{
-    .timePlib = &sysTimePlibAPI,
-    .hwTimerIntNum = SysTick_IRQn,
-};
-
-// </editor-fold>
 
 
 
@@ -154,22 +133,6 @@ void SYS_Initialize ( void* data )
     USART0_Initialize();
 
 
-
-    /* MISRAC 2012 deviation block start */
-    /* Following MISRA-C rules deviated in this block  */
-    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
-    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
-
-
-    /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
-        
-    sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
-    
-    /* MISRAC 2012 deviation block end */
-
-
-    /* MISRAC 2012 deviation block end */
     NVIC_Initialize();
 
 
