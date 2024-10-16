@@ -115,7 +115,6 @@ bool USART1_SerialSetup( USART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
     uint32_t overSampVal = 0;
     uint32_t usartMode;
     bool status = (setup != NULL);
-
     /*Valid pointer */
     if(status)
     {
