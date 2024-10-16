@@ -63,30 +63,30 @@
 
 
 /*** Macros for SWITCH pin ***/
-#define SWITCH_Set()               (PIOA_REGS->PIO_SODR = (1<<11))
-#define SWITCH_Clear()             (PIOA_REGS->PIO_CODR = (1<<11))
-#define SWITCH_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<11))
-#define SWITCH_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<11))
-#define SWITCH_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<11))
-#define SWITCH_Get()               ((PIOA_REGS->PIO_PDSR >> 11) & 0x1)
+#define SWITCH_Set()               (PIOA_REGS->PIO_SODR = ((uint32_t)1U<<11U))
+#define SWITCH_Clear()             (PIOA_REGS->PIO_CODR = ((uint32_t)1U<<11U))
+#define SWITCH_Toggle()            (PIOA_REGS->PIO_ODSR ^= ((uint32_t)1U<<11U))
+#define SWITCH_OutputEnable()      (PIOA_REGS->PIO_OER = ((uint32_t)1U<<11U))
+#define SWITCH_InputEnable()       (PIOA_REGS->PIO_ODR = ((uint32_t)1U<<11U))
+#define SWITCH_Get()               ((PIOA_REGS->PIO_PDSR >> 11U) & 0x1U)
 #define SWITCH_PIN                  PIO_PIN_PA11
 
 /*** Macros for APP_SLAVE_BUSY_PIN pin ***/
-#define APP_SLAVE_BUSY_PIN_Set()               (PIOD_REGS->PIO_SODR = (1<<28))
-#define APP_SLAVE_BUSY_PIN_Clear()             (PIOD_REGS->PIO_CODR = (1<<28))
-#define APP_SLAVE_BUSY_PIN_Toggle()            (PIOD_REGS->PIO_ODSR ^= (1<<28))
-#define APP_SLAVE_BUSY_PIN_OutputEnable()      (PIOD_REGS->PIO_OER = (1<<28))
-#define APP_SLAVE_BUSY_PIN_InputEnable()       (PIOD_REGS->PIO_ODR = (1<<28))
-#define APP_SLAVE_BUSY_PIN_Get()               ((PIOD_REGS->PIO_PDSR >> 28) & 0x1)
+#define APP_SLAVE_BUSY_PIN_Set()               (PIOD_REGS->PIO_SODR = ((uint32_t)1U<<28U))
+#define APP_SLAVE_BUSY_PIN_Clear()             (PIOD_REGS->PIO_CODR = ((uint32_t)1U<<28U))
+#define APP_SLAVE_BUSY_PIN_Toggle()            (PIOD_REGS->PIO_ODSR ^= ((uint32_t)1U<<28U))
+#define APP_SLAVE_BUSY_PIN_OutputEnable()      (PIOD_REGS->PIO_OER = ((uint32_t)1U<<28U))
+#define APP_SLAVE_BUSY_PIN_InputEnable()       (PIOD_REGS->PIO_ODR = ((uint32_t)1U<<28U))
+#define APP_SLAVE_BUSY_PIN_Get()               ((PIOD_REGS->PIO_PDSR >> 28U) & 0x1U)
 #define APP_SLAVE_BUSY_PIN_PIN                  PIO_PIN_PD28
 
 /*** Macros for LED2 pin ***/
-#define LED2_Set()               (PIOA_REGS->PIO_SODR = (1<<5))
-#define LED2_Clear()             (PIOA_REGS->PIO_CODR = (1<<5))
-#define LED2_Toggle()            (PIOA_REGS->PIO_ODSR ^= (1<<5))
-#define LED2_OutputEnable()      (PIOA_REGS->PIO_OER = (1<<5))
-#define LED2_InputEnable()       (PIOA_REGS->PIO_ODR = (1<<5))
-#define LED2_Get()               ((PIOA_REGS->PIO_PDSR >> 5) & 0x1)
+#define LED2_Set()               (PIOA_REGS->PIO_SODR = ((uint32_t)1U<<5U))
+#define LED2_Clear()             (PIOA_REGS->PIO_CODR = ((uint32_t)1U<<5U))
+#define LED2_Toggle()            (PIOA_REGS->PIO_ODSR ^= ((uint32_t)1U<<5U))
+#define LED2_OutputEnable()      (PIOA_REGS->PIO_OER = ((uint32_t)1U<<5U))
+#define LED2_InputEnable()       (PIOA_REGS->PIO_ODR = ((uint32_t)1U<<5U))
+#define LED2_Get()               ((PIOA_REGS->PIO_PDSR >> 5U) & 0x1U)
 #define LED2_PIN                  PIO_PIN_PA5
 
 
