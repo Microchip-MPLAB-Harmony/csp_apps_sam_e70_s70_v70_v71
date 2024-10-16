@@ -5,10 +5,10 @@
     Microchip Technology Inc.
 
   File Name:
-    plib_usart0.c
+    plib_usart0_LIN.c
 
   Summary:
-    USART0 PLIB Implementation File
+    USART0 PLIB Implementation File in LIN mode
 
   Description:
     None
@@ -724,7 +724,7 @@ void __attribute__((used)) USART0_InterruptHandler( void )
         USART0_ISR_TX_Handler();
     }
 	/* LIN Break Detected */
-    if((USART0_REGS->US_CSR & US_CSR_LIN_LINBK_Msk) != 0 )
+    if((USART0_REGS->US_CSR & US_CSR_LIN_LINBK_Msk) != 0U)
     {
         USART0_REGS->US_CR = US_CR_USART_RSTSTA_Msk;
        
@@ -736,7 +736,7 @@ void __attribute__((used)) USART0_InterruptHandler( void )
     }
     
     /* LIN ID Receive */
-    if((USART0_REGS->US_CSR & US_CSR_LIN_LINID_Msk) != 0 )
+    if((USART0_REGS->US_CSR & US_CSR_LIN_LINID_Msk) != 0U)
     {
         USART0_REGS->US_CR = US_CR_USART_RSTSTA_Msk;
        
@@ -748,7 +748,7 @@ void __attribute__((used)) USART0_InterruptHandler( void )
     }
 	
     /* LIN Transfer Complete */
-    if((USART0_REGS->US_CSR & US_CSR_LIN_LINTC_Msk) != 0 )
+    if((USART0_REGS->US_CSR & US_CSR_LIN_LINTC_Msk) != 0U)
     {
         USART0_REGS->US_CR = US_CR_USART_RSTSTA_Msk;
        
@@ -784,54 +784,66 @@ bool USART0_LIN_IdentifierWrite( uint8_t id)
 
 uint8_t USART0_LIN_IdentifierRead( void)
 {
-    return USART0_REGS->US_LINIR;
+    return (uint8_t)(USART0_REGS->US_LINIR);
 }
 
 void USART0_LIN_ParityEnable(bool parityEnable)
 {
     if(parityEnable == true)
+    {
         USART0_REGS->US_LINMR &= ~US_LINMR_PARDIS_Msk;
+    }
     else
+    {
         USART0_REGS->US_LINMR |= US_LINMR_PARDIS_Msk;
+    }
 }
 
 void USART0_LIN_ChecksumEnable(bool checksumEnable)
 {
     if(checksumEnable == true)
+    {
         USART0_REGS->US_LINMR &= ~US_LINMR_CHKDIS_Msk;
+    }
     else
+    {
         USART0_REGS->US_LINMR |= US_LINMR_CHKDIS_Msk;
+    }
 }
 
 void USART0_LIN_ChecksumTypeSet(USART_LIN_CHECKSUM_TYPE checksumType)
 {
 	USART0_REGS->US_LINMR &= ~US_LINMR_CHKTYP_Msk;
-	USART0_REGS->US_LINMR |= checksumType;
+	USART0_REGS->US_LINMR |= (uint32_t)checksumType;
 }
 
 void USART0_LIN_FrameSlotEnable(bool frameSlotEnable)
 {
     if(frameSlotEnable == true)
+    {
         USART0_REGS->US_LINMR &= ~US_LINMR_FSDIS_Msk;
+    }
     else
+    {
         USART0_REGS->US_LINMR |= US_LINMR_FSDIS_Msk;
+    }
 }
 
 void USART0_LIN_DataLenModeSet(USART_LIN_DATA_LEN dataLenMode)
 {
     USART0_REGS->US_LINMR &= ~US_LINMR_DLM_Msk;
-    USART0_REGS->US_LINMR |= dataLenMode;    
+    USART0_REGS->US_LINMR |= (uint32_t)dataLenMode;    
 }
 
 void USART0_LIN_ResponseDataLenSet(uint8_t len)
 {
     USART0_REGS->US_LINMR &= ~US_LINMR_DLC_Msk;
-    USART0_REGS->US_LINMR |= US_LINMR_DLC(len-1);
+    USART0_REGS->US_LINMR |= US_LINMR_DLC((uint32_t)len-1U);
 }
 
 uint8_t USART0_LIN_TransferComplete(void)
 {
-	return ((USART0_REGS->US_CSR & US_CSR_LIN_LINTC_Msk) > 0);
+	return (uint8_t)((USART0_REGS->US_CSR & US_CSR_LIN_LINTC_Msk) > 0U);
 }
 
 void USART0_LINIdCallbackRegister( USART_LIN_CALLBACK callback, uintptr_t context)

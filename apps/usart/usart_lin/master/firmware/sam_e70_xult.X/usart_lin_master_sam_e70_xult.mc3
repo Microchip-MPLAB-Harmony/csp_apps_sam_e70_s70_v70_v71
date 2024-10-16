@@ -23,7 +23,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1235,7 +1235,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\definitions.h</file>
-         <hash>129dc92baba7da91b665e8a8035aef2cf25d1f2e46dbe8d55362a6e4723c99ee</hash>
+         <hash>9a8b457c954a1aad46f19ec8386d70b896b3e66ab3fdd472454321c1d89d469e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\device.h</file>
@@ -1311,11 +1311,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\usart\plib_usart0_lin.c</file>
-         <hash>62e2e21f2d269466d8faf56a3b71f105a2208397da4e0babcac541ffa984ca39</hash>
+         <hash>84c9a68f601b6401815fa1a343a6548f354e9c959c12dd67b542450c139371a2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\usart\plib_usart0_lin.h</file>
-         <hash>d7590536d148428131359902f3487b85929f21614f2e05d0cb0f05f1f97f04bb</hash>
+         <hash>7aea6c8652f2debbb568fc5b9667dc6cfc0898ea91d88719981473e05c514b28</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\usart\plib_usart_lin_common.h</file>
