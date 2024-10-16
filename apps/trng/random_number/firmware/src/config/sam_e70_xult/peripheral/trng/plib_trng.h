@@ -56,9 +56,15 @@
 // *****************************************************************************
 // *****************************************************************************
 
+void TRNG_Initialize(void);
+
 
 /***************************** TRNG API *******************************/
 uint32_t TRNG_ReadData( void );
+
+void TRNG_Enable( void );
+
+void TRNG_Disable( void );
 
 #ifdef __cplusplus // Provide C++ Compatibility
  }
