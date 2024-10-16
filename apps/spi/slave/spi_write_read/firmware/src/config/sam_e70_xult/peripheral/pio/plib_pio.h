@@ -63,12 +63,12 @@
 
 
 /*** Macros for GPIO_PD28 pin ***/
-#define GPIO_PD28_Set()               (PIOD_REGS->PIO_SODR = (1<<28))
-#define GPIO_PD28_Clear()             (PIOD_REGS->PIO_CODR = (1<<28))
-#define GPIO_PD28_Toggle()            (PIOD_REGS->PIO_ODSR ^= (1<<28))
-#define GPIO_PD28_OutputEnable()      (PIOD_REGS->PIO_OER = (1<<28))
-#define GPIO_PD28_InputEnable()       (PIOD_REGS->PIO_ODR = (1<<28))
-#define GPIO_PD28_Get()               ((PIOD_REGS->PIO_PDSR >> 28) & 0x1)
+#define GPIO_PD28_Set()               (PIOD_REGS->PIO_SODR = ((uint32_t)1U<<28U))
+#define GPIO_PD28_Clear()             (PIOD_REGS->PIO_CODR = ((uint32_t)1U<<28U))
+#define GPIO_PD28_Toggle()            (PIOD_REGS->PIO_ODSR ^= ((uint32_t)1U<<28U))
+#define GPIO_PD28_OutputEnable()      (PIOD_REGS->PIO_OER = ((uint32_t)1U<<28U))
+#define GPIO_PD28_InputEnable()       (PIOD_REGS->PIO_ODR = ((uint32_t)1U<<28U))
+#define GPIO_PD28_Get()               ((PIOD_REGS->PIO_PDSR >> 28U) & 0x1U)
 #define GPIO_PD28_PIN                  PIO_PIN_PD28
 
 
