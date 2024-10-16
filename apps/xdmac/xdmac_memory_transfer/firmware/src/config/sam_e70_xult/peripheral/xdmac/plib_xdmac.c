@@ -129,7 +129,7 @@ void XDMAC_Initialize( void )
                                             XDMAC_CC_DAM_INCREMENTED_AM |
                                             XDMAC_CC_SAM_INCREMENTED_AM |
                                             XDMAC_CC_SIF_AHB_IF1 |
-                                            XDMAC_CC_DIF_AHB_IF1 |
+                                            XDMAC_CC_DIF_AHB_IF0 |
                                             XDMAC_CC_DWIDTH_BYTE |
                                             XDMAC_CC_MBSIZE_SINGLE);
     XDMAC_REGS->XDMAC_CHID[0].XDMAC_CIE= (XDMAC_CIE_BIE_Msk | XDMAC_CIE_RBIE_Msk | XDMAC_CIE_WBIE_Msk | XDMAC_CIE_ROIE_Msk);
