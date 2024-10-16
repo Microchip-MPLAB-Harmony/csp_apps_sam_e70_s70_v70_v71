@@ -53,8 +53,8 @@
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/systick/plib_systick.h"
-#include "peripheral/efc/plib_efc.h"
 #include "peripheral/tc/plib_tc1.h"
+#include "peripheral/efc/plib_efc.h"
 #include "peripheral/tc/plib_tc0.h"
 #include "peripheral/usart/plib_usart1.h"
 
@@ -67,13 +67,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "ATSAMV71Q21B"
-#define DEVICE_ARCH			 "CORTEX-M7"
-#define DEVICE_FAMILY		 "SAMV"
-#define DEVICE_SERIES		 "SAMV71"
+#define DEVICE_NAME          "ATSAMV71Q21B"
+#define DEVICE_ARCH          "CORTEX-M7"
+#define DEVICE_FAMILY        "SAMV"
+#define DEVICE_SERIES        "SAMV71"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 300000000
+#define CPU_CLOCK_FREQUENCY 300000000U
 
 // *****************************************************************************
 // *****************************************************************************
