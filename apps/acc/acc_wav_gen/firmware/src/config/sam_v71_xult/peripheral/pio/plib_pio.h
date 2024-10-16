@@ -63,12 +63,12 @@
 
 
 /*** Macros for Compare_Pin pin ***/
-#define Compare_Pin_Set()               (PIOB_REGS->PIO_SODR = (1<<3))
-#define Compare_Pin_Clear()             (PIOB_REGS->PIO_CODR = (1<<3))
-#define Compare_Pin_Toggle()            (PIOB_REGS->PIO_ODSR ^= (1<<3))
-#define Compare_Pin_OutputEnable()      (PIOB_REGS->PIO_OER = (1<<3))
-#define Compare_Pin_InputEnable()       (PIOB_REGS->PIO_ODR = (1<<3))
-#define Compare_Pin_Get()               ((PIOB_REGS->PIO_PDSR >> 3) & 0x1)
+#define Compare_Pin_Set()               (PIOB_REGS->PIO_SODR = ((uint32_t)1U<<3U))
+#define Compare_Pin_Clear()             (PIOB_REGS->PIO_CODR = ((uint32_t)1U<<3U))
+#define Compare_Pin_Toggle()            (PIOB_REGS->PIO_ODSR ^= ((uint32_t)1U<<3U))
+#define Compare_Pin_OutputEnable()      (PIOB_REGS->PIO_OER = ((uint32_t)1U<<3U))
+#define Compare_Pin_InputEnable()       (PIOB_REGS->PIO_ODR = ((uint32_t)1U<<3U))
+#define Compare_Pin_Get()               ((PIOB_REGS->PIO_PDSR >> 3U) & 0x1U)
 #define Compare_Pin_PIN                  PIO_PIN_PB3
 
 
