@@ -1,6 +1,0 @@
-format_version: v1.0
-type: UniqueComponent
-attributes: {id: trng}
-children:
-- type: ElementPosition
-  attributes: {x: '287', y: '130', id: trng}

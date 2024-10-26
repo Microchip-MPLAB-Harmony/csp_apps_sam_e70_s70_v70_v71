@@ -1,10 +1,4 @@
-﻿---
-title: Harmony 3 peripheral library application examples for SAM E70/S70/V70/V71 family
-nav_order: 1
-has_children: true
-has_toc: false
----
-[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
+[![MCHP](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)](https://www.microchip.com)
 
 # Harmony 3 peripheral library application examples for SAM E70/S70/V70/V71 family
 
@@ -19,74 +13,29 @@ MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded
 This repository contains the MPLAB® Harmony 3 peripheral library application examples for SAM E70/S70/V70/V71 family
 
 - [Release Notes](release_notes.md)
-- [MPLAB® Harmony License](mplab_harmony_license.md)
+- [Microchip SLA](Microchip_SLA001.md)
 
 To clone or download these applications from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71) and then click **Clone** button to clone this repository or download as zip file.
-This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
+This content can also be downloaded using MCC content manager available as part of the MPLAB® X IDE.
 
 ## Contents Summary
 
 | Folder     | Description                             |
-| ---        | ---                                     |
+|:----------:|:---------------------------------------:|
 | apps       | Contains peripheral library example applications |
-| docs       | Contains documentation in html format for offline viewing (to be used only after cloning this repository onto a local machine). Use [github pages](https://microchip-mplab-harmony.github.io/csp_apps_sam_e70_s70_v70_v71/) of this repository for viewing it online. |
 
 ## Code Examples
 
-The following applications are provided to demonstrate the typical or interesting usage models of one or more peripheral libraries.
+Click [here](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=CSP_APPS_SAM_E70_S70_V70_V71_INTRODUCTION&redirect=true) to view the online documentation of code examples hosted in this repository.
 
-| Name | Description |
-| ---- | ----------- |
-| [ACC PWM generation](apps/acc/acc_wav_gen/readme.md) | This example uses ACC peripheral Library to generate a PWM waveform with variable duty cycle |
-| [AFEC with DMA](apps/afec/afec_dma_striding/readme.md) | This example uses AFEC peripheral Library to sample multiple ADC channels using DMA striding |
-| [AFEC Polling](apps/afec/afec_polled_mode/readme.md) | This example uses AFEC peripheral library to sample an analog input in polled mode and send the converted data to console |
-| [AFEC user sequence](apps/afec/afec_user_sequence/readme.md) | This example uses AFEC peripheral library to sample three analog inputs using the user sequencer in triggered conversion mode and send the converted data to the console |
-| [Cache maintenance](apps/cache/cache_maintenance/readme.md) | This example shows cache maintenance operation by cleaning and invalidating the cache for the DMA buffers located in the cacheable SRAM region |
-| [Clock configuration](apps/clock/clock_config/readme.md) | This example application shows how to configure the clock system to run the device at maximum frequency. It also outputs a prescaled clock signal on a GPIO pin for measurement and verification |
-| [DACC waveform generation](apps/dacc/dacc_wav_gen/readme.md) | This example shows how to use the DACC peripheral to generate a 5 KHz sine wave or triangle wave using a lookup table |
-| [DACC waveform generation with DMA](apps/dacc/dacc_wav_gen_dma/readme.md) | This example shows how to use the DAC with the DMA to generate sinusoidal waveform without CPU intervention |
-| [EFC read write](apps/efc/flash_read_write/readme.md) | This example shows how to use EFC to erase and program the internal Flash memory |
-| [MCAN FD blocking](apps/mcan/mcan_fd_operation_blocking/readme.md) | This example shows how to use the MCAN module to transmit and receive CAN FD messages in polling mode |
-| [MCAN FD interrupt](apps/mcan/mcan_fd_operation_interrupt_timestamp/readme.md) | This example shows how to use the MCAN module to transmit and receive CAN FD messages in interrupt mode |
-| [MCAN blocking](apps/mcan/mcan_normal_operation_blocking/readme.md) | This example shows how to use the MCAN module to transmit and receive CAN messages in polling mode |
-| [MPU cache coherency](apps/mpu/mpu_coherent_region/readme.md) | This example shows how to maintain cache coherency by allocating DMA buffers in non-cacheable SRAM region defined by MPU |
-| [PIO interrupt](apps/pio/pio_led_on_off_interrupt/readme.md) | This example shows how to generate GPIO interrupt on switch press and release, and indicate the switch status using the LED |
-| [PIO polling](apps/pio/pio_led_on_off_polling/readme.md) | This example shows how to poll the switch input, and indicate the switch status using the LED |
-| [PWM Generation](apps/pwm/pwm_synchronous_channels/readme.md) | This example shows how to use the PWM peripheral to generate 3-phase PWM signals with dead time |
-| [QSPI flash read write](apps/qspi/qspi_read_write/readme.md) | This example shows how to use the QSPI Peripheral library to perform erase, write and read operation with the QSPI Serial Flash memory in Quad IO mode |
-| [QSPI flash XIP](apps/qspi/qspi_xip/readme.md) | This example shows how to setup the QSPI Flash in the XIP mode to execute code from the serial Flash memory |
-| [QSPI flash XIP Function](apps/qspi/qspi_xip_function/readme.md) | This example shows how to setup the QSPI Flash in the XIP mode to call a function placed in QSPI Flash memory |
-| [QSPI flash read write in SPI mode](apps/qspi/spi_read_write/readme.md) | This example shows how to use the QSPI Peripheral library to perform erase, write and read operation with the QSPI Serial Flash memory in SPI mode |
-| [RSTC interrupt](apps/rstc/led_switcher/readme.md) | This example shows how to use the RSTC peripheral to generate an interrupt instead of generating a reset, when the Reset switch is pressed on board |
-| [RSWDT timeout](apps/rswdt/rswdt_timeout/readme.md) | This example shows how to generate a RSWDT reset by emulating a deadlock |
-| [RTC alarm interrupt](apps/rtc/rtc_alarm/readme.md) | This example shows how to use the RTC to configure the time and generate the alarm |
-| [RTT periodic interrupt](apps/rtt/rtt_periodic_timeout/readme.md) | This example shows how to use the RTT to generate periodic interrupts |
-| [SPI EEPROM write read](apps/spi/master/spi_eeprom_write_read/readme.md) | This example shows how to use the SPI peripheral to write and read from the SPI serial EEPROM memory |
-| [SPI ping pong with DMA](apps/spi/master/spi_ping_pong_with_dma/readme.md) | This example shows how to continuously transmit and receive data over a SPI interface using ping pong buffers with the DMA |
-| [SPI blocking](apps/spi/master/spi_self_loopback_blocking/readme.md) | This example shows how to use the SPI peripheral to transmit and receive a block of data in a blocking manner |
-| [SPI interrupt](apps/spi/master/spi_self_loopback_interrupt/readme.md) | This example shows how to use the SPI peripheral to transmit and receive a block of data using interrupts |
-| [SPI Master read write test application](apps/spi/master/spi_write_read_test_app/readme.md) | This is a SPI Master test application which is provided to demonstrate communication between SPI master and the corresponding SPI slave application available under -  apps/spi/slave/spi_write_read/firmware  |
-| [SPI Slave read write](apps/spi/slave/spi_write_read/readme.md) | This example application demonstrates how to use the SPI peripheral in slave mode |
-| [SUPC wakeup using RTC](apps/supc/supc_wakeup_rtc/readme.md) | This example shows how to enter different low power modes and exit it using the RTC alarm |
-| [SUPC wakeup using RTT](apps/supc/supc_wakeup_rtt/readme.md) | This example shows how to enter different low power modes and exit it using the RTT alarm |
-| [SUPC wakeup using WKUP pin](apps/supc/supc_wakeup_wkup/readme.md) | his example shows how to enter different low power modes and exit it using WKUP pin |
-| [SysTick periodic interrupt](apps/systick/systick_periodic_timeout/readme.md) | This example shows how to use the SysTick to generate periodic interrupts |
-| [TC capture mode](apps/tc/tc_capture_mode/readme.md) | This example shows how to use the TC module in capture mode to measure duty cycle and frequency of an external input |
-| [TC compare mode](apps/tc/tc_compare_mode/readme.md) | This example shows how to use the TC module in compare mode to generate an active low, active high, and toggle output on compare match |
-| [TC timer mode](apps/tc/tc_timer_mode/readme.md) | This example shows how to use the TC module in timer mode to generate periodic interrupt |
-| [TCM cache coherency](apps/tcm/data_tcm/readme.md) | This example shows how to  maintain cache coherency by allocating the DMA buffers in the Tightly Coupled Memory (TCM), which are not cacheable |
-| [TRNG random number](apps/trng/random_number/readme.md) | This example shows how to use the TRNG Peripheral library to generate and read a random number |
-| [TWIHS EEPROM read write](apps/twihs/master/twihs_eeprom/readme.md) | This example shows how to use the TWIHS peripheral to write and read from the I2C serial EEPROM memory |
-| [TWIHS EEPROM emulation](apps/twihs/slave/i2c_eeprom_emulation/readme.md) | This example application demonstrates how to use the TWIHS peripheral in slave mode |
-| [USART blocking](apps/usart/usart_echo_blocking/readme.md) | This example shows how to use the USART peripheral to transfer a block of data in a blocking manner |
-| [USART interrupt](apps/usart/usart_echo_interrupt/readme.md) | This example shows how to use the USART peripheral to transfer a block of data in a non-blocking manner |
-| [USART ring buffer](apps/usart/usart_ring_buffer_interrupt/readme.md) | This example shows how to use the USART peripheral in ring buffer mode |
-| [WDT timeout](apps/wdt/wdt_timeout/readme.md) | This example shows how to generate a Watchdog timer reset by emulating a deadlock |
-| [XDMAC memory transfer](apps/xdmac/xdmac_memory_transfer/readme.md) | This example shows how to use the XDMAC peripheral to do a memory to memory transfer and illustrates the usage of burst size to reduce the transfer time |
+To view the documentation offline, follow these steps:
+ - Download the publication as a zip file from [here](https://onlinedocs.microchip.com/download/GUID-8B5E4552-FEE8-445B-B100-BC1600B484D0?type=webhelp).
+ - Extract the zip file into a folder.
+ - Navigate to the folder and open **index.html** in a web browser of your choice.
 
 ____
 
-[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71/blob/master/mplab_harmony_license.md)
+[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71/blob/master/Microchip_SLA001.md)
 [![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71/releases/latest)
 [![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71/releases/latest)
 [![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_e70_s70_v70_v71/graphs/commit-activity)
@@ -94,6 +43,8 @@ ____
 
 ____
 
+[![Developer Help](https://img.shields.io/badge/Youtube-Developer%20Help-red.svg)](https://www.youtube.com/MicrochipDeveloperHelp)
+[![Developer Help](https://img.shields.io/badge/XWiki-Developer%20Help-torquiose.svg)](https://developerhelp.microchip.com/xwiki/bin/view/software-tools/harmony/)
 [![Follow us on Youtube](https://img.shields.io/badge/Youtube-Follow%20us%20on%20Youtube-red.svg)](https://www.youtube.com/user/MicrochipTechnology)
 [![Follow us on LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20us%20on%20LinkedIn-blue.svg)](https://www.linkedin.com/company/microchip-technology)
 [![Follow us on Facebook](https://img.shields.io/badge/Facebook-Follow%20us%20on%20Facebook-blue.svg)](https://www.facebook.com/microchiptechnology/)

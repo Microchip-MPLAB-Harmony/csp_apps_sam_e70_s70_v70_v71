@@ -1,6 +1,0 @@
-format_version: v1.0
-type: UniqueComponent
-attributes: {id: rtc}
-children:
-- type: ElementPosition
-  attributes: {x: '32', y: '60', id: rtc}

@@ -4,7 +4,7 @@
 
 
 project: mcan_fd_operation_blocking
-creation_date: 2024-10-17T17:43:29.275+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2024-10-27T01:18:09.396+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.1
@@ -14,8 +14,8 @@ harmony_version: v1.5.3
 compiler: XC32 4.45
 
 modules:
-    - {name: "csp", version: "v3.20.0-rc.1-10-g4bed52c"}
     - {name: "CMSIS_5", version: "5.9.0"}
+    - {name: "csp", version: "v3.20.0"}
 
 packs:
     - {name: "SAME70_DFP", version: "4.11.257"}
