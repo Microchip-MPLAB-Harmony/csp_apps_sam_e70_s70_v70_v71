@@ -1,0 +1,243 @@
+configVersion: 1.0.0
+componentName: supc
+coreVersion: 5.8.2
+device: ATSAMV71Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: supc
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: supc
+          x: '6'
+          y: '65'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    SUPC_SMMR_SMSMPL:
+      attributes:
+        id: SUPC_SMMR_SMSMPL
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_SMMR_SMTH:
+      attributes:
+        id: SUPC_SMMR_SMTH
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '15'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT0:
+      attributes:
+        id: SUPC_WUIR_WKUPT0
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT1:
+      attributes:
+        id: SUPC_WUIR_WKUPT1
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT10:
+      attributes:
+        id: SUPC_WUIR_WKUPT10
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT11:
+      attributes:
+        id: SUPC_WUIR_WKUPT11
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT12:
+      attributes:
+        id: SUPC_WUIR_WKUPT12
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT13:
+      attributes:
+        id: SUPC_WUIR_WKUPT13
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT2:
+      attributes:
+        id: SUPC_WUIR_WKUPT2
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT3:
+      attributes:
+        id: SUPC_WUIR_WKUPT3
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT4:
+      attributes:
+        id: SUPC_WUIR_WKUPT4
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT5:
+      attributes:
+        id: SUPC_WUIR_WKUPT5
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT6:
+      attributes:
+        id: SUPC_WUIR_WKUPT6
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT7:
+      attributes:
+        id: SUPC_WUIR_WKUPT7
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT8:
+      attributes:
+        id: SUPC_WUIR_WKUPT8
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUIR_WKUPT9:
+      attributes:
+        id: SUPC_WUIR_WKUPT9
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUMR_LPDBC:
+      attributes:
+        id: SUPC_WUMR_LPDBC
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SUPC_WUMR_RTTEN:
+      attributes:
+        id: SUPC_WUMR_RTTEN
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SUPC_WUMR_WKUPDBC:
+      attributes:
+        id: SUPC_WUMR_WKUPDBC
+      children:
+      - children:
+        - attributes:
+            id: supc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+  userData: {}
