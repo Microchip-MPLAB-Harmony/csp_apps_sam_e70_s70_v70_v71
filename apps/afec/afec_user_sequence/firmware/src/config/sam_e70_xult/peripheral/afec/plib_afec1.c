@@ -56,7 +56,7 @@
 // *****************************************************************************
 // *****************************************************************************
 /* Object to hold callback function and context */
-volatile static AFEC_CALLBACK_OBJECT AFEC1_CallbackObj;
+static volatile AFEC_CALLBACK_OBJECT AFEC1_CallbackObj;
 
 /* Initialize AFEC peripheral */
 void AFEC1_Initialize(void)
