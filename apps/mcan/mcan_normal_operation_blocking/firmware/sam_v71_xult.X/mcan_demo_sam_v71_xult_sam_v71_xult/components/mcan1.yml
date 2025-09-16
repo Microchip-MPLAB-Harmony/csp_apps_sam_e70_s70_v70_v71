@@ -1,0 +1,164 @@
+configVersion: 1.0.0
+componentName: mcan1
+coreVersion: 5.8.2
+device: ATSAMV71Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: mcan1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: mcan1
+          x: '436'
+          y: '182'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CALCULATED_NOMINAL_BITRATE:
+      attributes:
+        id: CALCULATED_NOMINAL_BITRATE
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '500'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CALCULATED_NOMINAL_ERRORRATE:
+      attributes:
+        id: CALCULATED_NOMINAL_ERRORRATE
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '0.000'
+          type: Dynamic
+        type: Values
+      type: String
+    FILTERS_STD:
+      attributes:
+        id: FILTERS_STD
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: Integer
+    MCAN1_STD_FILTER1_SFID1:
+      attributes:
+        id: MCAN1_STD_FILTER1_SFID1
+      children:
+      - children:
+        - attributes:
+            value: '921'
+          type: User
+        type: Values
+      type: Hex
+    MCAN1_STD_FILTER1_SFID2:
+      attributes:
+        id: MCAN1_STD_FILTER1_SFID2
+      children:
+      - children:
+        - attributes:
+            value: '1177'
+          type: User
+        type: Values
+      type: Hex
+    MCAN_CORE_CLOCK_FREQ:
+      attributes:
+        id: MCAN_CORE_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '150000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN_MATRIX_CAN_ENABLE:
+      attributes:
+        id: MCAN_MATRIX_CAN_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NBTP_NSJW:
+      attributes:
+        id: NBTP_NSJW
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '75'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NBTP_NTSEG1:
+      attributes:
+        id: NBTP_NTSEG1
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '224'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NBTP_NTSEG2:
+      attributes:
+        id: NBTP_NTSEG2
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '75'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NBTP_TOTAL_TIME_QUANTA:
+      attributes:
+        id: NBTP_TOTAL_TIME_QUANTA
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '300'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NOMINAL_TIME_QUANTA_PERIOD:
+      attributes:
+        id: NOMINAL_TIME_QUANTA_PERIOD
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '6.667'
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}
