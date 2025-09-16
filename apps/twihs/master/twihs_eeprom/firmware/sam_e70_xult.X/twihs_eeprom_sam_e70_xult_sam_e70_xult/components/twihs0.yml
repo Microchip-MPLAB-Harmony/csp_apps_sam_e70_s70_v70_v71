@@ -1,0 +1,79 @@
+configVersion: 1.0.0
+componentName: twihs0
+coreVersion: 5.8.2
+device: ATSAME70Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: twihs0
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: twihs0
+          x: '70'
+          y: '88'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    TWIHS_CLK_SRC_FREQ:
+      attributes:
+        id: TWIHS_CLK_SRC_FREQ
+      children:
+      - children:
+        - attributes:
+            id: twihs0
+            value: '150000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TWIHS_CWGR_CHDIV:
+      attributes:
+        id: TWIHS_CWGR_CHDIV
+      children:
+      - children:
+        - attributes:
+            id: twihs0
+            value: '177'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TWIHS_CWGR_CKDIV:
+      attributes:
+        id: TWIHS_CWGR_CKDIV
+      children:
+      - children:
+        - attributes:
+            id: twihs0
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TWIHS_CWGR_CLDIV:
+      attributes:
+        id: TWIHS_CWGR_CLDIV
+      children:
+      - children:
+        - attributes:
+            id: twihs0
+            value: '192'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}
