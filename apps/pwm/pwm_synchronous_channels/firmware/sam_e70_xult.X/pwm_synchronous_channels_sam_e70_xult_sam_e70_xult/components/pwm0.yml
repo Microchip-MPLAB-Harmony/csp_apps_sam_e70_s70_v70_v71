@@ -1,0 +1,340 @@
+configVersion: 1.0.0
+componentName: pwm0
+coreVersion: 5.8.2
+device: ATSAME70Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: pwm0
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: pwm0
+          x: '29'
+          y: '62'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    INTR_PWM_FAULT:
+      attributes:
+        id: INTR_PWM_FAULT
+      children:
+      - children:
+        - attributes:
+            id: pwm0
+            value: PWM0_IRQn
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_CALLBACK_API:
+      attributes:
+        id: PWM_CALLBACK_API
+      children:
+      - children:
+        - attributes:
+            id: pwm0
+            value: PWM0_CallbackRegister
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_CH_0_CDTY:
+      attributes:
+        id: PWM_CH_0_CDTY
+      children:
+      - children:
+        - attributes:
+            id: max
+          children:
+          - type: Value
+            value: '3750'
+          type: Integer
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: Integer
+    PWM_CH_0_CPRD:
+      attributes:
+        id: PWM_CH_0_CPRD
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '3750'
+          type: User
+        type: Values
+      type: Integer
+    PWM_CH_0_ENABLE:
+      attributes:
+        id: PWM_CH_0_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    PWM_CH_0_IER1_CHID:
+      attributes:
+        id: PWM_CH_0_IER1_CHID
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    PWM_CH_1_CDTY:
+      attributes:
+        id: PWM_CH_1_CDTY
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: Integer
+    PWM_CH_1_ENABLE:
+      attributes:
+        id: PWM_CH_1_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    PWM_CH_1_SYNCENABLE:
+      attributes:
+        id: PWM_CH_1_SYNCENABLE
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    PWM_CH_2_CDTY:
+      attributes:
+        id: PWM_CH_2_CDTY
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: Integer
+    PWM_CH_2_ENABLE:
+      attributes:
+        id: PWM_CH_2_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    PWM_CH_2_SYNCENABLE:
+      attributes:
+        id: PWM_CH_2_SYNCENABLE
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    PWM_GET_PERIOD_API:
+      attributes:
+        id: PWM_GET_PERIOD_API
+      children:
+      - children:
+        - attributes:
+            id: pwm0
+            value: PWM0_ChannelPeriodGet
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_IER1_REG:
+      attributes:
+        id: PWM_IER1_REG
+      children:
+      - children:
+        - attributes:
+            id: pwm0
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PWM_OUTPUT_DISABLE_API:
+      attributes:
+        id: PWM_OUTPUT_DISABLE_API
+      children:
+      - children:
+        - attributes:
+            id: pwm0
+            value: PWM0_ChannelOverrideDisable
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_OUTPUT_ENABLE_API:
+      attributes:
+        id: PWM_OUTPUT_ENABLE_API
+      children:
+      - children:
+        - attributes:
+            id: pwm0
+            value: PWM0_ChannelOverrideEnable
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_PH_MASK:
+      attributes:
+        id: PWM_PH_MASK
+      children:
+      - children:
+        - attributes:
+            id: pwm0
+            value: '7'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PWM_PH_U:
+      attributes:
+        id: PWM_PH_U
+      children:
+      - children:
+        - attributes:
+            id: pwm0
+            value: PWM_CHANNEL_0
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_PH_V:
+      attributes:
+        id: PWM_PH_V
+      children:
+      - children:
+        - attributes:
+            id: pwm0
+            value: PWM_CHANNEL_1
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_PH_W:
+      attributes:
+        id: PWM_PH_W
+      children:
+      - children:
+        - attributes:
+            id: pwm0
+            value: PWM_CHANNEL_2
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_SET_DUTY_API:
+      attributes:
+        id: PWM_SET_DUTY_API
+      children:
+      - children:
+        - attributes:
+            id: pwm0
+            value: PWM0_ChannelDutySet
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_START_API:
+      attributes:
+        id: PWM_START_API
+      children:
+      - children:
+        - attributes:
+            id: pwm0
+            value: PWM0_ChannelsStart
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_STOP_API:
+      attributes:
+        id: PWM_STOP_API
+      children:
+      - children:
+        - attributes:
+            id: pwm0
+            value: PWM0_ChannelsStop
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}

@@ -57,7 +57,7 @@
 
 
 /* Object to hold callback function and context */
-volatile static PWM_CALLBACK_OBJECT PWM0_CallbackObj;
+static volatile PWM_CALLBACK_OBJECT PWM0_CallbackObj;
 
 /* Initialize enabled PWM channels */
 void PWM0_Initialize (void)
