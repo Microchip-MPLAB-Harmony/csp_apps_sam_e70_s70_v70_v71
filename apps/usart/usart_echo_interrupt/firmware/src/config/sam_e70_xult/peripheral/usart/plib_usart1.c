@@ -69,7 +69,7 @@ static void USART1_ErrorClear( void )
 }
 
 
-volatile static USART_OBJECT usart1Obj;
+static volatile USART_OBJECT usart1Obj;
 
 static void __attribute__((used)) USART1_ISR_RX_Handler( void )
 {
@@ -223,7 +223,7 @@ void USART1_Initialize( void )
 
     /* Configure USART1 Baud Rate */
     USART1_REGS->US_BRGR = US_BRGR_CD(81U);
-    
+
 
     /* Initialize instance object */
     usart1Obj.rxBuffer = NULL;
@@ -306,7 +306,7 @@ bool USART1_SerialSetup( USART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
 
         /* Configure USART1 Baud Rate */
         USART1_REGS->US_BRGR = US_BRGR_CD(brgVal);
-        
+
         status = true;
     }
 
