@@ -60,11 +60,11 @@
 // *****************************************************************************
 #define MCAN_STD_ID_Msk        0x7FFU
 
-volatile static MCAN_TX_FIFO_CALLBACK_OBJ mcan1TxFifoCallbackObj;
-volatile static MCAN_TX_EVENT_FIFO_CALLBACK_OBJ mcan1TxEventFifoCallbackObj;
-volatile static MCAN_TXRX_BUFFERS_CALLBACK_OBJ mcan1RxBufferCallbackObj;
-volatile static MCAN_RX_FIFO_CALLBACK_OBJ mcan1RxFifoCallbackObj[2];
-volatile static MCAN_CALLBACK_OBJ mcan1CallbackObj;
+static volatile MCAN_TX_FIFO_CALLBACK_OBJ mcan1TxFifoCallbackObj;
+static volatile MCAN_TX_EVENT_FIFO_CALLBACK_OBJ mcan1TxEventFifoCallbackObj;
+static volatile MCAN_TXRX_BUFFERS_CALLBACK_OBJ mcan1RxBufferCallbackObj;
+static volatile MCAN_RX_FIFO_CALLBACK_OBJ mcan1RxFifoCallbackObj[2];
+static volatile MCAN_CALLBACK_OBJ mcan1CallbackObj;
 static MCAN_OBJ mcan1Obj;
 
 static const mcan_sidfe_registers_t mcan1StdFilter[] =
