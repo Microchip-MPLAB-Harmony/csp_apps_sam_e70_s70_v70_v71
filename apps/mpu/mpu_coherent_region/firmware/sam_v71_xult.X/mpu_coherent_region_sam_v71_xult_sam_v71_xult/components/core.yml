@@ -1,0 +1,1214 @@
+configVersion: 1.0.0
+componentName: core
+coreVersion: 5.8.2
+device: ATSAMV71Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: core
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: core
+          x: '240'
+          y: '19'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    ADD_LINKER_FILE:
+      attributes:
+        id: ADD_LINKER_FILE
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    COMPILER_CHOICE:
+      attributes:
+        id: COMPILER_CHOICE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CoreMPU_PRIVDEFENA:
+      attributes:
+        id: CoreMPU_PRIVDEFENA
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    CoreUseMPU:
+      attributes:
+        id: CoreUseMPU
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    DEVICE_BOOT:
+      attributes:
+        id: DEVICE_BOOT
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    DEVICE_SECURITY:
+      attributes:
+        id: DEVICE_SECURITY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    DEVICE_TCM_SIZE:
+      attributes:
+        id: DEVICE_TCM_SIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    DMA_ENABLE:
+      attributes:
+        id: DMA_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    KEIL_STACK_HEAP_SIZE:
+      attributes:
+        id: KEIL_STACK_HEAP_SIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x1200'
+          type: Dynamic
+        type: Values
+      type: String
+    MPU_Region_0_Access:
+      attributes:
+        id: MPU_Region_0_Access
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '3'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    MPU_Region_0_Address:
+      attributes:
+        id: MPU_Region_0_Address
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '541065216'
+          type: Dynamic
+        - attributes:
+            value: '541454336'
+          type: User
+        type: Values
+      type: Hex
+    MPU_Region_0_Enable:
+      attributes:
+        id: MPU_Region_0_Enable
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    MPU_Region_0_Execute:
+      attributes:
+        id: MPU_Region_0_Execute
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    MPU_Region_0_Length:
+      attributes:
+        id: MPU_Region_0_Length
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 4MB
+          type: Dynamic
+        type: Values
+      type: String
+    MPU_Region_0_Share:
+      attributes:
+        id: MPU_Region_0_Share
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    MPU_Region_0_Size:
+      attributes:
+        id: MPU_Region_0_Size
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '18'
+          type: Dynamic
+        - attributes:
+            value: '17'
+          type: User
+        type: Values
+      type: KeyValueSet
+    MPU_Region_0_Type:
+      attributes:
+        id: MPU_Region_0_Type
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '4'
+          type: Dynamic
+        - attributes:
+            value: '5'
+          type: User
+        type: Values
+      type: KeyValueSet
+    MPU_Region_Name0:
+      attributes:
+        id: MPU_Region_Name0
+      children:
+      - children:
+        - attributes:
+            value: SRAM_NO_CACHE
+          type: User
+        type: Values
+      type: String
+    MPU_Region_Name0_Options:
+      attributes:
+        id: MPU_Region_Name0_Options
+      children:
+      - children:
+        - attributes:
+            value: SRAM
+          type: User
+        type: Values
+      type: Combo
+    NVIC_14_0_ENABLE:
+      attributes:
+        id: NVIC_14_0_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_14_0_HANDLER:
+      attributes:
+        id: NVIC_14_0_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: USART1_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    NVIC_14_0_HANDLER_LOCK:
+      attributes:
+        id: NVIC_14_0_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_4_0_ENABLE:
+      attributes:
+        id: NVIC_4_0_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_4_0_HANDLER:
+      attributes:
+        id: NVIC_4_0_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: WDT_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    NVIC_4_0_HANDLER_LOCK:
+      attributes:
+        id: NVIC_4_0_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_58_0_ENABLE:
+      attributes:
+        id: NVIC_58_0_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_58_0_HANDLER:
+      attributes:
+        id: NVIC_58_0_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: XDMAC_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    NVIC_58_0_HANDLER_LOCK:
+      attributes:
+        id: NVIC_58_0_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_63_0_ENABLE:
+      attributes:
+        id: NVIC_63_0_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_63_0_HANDLER:
+      attributes:
+        id: NVIC_63_0_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: RSWDT_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    NVIC_63_0_HANDLER_LOCK:
+      attributes:
+        id: NVIC_63_0_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIN_105_FUNCTION_TYPE:
+      attributes:
+        id: PIN_105_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: USART1_TXD1
+          type: User
+        type: Values
+      type: String
+    PIN_105_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_105_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: D
+          type: User
+        type: Values
+      type: String
+    PIN_32_FUNCTION_TYPE:
+      attributes:
+        id: PIN_32_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: USART1_RXD1
+          type: User
+        type: Values
+      type: String
+    PIN_32_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_32_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PIN_46_DIR:
+      attributes:
+        id: PIN_46_DIR
+      children:
+      - children:
+        - attributes:
+            value: Out
+          type: User
+        type: Values
+      type: String
+    PIN_46_FUNCTION_NAME:
+      attributes:
+        id: PIN_46_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: LED
+          type: User
+        type: Values
+      type: String
+    PIN_46_FUNCTION_TYPE:
+      attributes:
+        id: PIN_46_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIN_46_LAT:
+      attributes:
+        id: PIN_46_LAT
+      children:
+      - children:
+        - attributes:
+            value: High
+          type: User
+        type: Values
+      type: String
+    PIN_46_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_46_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIOA_ABCDSR1_VALUE:
+      attributes:
+        id: PIOA_ABCDSR1_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOA_ABCDSR2_VALUE:
+      attributes:
+        id: PIOA_ABCDSR2_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOA_CLOCK_ENABLE:
+      attributes:
+        id: PIOA_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIOA_OER_VALUE:
+      attributes:
+        id: PIOA_OER_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '8388608'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOA_PDR_VALUE:
+      attributes:
+        id: PIOA_PDR_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '2097152'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOA_SODR_VALUE:
+      attributes:
+        id: PIOA_SODR_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '8388608'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOB_ABCDSR1_VALUE:
+      attributes:
+        id: PIOB_ABCDSR1_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '16'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOB_ABCDSR2_VALUE:
+      attributes:
+        id: PIOB_ABCDSR2_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '16'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOB_CLOCK_ENABLE:
+      attributes:
+        id: PIOB_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIOB_PDR_VALUE:
+      attributes:
+        id: PIOB_PDR_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '16'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PIOC_CLOCK_ENABLE:
+      attributes:
+        id: PIOC_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIOD_CLOCK_ENABLE:
+      attributes:
+        id: PIOD_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIOE_CLOCK_ENABLE:
+      attributes:
+        id: PIOE_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIO_CCFG_SYSIO_VALUE:
+      attributes:
+        id: PIO_CCFG_SYSIO_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '16'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PMC_PCER0:
+      attributes:
+        id: PMC_PCER0
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '220160'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PMC_PCER1:
+      attributes:
+        id: PMC_PCER1
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '67108864'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PMC_PCR_GCLK0CSS:
+      attributes:
+        id: PMC_PCR_GCLK0CSS
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    PMC_PCR_GCLK1CSS:
+      attributes:
+        id: PMC_PCR_GCLK1CSS
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    PMC_SCER_PCK4:
+      attributes:
+        id: PMC_SCER_PCK4
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    RSWDT_INTERRUPT_ENABLE:
+      attributes:
+        id: RSWDT_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    RSWDT_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: RSWDT_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    RSWDT_INTERRUPT_HANDLER:
+      attributes:
+        id: RSWDT_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: RSWDT_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    RSWDT_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: RSWDT_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    TCM_ENABLE:
+      attributes:
+        id: TCM_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    TCM_SIZE:
+      attributes:
+        id: TCM_SIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 0 KB
+          type: Dynamic
+        type: Values
+      type: String
+    USART1_CLOCK_ENABLE:
+      attributes:
+        id: USART1_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: usart1
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USART1_CLOCK_FREQUENCY:
+      attributes:
+        id: USART1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '150000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    USART1_INTERRUPT_ENABLE:
+      attributes:
+        id: USART1_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: usart1
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USART1_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: USART1_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USART1_INTERRUPT_HANDLER:
+      attributes:
+        id: USART1_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: usart1
+            value: USART1_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    USART1_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: USART1_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: usart1
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    WDT_INTERRUPT_ENABLE:
+      attributes:
+        id: WDT_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    WDT_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: WDT_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    WDT_INTERRUPT_HANDLER:
+      attributes:
+        id: WDT_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: WDT_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    WDT_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: WDT_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    XDMAC_CC0_CSIZE:
+      attributes:
+        id: XDMAC_CC0_CSIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_DAM:
+      attributes:
+        id: XDMAC_CC0_DAM
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_DIF:
+      attributes:
+        id: XDMAC_CC0_DIF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_DSYNC:
+      attributes:
+        id: XDMAC_CC0_DSYNC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_DWIDTH:
+      attributes:
+        id: XDMAC_CC0_DWIDTH
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_MBSIZE:
+      attributes:
+        id: XDMAC_CC0_MBSIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_PERID:
+      attributes:
+        id: XDMAC_CC0_PERID
+      children:
+      - children:
+        - attributes:
+            value: USART1_Transmit
+          type: User
+        type: Values
+      type: Combo
+    XDMAC_CC0_PERID_VAL:
+      attributes:
+        id: XDMAC_CC0_PERID_VAL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '9'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XDMAC_CC0_SAM:
+      attributes:
+        id: XDMAC_CC0_SAM
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_SIF:
+      attributes:
+        id: XDMAC_CC0_SIF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_SWREQ:
+      attributes:
+        id: XDMAC_CC0_SWREQ
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC0_TYPE:
+      attributes:
+        id: XDMAC_CC0_TYPE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_CSIZE:
+      attributes:
+        id: XDMAC_CC1_CSIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_DAM:
+      attributes:
+        id: XDMAC_CC1_DAM
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_DIF:
+      attributes:
+        id: XDMAC_CC1_DIF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_DSYNC:
+      attributes:
+        id: XDMAC_CC1_DSYNC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_DWIDTH:
+      attributes:
+        id: XDMAC_CC1_DWIDTH
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_MBSIZE:
+      attributes:
+        id: XDMAC_CC1_MBSIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_PERID:
+      attributes:
+        id: XDMAC_CC1_PERID
+      children:
+      - children:
+        - attributes:
+            value: USART1_Receive
+          type: User
+        type: Values
+      type: Combo
+    XDMAC_CC1_PERID_VAL:
+      attributes:
+        id: XDMAC_CC1_PERID_VAL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '10'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XDMAC_CC1_SAM:
+      attributes:
+        id: XDMAC_CC1_SAM
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_SIF:
+      attributes:
+        id: XDMAC_CC1_SIF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_SWREQ:
+      attributes:
+        id: XDMAC_CC1_SWREQ
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CC1_TYPE:
+      attributes:
+        id: XDMAC_CC1_TYPE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    XDMAC_CH0_ENABLE:
+      attributes:
+        id: XDMAC_CH0_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    XDMAC_CH1_ENABLE:
+      attributes:
+        id: XDMAC_CH1_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    XDMAC_CLOCK_ENABLE:
+      attributes:
+        id: XDMAC_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    XDMAC_HIGHEST_CHANNEL:
+      attributes:
+        id: XDMAC_HIGHEST_CHANNEL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '2'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XDMAC_INTERRUPT_ENABLE:
+      attributes:
+        id: XDMAC_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    XDMAC_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: XDMAC_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    XDMAC_INTERRUPT_HANDLER:
+      attributes:
+        id: XDMAC_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: XDMAC_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    XDMAC_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: XDMAC_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+  userData:
+    children:
+    - attributes:
+        canvasHeight: '400'
+        canvasWidth: '400'
+      type: GraphSettings
+    - children:
+      - attributes:
+          id: profile0
+          name: Main
+        type: Profile
+      type: PowerProfiles
+    type: UserData
