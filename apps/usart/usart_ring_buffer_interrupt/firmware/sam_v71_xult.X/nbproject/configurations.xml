@@ -156,9 +156,18 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+      <logicalFolder name="usart_ring_buffer_interrupt_sam_v71_xult_sam_v71_xult" displayName="usart_ring_buffer_interrupt_sam_v71_xult_sam_v71_xult" projectFiles="true">
+        <itemPath>usart_ring_buffer_interrupt_sam_v71_xult_sam_v71_xult/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>usart_ring_buffer_interrupt_sam_v71_xult_sam_v71_xult/components/cmsis.yml</itemPath>
+          <itemPath>usart_ring_buffer_interrupt_sam_v71_xult_sam_v71_xult/components/core.yml</itemPath>
+          <itemPath>usart_ring_buffer_interrupt_sam_v71_xult_sam_v71_xult/components/dfp.yml</itemPath>
+          <itemPath>usart_ring_buffer_interrupt_sam_v71_xult_sam_v71_xult/components/efc.yml</itemPath>
+          <itemPath>usart_ring_buffer_interrupt_sam_v71_xult_sam_v71_xult/components/usart1.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_v71_xult/harmony-manifest-success.yml</itemPath>
-      <itemPath>usart_ring_buffer_interrupt_sam_v71_xult.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
@@ -213,7 +222,7 @@
         <targetPluginBoard/>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
