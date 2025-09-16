@@ -1,0 +1,75 @@
+configVersion: 1.0.0
+componentName: rstc
+coreVersion: 5.8.2
+device: ATSAME70Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: rstc
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: rstc
+          x: '19'
+          y: '69'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    RSTC_MR_URSTEN:
+      attributes:
+        id: RSTC_MR_URSTEN
+      children:
+      - children:
+        - attributes:
+            id: rstc
+            value: '0'
+          type: Dynamic
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    RSTC_RSTTYP_DESC:
+      attributes:
+        id: RSTC_RSTTYP_DESC
+      children:
+      - children:
+        - attributes:
+            id: rstc
+            value: '["First power-up reset","Return from Backup Mode","Watchdog fault
+              occurred","Processor reset required by the software","NRST pin detected
+              low"]'
+          type: Dynamic
+        type: Values
+      type: String
+    RSTC_RSTTYP_ENUM:
+      attributes:
+        id: RSTC_RSTTYP_ENUM
+      children:
+      - children:
+        - attributes:
+            id: rstc
+            value: '["RSTC_GENERAL_RESET = RSTC_SR_RSTTYP_GENERAL_RST","RSTC_BACKUP_RESET
+              = RSTC_SR_RSTTYP_BACKUP_RST","RSTC_WATCHDOG_RESET = RSTC_SR_RSTTYP_WDT_RST","RSTC_SOFTWARE_RESET
+              = RSTC_SR_RSTTYP_SOFT_RST","RSTC_USER_RESET = RSTC_SR_RSTTYP_USER_RST"]'
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}
