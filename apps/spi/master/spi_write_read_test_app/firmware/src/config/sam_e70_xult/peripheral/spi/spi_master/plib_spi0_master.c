@@ -59,7 +59,7 @@
 // *****************************************************************************
 
 /* Global object to save SPI Exchange related data */
-volatile static SPI_OBJECT spi0Obj;
+static volatile SPI_OBJECT spi0Obj;
 
 void SPI0_Initialize( void )
 {
