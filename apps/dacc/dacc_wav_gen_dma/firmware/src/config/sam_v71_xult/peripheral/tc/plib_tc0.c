@@ -65,7 +65,7 @@
  
 
 /* Callback object for channel 0 */
-volatile static TC_COMPARE_CALLBACK_OBJECT TC0_CH0_CallbackObj;
+static volatile TC_COMPARE_CALLBACK_OBJECT TC0_CH0_CallbackObj;
 
 /* Initialize channel in compare mode */
 void TC0_CH0_CompareInitialize (void)
