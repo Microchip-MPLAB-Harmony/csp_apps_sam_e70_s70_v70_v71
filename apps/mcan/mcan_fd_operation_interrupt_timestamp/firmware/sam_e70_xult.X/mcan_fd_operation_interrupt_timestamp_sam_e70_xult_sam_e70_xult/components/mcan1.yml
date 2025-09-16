@@ -1,0 +1,453 @@
+configVersion: 1.0.0
+componentName: mcan1
+coreVersion: 5.8.2
+device: ATSAME70Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: mcan1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: mcan1
+          x: '276'
+          y: '241'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CALCULATED_DATA_BITRATE:
+      attributes:
+        id: CALCULATED_DATA_BITRATE
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '2000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CALCULATED_DATA_ERRORRATE:
+      attributes:
+        id: CALCULATED_DATA_ERRORRATE
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '0.000'
+          type: Dynamic
+        type: Values
+      type: String
+    CALCULATED_NOMINAL_BITRATE:
+      attributes:
+        id: CALCULATED_NOMINAL_BITRATE
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '500'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CALCULATED_NOMINAL_ERRORRATE:
+      attributes:
+        id: CALCULATED_NOMINAL_ERRORRATE
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '0.000'
+          type: Dynamic
+        type: Values
+      type: String
+    DATA_BITRATE:
+      attributes:
+        id: DATA_BITRATE
+      children:
+      - children:
+        - attributes:
+            value: '2000'
+          type: User
+        type: Values
+      type: Integer
+    DATA_TIME_QUANTA_PERIOD:
+      attributes:
+        id: DATA_TIME_QUANTA_PERIOD
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '12.500'
+          type: Dynamic
+        type: Values
+      type: String
+    DBTP_DSJW:
+      attributes:
+        id: DBTP_DSJW
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '8'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DBTP_DTSEG1:
+      attributes:
+        id: DBTP_DTSEG1
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '29'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DBTP_DTSEG2:
+      attributes:
+        id: DBTP_DTSEG2
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '10'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DBTP_TOTAL_TIME_QUANTA:
+      attributes:
+        id: DBTP_TOTAL_TIME_QUANTA
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '40'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FILTERS_EXT:
+      attributes:
+        id: FILTERS_EXT
+      children:
+      - children:
+        - attributes:
+            value: '2'
+          type: User
+        type: Values
+      type: Integer
+    FILTERS_STD:
+      attributes:
+        id: FILTERS_STD
+      children:
+      - children:
+        - attributes:
+            value: '2'
+          type: User
+        type: Values
+      type: Integer
+    INTERRUPT_MODE:
+      attributes:
+        id: INTERRUPT_MODE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    MCAN1_EXT_FILTER1_CONFIG:
+      attributes:
+        id: MCAN1_EXT_FILTER1_CONFIG
+      children:
+      - children:
+        - attributes:
+            value: '7'
+          type: User
+        type: Values
+      type: KeyValueSet
+    MCAN1_EXT_FILTER1_EFID1:
+      attributes:
+        id: MCAN1_EXT_FILTER1_EFID1
+      children:
+      - children:
+        - attributes:
+            value: '268435621'
+          type: User
+        type: Values
+      type: Hex
+    MCAN1_EXT_FILTER2_CONFIG:
+      attributes:
+        id: MCAN1_EXT_FILTER2_CONFIG
+      children:
+      - children:
+        - attributes:
+            value: '2'
+          type: User
+        type: Values
+      type: KeyValueSet
+    MCAN1_EXT_FILTER2_EFID1:
+      attributes:
+        id: MCAN1_EXT_FILTER2_EFID1
+      children:
+      - children:
+        - attributes:
+            value: '268435606'
+          type: User
+        type: Values
+      type: Hex
+    MCAN1_EXT_FILTER2_EFID2:
+      attributes:
+        id: MCAN1_EXT_FILTER2_EFID2
+      children:
+      - children:
+        - attributes:
+            value: '268435606'
+          type: User
+        type: Values
+      type: Hex
+    MCAN1_STD_FILTER1_SFID1:
+      attributes:
+        id: MCAN1_STD_FILTER1_SFID1
+      children:
+      - children:
+        - attributes:
+            value: '1129'
+          type: User
+        type: Values
+      type: Hex
+    MCAN1_STD_FILTER1_SFID2:
+      attributes:
+        id: MCAN1_STD_FILTER1_SFID2
+      children:
+      - children:
+        - attributes:
+            value: '1129'
+          type: User
+        type: Values
+      type: Hex
+    MCAN1_STD_FILTER2_CONFIG:
+      attributes:
+        id: MCAN1_STD_FILTER2_CONFIG
+      children:
+      - children:
+        - attributes:
+            value: '7'
+          type: User
+        type: Values
+      type: KeyValueSet
+    MCAN1_STD_FILTER2_SFID1:
+      attributes:
+        id: MCAN1_STD_FILTER2_SFID1
+      children:
+      - children:
+        - attributes:
+            value: '1114'
+          type: User
+        type: Values
+      type: Hex
+    MCAN1_STD_FILTER2_TYPE:
+      attributes:
+        id: MCAN1_STD_FILTER2_TYPE
+      children:
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: KeyValueSet
+    MCAN_CORE_CLOCK_FREQ:
+      attributes:
+        id: MCAN_CORE_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '80000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN_MATRIX_CAN_ENABLE:
+      attributes:
+        id: MCAN_MATRIX_CAN_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    MCAN_OPMODE:
+      attributes:
+        id: MCAN_OPMODE
+      children:
+      - children:
+        - attributes:
+            value: CAN FD
+          type: User
+        type: Values
+      type: Combo
+    NBTP_NSJW:
+      attributes:
+        id: NBTP_NSJW
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '40'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NBTP_NTSEG1:
+      attributes:
+        id: NBTP_NTSEG1
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '119'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NBTP_NTSEG2:
+      attributes:
+        id: NBTP_NTSEG2
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '40'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NBTP_TOTAL_TIME_QUANTA:
+      attributes:
+        id: NBTP_TOTAL_TIME_QUANTA
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '160'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NOMINAL_TIME_QUANTA_PERIOD:
+      attributes:
+        id: NOMINAL_TIME_QUANTA_PERIOD
+      children:
+      - children:
+        - attributes:
+            id: mcan1
+            value: '12.500'
+          type: Dynamic
+        type: Values
+      type: String
+    RXBUF_USE:
+      attributes:
+        id: RXBUF_USE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    RXF0_BYTES_CFG:
+      attributes:
+        id: RXF0_BYTES_CFG
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '7'
+          type: User
+        type: Values
+      type: KeyValueSet
+    RXF1_BYTES_CFG:
+      attributes:
+        id: RXF1_BYTES_CFG
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '7'
+          type: User
+        type: Values
+      type: KeyValueSet
+    RX_BUFFER_BYTES_CFG:
+      attributes:
+        id: RX_BUFFER_BYTES_CFG
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '7'
+          type: User
+        type: Values
+      type: KeyValueSet
+    TIMESTAMP_ENABLE:
+      attributes:
+        id: TIMESTAMP_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    TX_FIFO_BYTES_CFG:
+      attributes:
+        id: TX_FIFO_BYTES_CFG
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '7'
+          type: User
+        type: Values
+      type: KeyValueSet
+  userData: {}
