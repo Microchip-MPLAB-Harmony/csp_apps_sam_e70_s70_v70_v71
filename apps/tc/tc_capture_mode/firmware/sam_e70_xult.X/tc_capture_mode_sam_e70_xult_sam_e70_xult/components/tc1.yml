@@ -1,0 +1,256 @@
+configVersion: 1.0.0
+componentName: tc1
+coreVersion: 5.8.2
+device: ATSAME70Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: tc1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: tc1
+          x: '30'
+          y: '100'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    ENCODER_POS_GET_API:
+      attributes:
+        id: ENCODER_POS_GET_API
+      children:
+      - children:
+        - attributes:
+            id: tc1
+            value: TC1_QuadraturePositionGet
+          type: Dynamic
+        type: Values
+      type: String
+    ENCODER_POS_SET_API:
+      attributes:
+        id: ENCODER_POS_SET_API
+      children:
+      - children:
+        - attributes:
+            id: tc1
+            value: ''
+          type: Dynamic
+        type: Values
+      type: String
+    ENCODER_SPEED_GET_API:
+      attributes:
+        id: ENCODER_SPEED_GET_API
+      children:
+      - children:
+        - attributes:
+            id: tc1
+            value: ''
+          type: Dynamic
+        type: Values
+      type: String
+    ENCODER_SPEED_SET_API:
+      attributes:
+        id: ENCODER_SPEED_SET_API
+      children:
+      - children:
+        - attributes:
+            id: tc1
+            value: ''
+          type: Dynamic
+        type: Values
+      type: String
+    ENCODER_START_API:
+      attributes:
+        id: ENCODER_START_API
+      children:
+      - children:
+        - attributes:
+            id: tc1
+            value: TC1_QuadratureStart
+          type: Dynamic
+        type: Values
+      type: String
+    ENCODER_STOP_API:
+      attributes:
+        id: ENCODER_STOP_API
+      children:
+      - children:
+        - attributes:
+            id: tc1
+            value: TC1_QuadratureStop
+          type: Dynamic
+        type: Values
+      type: String
+    TC0_CLOCK_FREQ:
+      attributes:
+        id: TC0_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: tc1
+            value: '150000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TC0_TIMER_PERIOD_COUNT:
+      attributes:
+        id: TC0_TIMER_PERIOD_COUNT
+      children:
+      - children:
+        - attributes:
+            id: tc1
+            value: '60000'
+          type: Dynamic
+        type: Values
+      type: Long
+    TC1_CLOCK_FREQ:
+      attributes:
+        id: TC1_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: tc1
+            value: '150000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TC1_TIMER_PERIOD_COUNT:
+      attributes:
+        id: TC1_TIMER_PERIOD_COUNT
+      children:
+      - children:
+        - attributes:
+            id: tc1
+            value: '60000'
+          type: Dynamic
+        type: Values
+      type: Long
+    TC2_CLOCK_FREQ:
+      attributes:
+        id: TC2_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: tc1
+            value: '150000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TC2_CMR_BCPB:
+      attributes:
+        id: TC2_CMR_BCPB
+      children:
+      - children:
+        - attributes:
+            value: CLEAR
+          type: User
+        type: Values
+      type: Combo
+    TC2_CMR_BCPC:
+      attributes:
+        id: TC2_CMR_BCPC
+      children:
+      - children:
+        - attributes:
+            value: SET
+          type: User
+        type: Values
+      type: Combo
+    TC2_COMPARE_B:
+      attributes:
+        id: TC2_COMPARE_B
+      children:
+      - children:
+        - attributes:
+            id: max
+          children:
+          - type: Value
+            value: '60000'
+          type: Long
+        type: Attributes
+      - children:
+        - attributes:
+            value: '600'
+          type: User
+        type: Values
+      type: Long
+    TC2_COMPARE_IER_CPCS:
+      attributes:
+        id: TC2_COMPARE_IER_CPCS
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    TC2_COMPARE_PERIOD_COUNT:
+      attributes:
+        id: TC2_COMPARE_PERIOD_COUNT
+      children:
+      - children:
+        - attributes:
+            value: '60000'
+          type: User
+        type: Values
+      type: Long
+    TC2_ENABLE:
+      attributes:
+        id: TC2_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    TC2_OPERATING_MODE:
+      attributes:
+        id: TC2_OPERATING_MODE
+      children:
+      - children:
+        - attributes:
+            value: COMPARE
+          type: User
+        type: Values
+      type: Combo
+    TC3_CLOCK_FREQ:
+      attributes:
+        id: TC3_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: tc1
+            value: '150000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TC3_PCK7:
+      attributes:
+        id: TC3_PCK7
+      children:
+      - children:
+        - attributes:
+            id: tc1
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+  userData: {}

@@ -14,7 +14,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -53,8 +53,8 @@
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/systick/plib_systick.h"
-#include "peripheral/tc/plib_tc1.h"
 #include "peripheral/efc/plib_efc.h"
+#include "peripheral/tc/plib_tc1.h"
 #include "peripheral/tc/plib_tc0.h"
 #include "peripheral/usart/plib_usart1.h"
 
