@@ -156,9 +156,18 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="true">
+      <logicalFolder name="spi_write_read_sam_e70_xult_sam_e70_xult" displayName="spi_write_read_sam_e70_xult_sam_e70_xult" projectFiles="true">
+        <itemPath>spi_write_read_sam_e70_xult_sam_e70_xult/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>spi_write_read_sam_e70_xult_sam_e70_xult/components/cmsis.yml</itemPath>
+          <itemPath>spi_write_read_sam_e70_xult_sam_e70_xult/components/core.yml</itemPath>
+          <itemPath>spi_write_read_sam_e70_xult_sam_e70_xult/components/dfp.yml</itemPath>
+          <itemPath>spi_write_read_sam_e70_xult_sam_e70_xult/components/efc.yml</itemPath>
+          <itemPath>spi_write_read_sam_e70_xult_sam_e70_xult/components/spi0.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_e70_xult/harmony-manifest-success.yml</itemPath>
-      <itemPath>spi_write_read_sam_e70_xult.mc3</itemPath>
     </logicalFolder>
     <logicalFolder displayName="Linker Files" name="LinkerScript" projectFiles="true">
       <logicalFolder displayName="config" name="f1" projectFiles="true">
@@ -215,7 +224,7 @@
         <targetPluginBoard/>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
