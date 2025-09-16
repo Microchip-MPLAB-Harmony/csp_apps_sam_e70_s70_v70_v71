@@ -42,7 +42,7 @@
 #include "plib_rtc.h"
 #include "interrupts.h"
 
-volatile static RTC_OBJECT rtc;
+static volatile RTC_OBJECT rtc;
 
 __STATIC_INLINE uint32_t decimaltobcd( uint32_t aDecValue )
 {
