@@ -69,7 +69,7 @@ RSTC_RESET_CAUSE RSTC_ResetCauseGet (void)
 }
 
 
-volatile static RSTC_OBJECT rstcObj;
+static volatile RSTC_OBJECT rstcObj;
 
 void RSTC_CallbackRegister (RSTC_CALLBACK callback, uintptr_t context)
 {
