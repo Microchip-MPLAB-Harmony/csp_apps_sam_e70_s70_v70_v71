@@ -74,10 +74,10 @@
 #define USART0_LIN_LINBK_INT_DISABLE()      USART0_REGS->US_IDR = US_IDR_LIN_LINBK_Msk;
 #define USART0_LIN_LINBK_INT_ENABLE()       USART0_REGS->US_IER = US_IER_LIN_LINBK_Msk;
 
-volatile static uint8_t USART0_ReadBuffer[USART0_READ_BUFFER_SIZE];
-volatile static USART_RING_BUFFER_OBJECT usart0Obj;
-volatile static uint8_t USART0_WriteBuffer[USART0_WRITE_BUFFER_SIZE];
-volatile static USART_LIN_CALLBACK_OBJECT usart0LinObj;
+static volatile uint8_t USART0_ReadBuffer[USART0_READ_BUFFER_SIZE];
+static volatile USART_RING_BUFFER_OBJECT usart0Obj;
+static volatile uint8_t USART0_WriteBuffer[USART0_WRITE_BUFFER_SIZE];
+static volatile USART_LIN_CALLBACK_OBJECT usart0LinObj;
 
 void USART0_Initialize( void )
 {
@@ -93,7 +93,7 @@ void USART0_Initialize( void )
     USART0_REGS->US_MR |= US_MR_USART_MODE_LIN_MASTER;
  USART0_REGS->US_LINMR =
 US_LINMR_CHKTYP(0x0U) | US_LINMR_DLM(0x0U) |
-US_LINMR_DLC(8U) | US_LINMR_WKUPTYP(0x0U);    
+US_LINMR_DLC(8U) | US_LINMR_WKUPTYP(0x0U);
 
     /* Configure USART0 Baud Rate */
     USART0_REGS->US_BRGR = US_BRGR_CD(721U);
@@ -126,13 +126,13 @@ US_LINMR_DLC(8U) | US_LINMR_WKUPTYP(0x0U);
 
     /* Enable Read, Overrun, Parity and Framing error interrupts */
     USART0_RX_INT_ENABLE();
-	
+
 	/* Enable LIN ID interrupt */
 	USART0_LIN_LINID_INT_ENABLE();
-	
+
 	/* Enable LIN Transfer Complete interrupt */
     USART0_LIN_LINTC_INT_ENABLE();
-	
+
 	/* Enable LIN Break interrupt */
     USART0_LIN_LINBK_INT_ENABLE();
 }
@@ -727,31 +727,31 @@ void __attribute__((used)) USART0_InterruptHandler( void )
     if((USART0_REGS->US_CSR & US_CSR_LIN_LINBK_Msk) != 0U)
     {
         USART0_REGS->US_CR = US_CR_USART_RSTSTA_Msk;
-       
+
         if( usart0LinObj.breakCallback != NULL)
         {
             uintptr_t breakContext = usart0LinObj.breakContext;
             usart0LinObj.breakCallback(breakContext);
         }
     }
-    
+
     /* LIN ID Receive */
     if((USART0_REGS->US_CSR & US_CSR_LIN_LINID_Msk) != 0U)
     {
         USART0_REGS->US_CR = US_CR_USART_RSTSTA_Msk;
-       
+
         if( usart0LinObj.idCallback != NULL)
         {
             uintptr_t idContext = usart0LinObj.idContext;
             usart0LinObj.idCallback(idContext);
         }
     }
-	
+
     /* LIN Transfer Complete */
     if((USART0_REGS->US_CSR & US_CSR_LIN_LINTC_Msk) != 0U)
     {
         USART0_REGS->US_CR = US_CR_USART_RSTSTA_Msk;
-       
+
         if( usart0LinObj.tranferCallback != NULL)
         {
             uintptr_t transferContext = usart0LinObj.tranferContext;
@@ -770,15 +770,15 @@ void USART0_LIN_NodeActionSet( USART_LIN_NACT action )
 
 bool USART0_LIN_IdentifierWrite( uint8_t id)
 {
-	bool status = false; 
+	bool status = false;
 	USART0_REGS->US_CR = US_CR_USART_RSTSTA_Msk;
-    
+
     if((USART0_REGS->US_CSR & US_CSR_USART_TXRDY_Msk) != 0U)
     {
         USART0_REGS->US_LINIR = id;
 		status = true;
     }
-	
+
 	return status;
 }
 
@@ -832,7 +832,7 @@ void USART0_LIN_FrameSlotEnable(bool frameSlotEnable)
 void USART0_LIN_DataLenModeSet(USART_LIN_DATA_LEN dataLenMode)
 {
     USART0_REGS->US_LINMR &= ~US_LINMR_DLM_Msk;
-    USART0_REGS->US_LINMR |= (uint32_t)dataLenMode;    
+    USART0_REGS->US_LINMR |= (uint32_t)dataLenMode;
 }
 
 void USART0_LIN_ResponseDataLenSet(uint8_t len)
