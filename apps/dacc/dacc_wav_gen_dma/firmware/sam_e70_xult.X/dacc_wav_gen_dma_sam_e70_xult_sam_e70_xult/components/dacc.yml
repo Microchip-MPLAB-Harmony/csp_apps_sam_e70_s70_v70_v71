@@ -1,0 +1,175 @@
+configVersion: 1.0.0
+componentName: dacc
+coreVersion: 5.8.2
+device: ATSAME70Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: dacc
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: dacc
+          x: '30'
+          y: '60'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CONVERSION_MODE_CH0:
+      attributes:
+        id: CONVERSION_MODE_CH0
+      children:
+      - children:
+        - attributes:
+            id: dacc
+            value: '0'
+          type: Dynamic
+        - attributes:
+            value: '2'
+          type: User
+        type: Values
+      type: KeyValueSet
+    CONVERSION_MODE_CH1:
+      attributes:
+        id: CONVERSION_MODE_CH1
+      children:
+      - children:
+        - attributes:
+            id: dacc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    DACC_ACR_IBCTLCH0:
+      attributes:
+        id: DACC_ACR_IBCTLCH0
+      children:
+      - children:
+        - attributes:
+            id: dacc
+            value: '2'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    DACC_ACR_IBCTLCH1:
+      attributes:
+        id: DACC_ACR_IBCTLCH1
+      children:
+      - children:
+        - attributes:
+            id: dacc
+            value: '2'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    DACC_CHER_CH0:
+      attributes:
+        id: DACC_CHER_CH0
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    DACC_MR_DIFF:
+      attributes:
+        id: DACC_MR_DIFF
+      children:
+      - children:
+        - attributes:
+            id: dacc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    DACC_MR_MAXS0:
+      attributes:
+        id: DACC_MR_MAXS0
+      children:
+      - children:
+        - attributes:
+            id: dacc
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    DACC_MR_MAXS1:
+      attributes:
+        id: DACC_MR_MAXS1
+      children:
+      - children:
+        - attributes:
+            id: dacc
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    DACC_MR_PRESCALER:
+      attributes:
+        id: DACC_MR_PRESCALER
+      children:
+      - children:
+        - attributes:
+            value: '10'
+          type: User
+        type: Values
+      type: Integer
+    DACC_TRIGR_TRGEN0:
+      attributes:
+        id: DACC_TRIGR_TRGEN0
+      children:
+      - children:
+        - attributes:
+            id: dacc
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    DACC_TRIGR_TRGEN1:
+      attributes:
+        id: DACC_TRIGR_TRGEN1
+      children:
+      - children:
+        - attributes:
+            id: dacc
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    DACC_TRIGR_TRGSEL0:
+      attributes:
+        id: DACC_TRIGR_TRGSEL0
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+  userData: {}
