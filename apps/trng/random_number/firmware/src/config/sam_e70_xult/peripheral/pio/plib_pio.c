@@ -48,10 +48,10 @@
 #define PIO_MAX_NUM_OF_CHANNELS     5U
 
 /* Array to store callback objects of each configured interrupt */
-volatile static PIO_PIN_CALLBACK_OBJ portPinCbObj[1 + 0 + 0 + 0 + 0];
+static volatile PIO_PIN_CALLBACK_OBJ portPinCbObj[1 + 0 + 0 + 0 + 0];
 
 /* Array to store number of interrupts in each PORT Channel + previous interrupt count */
-volatile static uint8_t portNumCb[PIO_MAX_NUM_OF_CHANNELS + 1] = {0U, 1U, 1U, 1U, 1U, 1U};
+static volatile uint8_t portNumCb[PIO_MAX_NUM_OF_CHANNELS + 1] = {0U, 1U, 1U, 1U, 1U, 1U};
  void PIO_Interrupt_Handler ( PIO_PORT port );
 
 /******************************************************************************
