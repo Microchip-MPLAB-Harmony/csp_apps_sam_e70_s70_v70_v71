@@ -1,0 +1,197 @@
+configVersion: 1.0.0
+componentName: usart0
+coreVersion: 5.8.2
+device: ATSAME70Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: usart0
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: usart0
+          x: '30'
+          y: '220'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BAUD_RATE:
+      attributes:
+        id: BAUD_RATE
+      children:
+      - children:
+        - attributes:
+            value: '14000'
+          type: User
+        type: Values
+      type: Integer
+    BRG_VALUE:
+      attributes:
+        id: BRG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: usart0
+            value: '669'
+          type: Dynamic
+        type: Values
+      type: Integer
+    USART_INTERRUPT_MODE_ENABLE:
+      attributes:
+        id: USART_INTERRUPT_MODE_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: usart0
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USART_LIN_LINBK_INTERRUPT_ENABLE:
+      attributes:
+        id: USART_LIN_LINBK_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    USART_LIN_LINID_INTERRUPT_ENABLE:
+      attributes:
+        id: USART_LIN_LINID_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    USART_LIN_LINMR_CHKDIS:
+      attributes:
+        id: USART_LIN_LINMR_CHKDIS
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    USART_LIN_LINMR_CHKTYP:
+      attributes:
+        id: USART_LIN_LINMR_CHKTYP
+      children:
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: KeyValueSet
+    USART_LIN_LINMR_DLM:
+      attributes:
+        id: USART_LIN_LINMR_DLM
+      children:
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: KeyValueSet
+    USART_LIN_LINMR_SYNCDIS:
+      attributes:
+        id: USART_LIN_LINMR_SYNCDIS
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    USART_LIN_LINTC_INTERRUPT_ENABLE:
+      attributes:
+        id: USART_LIN_LINTC_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    USART_LIN_OPERATING_MODE:
+      attributes:
+        id: USART_LIN_OPERATING_MODE
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    USART_MODE:
+      attributes:
+        id: USART_MODE
+      children:
+      - children:
+        - attributes:
+            value: '3'
+          type: User
+        type: Values
+      type: KeyValueSet
+    USART_OPERATING_MODE:
+      attributes:
+        id: USART_OPERATING_MODE
+      children:
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: KeyValueSet
+    USART_RING_BUFFER_MODE_ENABLE:
+      attributes:
+        id: USART_RING_BUFFER_MODE_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: usart0
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USART_SPI_BRG_VALUE:
+      attributes:
+        id: USART_SPI_BRG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: usart0
+            value: '150'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}

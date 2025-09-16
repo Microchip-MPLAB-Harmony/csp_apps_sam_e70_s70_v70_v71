@@ -3,36 +3,7 @@
   <logicalFolder name="root" displayName="root" projectFiles="true">
     <logicalFolder name="HeaderFiles" displayName="Header Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_e70_xult" displayName="sam_e70_xult" projectFiles="true">
-          <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="clk" displayName="clk" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/peripheral/clk/plib_clk.h</itemPath>
-            </logicalFolder>
-            <logicalFolder name="efc" displayName="efc" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/peripheral/efc/plib_efc.h</itemPath>
-            </logicalFolder>
-            <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/peripheral/nvic/plib_nvic.h</itemPath>
-            </logicalFolder>
-            <logicalFolder name="pio" displayName="pio" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/peripheral/pio/plib_pio.h</itemPath>
-            </logicalFolder>
-            <logicalFolder name="systick" displayName="systick" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/peripheral/systick/plib_systick.h</itemPath>
-            </logicalFolder>
-            <logicalFolder name="usart" displayName="usart" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/peripheral/usart/plib_usart_lin_common.h</itemPath>
-              <itemPath>../src/config/sam_e70_xult/peripheral/usart/plib_usart0_lin.h</itemPath>
-            </logicalFolder>
-          </logicalFolder>
-          <itemPath>../src/config/sam_e70_xult/device_vectors.h</itemPath>
-          <itemPath>../src/config/sam_e70_xult/toolchain_specifics.h</itemPath>
-          <itemPath>../src/config/sam_e70_xult/device_cache.h</itemPath>
-          <itemPath>../src/config/sam_e70_xult/device.h</itemPath>
-          <itemPath>../src/config/sam_e70_xult/definitions.h</itemPath>
-          <itemPath>../src/config/sam_e70_xult/interrupts.h</itemPath>
         </logicalFolder>
-      </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
         <logicalFolder name="ATSAME70Q21B_DFP" displayName="ATSAME70Q21B_DFP" projectFiles="true">
           <logicalFolder name="component" displayName="component" projectFiles="true">
@@ -157,49 +128,25 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+      <logicalFolder name="sam_e70_xult" displayName="sam_e70_xult" projectFiles="true">
+        <itemPath>sam_e70_xult/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>sam_e70_xult/components/cmsis.yml</itemPath>
+          <itemPath>sam_e70_xult/components/core.yml</itemPath>
+          <itemPath>sam_e70_xult/components/dfp.yml</itemPath>
+          <itemPath>sam_e70_xult/components/efc.yml</itemPath>
+          <itemPath>sam_e70_xult/components/usart0.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>sam_e70_xult.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_e70_xult" displayName="sam_e70_xult" projectFiles="true">
-          <itemPath>../src/config/sam_e70_xult/ATSAME70Q21B.ld</itemPath>
         </logicalFolder>
-      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles" displayName="Source Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_e70_xult" displayName="sam_e70_xult" projectFiles="true">
-          <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="clk" displayName="clk" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/peripheral/clk/plib_clk.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="efc" displayName="efc" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/peripheral/efc/plib_efc.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/peripheral/nvic/plib_nvic.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="pio" displayName="pio" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/peripheral/pio/plib_pio.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="systick" displayName="systick" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/peripheral/systick/plib_systick.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="usart" displayName="usart" projectFiles="true">
-              <itemPath>../src/config/sam_e70_xult/peripheral/usart/plib_usart0_lin.c</itemPath>
-            </logicalFolder>
-          </logicalFolder>
-          <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
-            <itemPath>../src/config/sam_e70_xult/stdio/xc32_monitor.c</itemPath>
-          </logicalFolder>
-          <itemPath>../src/config/sam_e70_xult/exceptions.c</itemPath>
-          <itemPath>../src/config/sam_e70_xult/startup_xc32.c</itemPath>
-          <itemPath>../src/config/sam_e70_xult/libc_syscalls.c</itemPath>
-          <itemPath>../src/config/sam_e70_xult/initialization.c</itemPath>
-          <itemPath>../src/config/sam_e70_xult/interrupts.c</itemPath>
         </logicalFolder>
-      </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/config/sam_e70_xult/pin_configurations.csv</itemPath>
     </logicalFolder>
@@ -214,7 +161,7 @@
         <targetPluginBoard/>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
