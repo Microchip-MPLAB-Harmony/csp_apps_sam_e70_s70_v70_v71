@@ -1,0 +1,65 @@
+configVersion: 1.0.0
+componentName: rtt
+coreVersion: 5.8.2
+device: ATSAME70Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: rtt
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: rtt
+          x: '30'
+          y: '60'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    rttALMIEN:
+      attributes:
+        id: rttALMIEN
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    rttINCIEN:
+      attributes:
+        id: rttINCIEN
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    rttRTPRES:
+      attributes:
+        id: rttRTPRES
+      children:
+      - children:
+        - attributes:
+            value: '32768'
+          type: User
+        type: Values
+      type: Integer
+  userData: {}

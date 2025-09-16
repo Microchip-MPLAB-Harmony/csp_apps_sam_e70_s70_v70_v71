@@ -44,7 +44,7 @@ Description:
 #include "plib_rtt.h"
 #include "interrupts.h"
 
-volatile static RTT_OBJECT rtt;
+static volatile RTT_OBJECT rtt;
 
 void RTT_Initialize(void)
 {
