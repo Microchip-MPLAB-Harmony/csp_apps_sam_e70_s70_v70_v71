@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: random_number_sam_v71_xult
-creation_date: 2025-09-16T17:23:32.606+00:00[UTC]
-operating_system: Windows 10
+creation_date: 2025-11-18T12:17:25.882+00:00[UTC]
+operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: ATSAMV71Q21B

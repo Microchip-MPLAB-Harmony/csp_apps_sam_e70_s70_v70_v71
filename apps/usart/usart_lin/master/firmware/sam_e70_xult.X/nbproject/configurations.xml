@@ -178,6 +178,7 @@
         <itemPath>usart_lin_master_sam_e70_xult_sam_e70_xult/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
+      <itemPath>../src/config/sam_e70_xult/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -227,7 +228,6 @@
           <itemPath>../src/config/sam_e70_xult/startup_xc32.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>../src/config/sam_e70_xult/pin_configurations.csv</itemPath>
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>
   </logicalFolder>
@@ -246,7 +246,7 @@
       </toolsSet>
       <packs>
         <pack name="SAME70_DFP" vendor="Microchip" version="4.11.257"/>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

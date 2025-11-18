@@ -181,7 +181,7 @@
         <itemPath>mcan_fd_operation_interrupt_timestamp_sam_e70_xult_sam_e70_xult/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_e70_xult/harmony-manifest-success.yml</itemPath>
+      <itemPath>../src/config/sam_e70_xult/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -227,7 +227,6 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main_e70.c</itemPath>
-      <itemPath>../src/config/sam_e70_xult/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -247,7 +246,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
         <pack name="SAME70_DFP" vendor="Microchip" version="4.11.257"/>
       </packs>
       <ScriptingSettings>

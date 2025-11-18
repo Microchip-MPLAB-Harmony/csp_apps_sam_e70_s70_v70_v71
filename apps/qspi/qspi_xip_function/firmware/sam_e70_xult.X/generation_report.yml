@@ -1,0 +1,576 @@
+generatedFiles:
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/qspi/plib_qspi_common.h
+  projectFolder: config/sam_e70_xult/peripheral/qspi
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/qspi/plib_qspi.h
+  projectFolder: config/sam_e70_xult/peripheral/qspi
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/qspi/plib_qspi.c
+  projectFolder: config/sam_e70_xult/peripheral/qspi
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/device_cache.h
+  projectFolder: config/sam_e70_xult
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/toolchain_specifics.h
+  projectFolder: config/sam_e70_xult
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/main.c
+  projectFolder: ''
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/definitions.h
+  projectFolder: config/sam_e70_xult
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/initialization.c
+  projectFolder: config/sam_e70_xult
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/interrupts.c
+  projectFolder: config/sam_e70_xult
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/interrupts.h
+  projectFolder: config/sam_e70_xult
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/device_vectors.h
+  projectFolder: config/sam_e70_xult
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/exceptions.c
+  projectFolder: config/sam_e70_xult
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/stdio/xc32_monitor.c
+  projectFolder: config/sam_e70_xult/stdio
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/clk/plib_clk.h
+  projectFolder: config/sam_e70_xult/peripheral/clk
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/clk/plib_clk.c
+  projectFolder: config/sam_e70_xult/peripheral/clk
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/pio/plib_pio.h
+  projectFolder: config/sam_e70_xult/peripheral/pio
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/pio/plib_pio.c
+  projectFolder: config/sam_e70_xult/peripheral/pio
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/pin_configurations.csv
+  projectFolder: ''
+  type: Important Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/nvic/plib_nvic.h
+  projectFolder: config/sam_e70_xult/peripheral/nvic
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/nvic/plib_nvic.c
+  projectFolder: config/sam_e70_xult/peripheral/nvic
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/mpu/plib_mpu.h
+  projectFolder: config/sam_e70_xult/peripheral/mpu
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/mpu/plib_mpu_local.h
+  projectFolder: config/sam_e70_xult/peripheral/mpu
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/mpu/plib_mpu.c
+  projectFolder: config/sam_e70_xult/peripheral/mpu
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/systick/plib_systick.h
+  projectFolder: config/sam_e70_xult/peripheral/systick
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/systick/plib_systick.c
+  projectFolder: config/sam_e70_xult/peripheral/systick
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/startup_xc32.c
+  projectFolder: config/sam_e70_xult
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/libc_syscalls.c
+  projectFolder: config/sam_e70_xult
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/device.h
+  projectFolder: config/sam_e70_xult
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/acc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/aes.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/afec.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/chipid.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/dacc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/efc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/fuses.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/gmac.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/gpbr.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/hsmci.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/i2sc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/icm.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/isi.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/matrix.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/mcan.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/pio.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/pmc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/pwm.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/qspi.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/rstc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/rswdt.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/rtc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/rtt.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/smc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/spi.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/ssc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/supc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/tc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/trng.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/twihs.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/uart.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/usart.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/usbhs.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/utmi.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/wdt.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/component/xdmac.h
+  projectFolder: packs/ATSAME70Q21B_DFP/component
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/acc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/aes.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/afec0.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/afec1.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/chipid.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/dacc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/efc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/fuses.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/gmac.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/gpbr.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/hsmci.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/i2sc0.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/i2sc1.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/icm.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/isi.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/matrix.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/mcan0.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/mcan1.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/pioa.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/piob.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/pioc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/piod.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/pioe.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/pmc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/pwm0.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/pwm1.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/qspi.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/rstc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/rswdt.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/rtc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/rtt.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/smc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/spi0.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/spi1.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/ssc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/supc.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/tc0.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/tc1.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/tc2.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/tc3.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/trng.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/twihs0.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/twihs1.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/twihs2.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/uart0.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/uart1.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/uart2.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/uart3.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/uart4.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/usart0.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/usart1.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/usart2.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/usbhs.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/utmi.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/wdt.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/instance/xdmac.h
+  projectFolder: packs/ATSAME70Q21B_DFP/instance
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/same70q21b.h
+  projectFolder: packs/ATSAME70Q21B_DFP
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/ATSAME70Q21B_DFP/pio/same70q21b.h
+  projectFolder: packs/ATSAME70Q21B_DFP/pio
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h
+  projectFolder: packs/CMSIS/CMSIS/Core/Include
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h
+  projectFolder: packs/CMSIS/CMSIS/Core/Include
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h
+  projectFolder: packs/CMSIS/CMSIS/Core/Include
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h
+  projectFolder: packs/CMSIS/CMSIS/Core/Include
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/CMSIS/CMSIS/Core/Include/cmsis_armcc.h
+  projectFolder: packs/CMSIS/CMSIS/Core/Include
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang.h
+  projectFolder: packs/CMSIS/CMSIS/Core/Include
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h
+  projectFolder: packs/CMSIS/CMSIS/Core/Include
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/CMSIS/CMSIS/Core/Include/core_cm7.h
+  projectFolder: packs/CMSIS/CMSIS/Core/Include
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h
+  projectFolder: packs/CMSIS/CMSIS/Core/Include
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h
+  projectFolder: packs/CMSIS/CMSIS/Core/Include
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/efc/plib_efc.h
+  projectFolder: config/sam_e70_xult/peripheral/efc
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/efc/plib_efc.c
+  projectFolder: config/sam_e70_xult/peripheral/efc
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/usart/plib_usart_common.h
+  projectFolder: config/sam_e70_xult/peripheral/usart
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/usart/plib_usart1.h
+  projectFolder: config/sam_e70_xult/peripheral/usart
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_sam_e70_s70_v70_v71/apps/qspi/qspi_xip_function/firmware/src/config/sam_e70_xult/peripheral/usart/plib_usart1.c
+  projectFolder: config/sam_e70_xult/peripheral/usart
+  type: Source Files
+generatedSettings:
+- category: C32-LD
+  key: preprocessor-macros
+  value: ''
+- category: C32-LD
+  key: heap-size
+  value: '512'
+- category: C32
+  key: extra-include-directories
+  value: ../src;../src/config/sam_e70_xult;../src/packs/ATSAME70Q21B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/
+- category: C32CPP
+  key: extra-include-directories
+  value: ../src;../src/config/sam_e70_xult;../src/packs/ATSAME70Q21B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/
+- category: C32-LD
+  key: no-device-startup-code
+  value: 'true'
+- category: C32Global
+  key: mitcm
+  value: ''
+- category: C32Global
+  key: mdtcm
+  value: ''
+- category: C32Global
+  key: mstacktcm
+  value: 'false'
+removedFiles: [
+  ]

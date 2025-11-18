@@ -14,7 +14,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_e70_xult\ATSAME70Q21B.ld
   hash: 10e391da037e9ce29f4329b436141253b11682372aa196e2054c0b3a9203e979
 - file: ..\src\config\sam_e70_xult\definitions.h
-  hash: 32f2675e41ec0a4fd6b08a33b178cac1b7220387ece0f83172e520c4de118b71
+  hash: ed91cf9a15397af248b1d89dda7baf0849fd40b2a1c15e8a6447afb6779ef85c
 - file: ..\src\config\sam_e70_xult\device.h
   hash: 20dfb84db53f624d3d222de5c7063708d1393bbfe5dfa2ead18ae753ceb5988f
 - file: ..\src\config\sam_e70_xult\device_cache.h

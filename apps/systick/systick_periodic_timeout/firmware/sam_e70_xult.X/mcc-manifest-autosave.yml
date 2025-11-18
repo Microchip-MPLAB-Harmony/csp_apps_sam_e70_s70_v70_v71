@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: systick_periodic_timeout_sam_e70_xult
-creation_date: 2025-09-16T17:15:52.188+00:00[UTC]
-operating_system: Windows 10
+creation_date: 2025-11-18T12:20:47.518+00:00[UTC]
+operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: ATSAME70Q21B
